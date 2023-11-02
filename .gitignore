@@ -15,7 +15,8 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-*.xcworkspace/
+SkateSpotsMap.xcodeproj/project.xcworkspace/xcuserdata/
+SkateSpotsMap.xcworkspace/xcuserdata/
 
 ## Other
 *.moved-aside
