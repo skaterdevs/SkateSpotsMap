@@ -15,6 +15,8 @@
 		9636CE2A2AF35F6500F014C5 /* SkateSpotsMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE292AF35F6500F014C5 /* SkateSpotsMapTests.swift */; };
 		9636CE342AF35F6500F014C5 /* SkateSpotsMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE332AF35F6500F014C5 /* SkateSpotsMapUITests.swift */; };
 		9636CE362AF35F6500F014C5 /* SkateSpotsMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE352AF35F6500F014C5 /* SkateSpotsMapUITestsLaunchTests.swift */; };
+		9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */; };
+		9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		9636CE332AF35F6500F014C5 /* SkateSpotsMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotsMapUITests.swift; sourceTree = "<group>"; };
 		9636CE352AF35F6500F014C5 /* SkateSpotsMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotsMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9636CE422AF368ED00F014C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
 		B66B5B2EC73614EF7746E649 /* libPods-SkateSpotsMap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkateSpotsMap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,8 @@
 				9636CE1A2AF35F5700F014C5 /* ContentView.swift */,
 				9636CE1C2AF35F6300F014C5 /* Assets.xcassets */,
 				9636CE1E2AF35F6300F014C5 /* Preview Content */,
+				9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */,
+				9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */,
 			);
 			path = SkateSpotsMap;
 			sourceTree = "<group>";
@@ -150,7 +156,6 @@
 				3AD1F795D6D71255438CF639 /* Pods-SkateSpotsMap.debug.xcconfig */,
 				11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -328,6 +333,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */,
+				9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */,
 				9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */,
 				9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */,
 			);
