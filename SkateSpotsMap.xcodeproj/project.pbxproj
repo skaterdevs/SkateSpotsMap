@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1546C075571D35341768FB36 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */; };
 		3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */; };
+		530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */; };
 		9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */; };
 		9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE1A2AF35F5700F014C5 /* ContentView.swift */; };
 		9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636CE1C2AF35F6300F014C5 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.release.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.release.xcconfig"; sourceTree = "<group>"; };
+		1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; lastKnownFileType = text.json; name = awsconfiguration.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		3AD1F795D6D71255438CF639 /* Pods-SkateSpotsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.debug.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.debug.xcconfig"; sourceTree = "<group>"; };
 		9636CE152AF35F5700F014C5 /* SkateSpotsMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateSpotsMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotsMapApp.swift; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A1C6FF1A267805FBACBDB9C /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */,
+				1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
 		9636CE0C2AF35F5700F014C5 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +113,7 @@
 				9636CE162AF35F5700F014C5 /* Products */,
 				C58B1ED02CC91BF54F71B84A /* Pods */,
 				3FBAE14E9A653BF5A9DB3D22 /* Frameworks */,
+				4A1C6FF1A267805FBACBDB9C /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +285,8 @@
 				9636CE202AF35F6300F014C5 /* Preview Assets.xcassets in Resources */,
 				9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */,
 				96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */,
+				1546C075571D35341768FB36 /* awsconfiguration.json in Resources */,
+				530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,9 +315,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
