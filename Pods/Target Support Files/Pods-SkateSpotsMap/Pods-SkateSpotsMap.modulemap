@@ -1,0 +1,6 @@
+framework module Pods_SkateSpotsMap {
+  umbrella header "Pods-SkateSpotsMap-umbrella.h"
+
+  export *
+  module * { export * }
+}
