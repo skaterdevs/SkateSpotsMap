@@ -7,6 +7,9 @@ target 'SkateSpotsMap' do
   pod 'GoogleMaps', '8.2.0'
   pod 'FirebaseFirestore'
   pod 'GoogleUtilities', :modular_headers => true
+  pod 'Amplify'
+  pod 'AmplifyPlugins/AWSS3StoragePlugin'
+  pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
 end
 
 workspace 'SkateSpotsMap'
