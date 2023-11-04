@@ -20,6 +20,7 @@
 		96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96645AE12AF492B70017C298 /* GoogleService-Info.plist */; };
 		9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */; };
 		9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */; };
+		96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		96645AE12AF492B70017C298 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
+		96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotRepository.swift; sourceTree = "<group>"; };
 		C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkateSpotsMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 		968271BF2AF6E108008A5994 /* DataRepositories */ = {
 			isa = PBXGroup;
 			children = (
+				96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */,
 			);
 			path = DataRepositories;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */,
 				9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */,
 				9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */,
 				9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */,
