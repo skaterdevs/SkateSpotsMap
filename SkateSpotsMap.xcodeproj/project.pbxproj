@@ -17,10 +17,13 @@
 		9636CE2A2AF35F6500F014C5 /* SkateSpotsMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE292AF35F6500F014C5 /* SkateSpotsMapTests.swift */; };
 		9636CE342AF35F6500F014C5 /* SkateSpotsMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE332AF35F6500F014C5 /* SkateSpotsMapUITests.swift */; };
 		9636CE362AF35F6500F014C5 /* SkateSpotsMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE352AF35F6500F014C5 /* SkateSpotsMapUITestsLaunchTests.swift */; };
+		965283402AF977C800E7299E /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652833F2AF977C800E7299E /* Feature.swift */; };
+		965283422AF978D100E7299E /* Kickout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965283412AF978D100E7299E /* Kickout.swift */; };
 		96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96645AE12AF492B70017C298 /* GoogleService-Info.plist */; };
 		9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */; };
 		9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */; };
 		96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */; };
+		96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D22F972AF6FBA600657EF2 /* SkateSpot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +59,13 @@
 		9636CE332AF35F6500F014C5 /* SkateSpotsMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotsMapUITests.swift; sourceTree = "<group>"; };
 		9636CE352AF35F6500F014C5 /* SkateSpotsMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotsMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9636CE422AF368ED00F014C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9652833F2AF977C800E7299E /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		965283412AF978D100E7299E /* Kickout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kickout.swift; sourceTree = "<group>"; };
 		96645AE12AF492B70017C298 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
 		96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotRepository.swift; sourceTree = "<group>"; };
+		96D22F972AF6FBA600657EF2 /* SkateSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpot.swift; sourceTree = "<group>"; };
 		C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkateSpotsMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -183,6 +189,9 @@
 		968271C02AF6E222008A5994 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				96D22F972AF6FBA600657EF2 /* SkateSpot.swift */,
+				9652833F2AF977C800E7299E /* Feature.swift */,
+				965283412AF978D100E7299E /* Kickout.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,6 +397,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */,
+				965283402AF977C800E7299E /* Feature.swift in Sources */,
+				965283422AF978D100E7299E /* Kickout.swift in Sources */,
 				96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */,
 				9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */,
 				9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */,
