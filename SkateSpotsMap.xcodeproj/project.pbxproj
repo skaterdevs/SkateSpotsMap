@@ -14,6 +14,7 @@
 		657B42A12AF9F79700785EBF /* Reviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A02AF9F79700785EBF /* Reviewer.swift */; };
 		657B42A32AF9F99800785EBF /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A22AF9F99800785EBF /* Review.swift */; };
 		657B42A52AFA00F500785EBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A42AFA00F500785EBF /* User.swift */; };
+		657B42A72AFA032400785EBF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A62AFA032400785EBF /* UserRepository.swift */; };
 		9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */; };
 		9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE1A2AF35F5700F014C5 /* ContentView.swift */; };
 		9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636CE1C2AF35F6300F014C5 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		657B42A02AF9F79700785EBF /* Reviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviewer.swift; sourceTree = "<group>"; };
 		657B42A22AF9F99800785EBF /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		657B42A42AFA00F500785EBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		657B42A62AFA032400785EBF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		9636CE152AF35F5700F014C5 /* SkateSpotsMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateSpotsMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotsMapApp.swift; sourceTree = "<group>"; };
 		9636CE1A2AF35F5700F014C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */,
+				657B42A62AFA032400785EBF /* UserRepository.swift */,
 			);
 			path = DataRepositories;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				657B42A72AFA032400785EBF /* UserRepository.swift in Sources */,
 				96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
 				657B429F2AF9F4E800785EBF /* Tag.swift in Sources */,
