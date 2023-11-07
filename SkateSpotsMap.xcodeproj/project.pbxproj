@@ -19,6 +19,9 @@
 		57266DA12AFA9D4200DD9C69 /* SkateSpotDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DA02AFA9D4200DD9C69 /* SkateSpotDetailView.swift */; };
 		57266DA32AFA9D4B00DD9C69 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DA22AFA9D4B00DD9C69 /* ReviewListView.swift */; };
 		57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DA42AFA9D5500DD9C69 /* NewReviewView.swift */; };
+		57266DAA2AFAA59300DD9C69 /* SkateSpotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DA92AFAA59300DD9C69 /* SkateSpotViewModel.swift */; };
+		57266DAC2AFAA59C00DD9C69 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DAB2AFAA59C00DD9C69 /* ReviewViewModel.swift */; };
+		57266DAE2AFAA5A500DD9C69 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DAD2AFAA5A500DD9C69 /* UserViewModel.swift */; };
 		657B429F2AF9F4E800785EBF /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B429E2AF9F4E800785EBF /* Tag.swift */; };
 		657B42A12AF9F79700785EBF /* Reviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A02AF9F79700785EBF /* Reviewer.swift */; };
 		657B42A32AF9F99800785EBF /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A22AF9F99800785EBF /* Review.swift */; };
@@ -69,6 +72,9 @@
 		57266DA02AFA9D4200DD9C69 /* SkateSpotDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotDetailView.swift; sourceTree = "<group>"; };
 		57266DA22AFA9D4B00DD9C69 /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
 		57266DA42AFA9D5500DD9C69 /* NewReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReviewView.swift; sourceTree = "<group>"; };
+		57266DA92AFAA59300DD9C69 /* SkateSpotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotViewModel.swift; sourceTree = "<group>"; };
+		57266DAB2AFAA59C00DD9C69 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		57266DAD2AFAA5A500DD9C69 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		657B429E2AF9F4E800785EBF /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		657B42A02AF9F79700785EBF /* Reviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviewer.swift; sourceTree = "<group>"; };
 		657B42A22AF9F99800785EBF /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -246,6 +252,9 @@
 		968271C12AF6E222008A5994 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				57266DA92AFAA59300DD9C69 /* SkateSpotViewModel.swift */,
+				57266DAB2AFAA59C00DD9C69 /* ReviewViewModel.swift */,
+				57266DAD2AFAA5A500DD9C69 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -453,6 +462,7 @@
 				96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */,
 				57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */,
 				57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */,
+				57266DAA2AFAA59300DD9C69 /* SkateSpotViewModel.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
 				57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */,
 				657B429F2AF9F4E800785EBF /* Tag.swift in Sources */,
@@ -470,6 +480,8 @@
 				57266D952AFA9D0000DD9C69 /* AppView.swift in Sources */,
 				657B42A12AF9F79700785EBF /* Reviewer.swift in Sources */,
 				9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */,
+				57266DAC2AFAA59C00DD9C69 /* ReviewViewModel.swift in Sources */,
+				57266DAE2AFAA5A500DD9C69 /* UserViewModel.swift in Sources */,
 				9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
