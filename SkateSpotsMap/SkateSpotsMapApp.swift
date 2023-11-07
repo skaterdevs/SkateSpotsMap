@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct SkateSpotsMapApp: App {
-    @UIApplicationDelegateAdaptor var delegate: AppDelegate
+  @UIApplicationDelegateAdaptor var delegate: AppDelegate
     
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }

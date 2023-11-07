@@ -8,8 +8,8 @@
 import Foundation
 
 enum Feature: String {
-    case walls = "Walls"
-    case banks = "Banks"
-    case ledges = "Ledges"
-    case curbs = "Curbs"
+  case walls = "Walls"
+  case banks = "Banks"
+  case ledges = "Ledges"
+  case curbs = "Curbs"
 }

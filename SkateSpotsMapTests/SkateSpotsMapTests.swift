@@ -9,20 +9,16 @@ import XCTest
 @testable import SkateSpotsMap
 
 final class SkateSpotsMapTests: XCTestCase {
+  override func setUp() {
+  }
 
-    override func setUp() {
-        
-    }
+  override func tearDown() {
+  }
 
-    override func tearDown() {
-        
-    }
-
-    // MARK: SkateSpotRepository Testing
-    func testSkateSpotRepositoryInit() {
-        let skateSpotRepo = SkateSpotRepository()
-        print("Number of Documents:", skateSpotRepo.skate_spots.count)
-        XCTAssert(skateSpotRepo.skate_spots.count != 0)
-    }
-
+  // MARK: SkateSpotRepository Testing
+  func testSkateSpotRepositoryInit() {
+    let skateSpotRepo = SkateSpotRepository()
+    print("Number of Documents:", skateSpotRepo.skate_spots.count)
+    XCTAssert(skateSpotRepo.skate_spots.count != 0)
+  }
 }
