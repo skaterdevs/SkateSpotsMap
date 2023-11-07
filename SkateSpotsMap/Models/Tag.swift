@@ -7,27 +7,13 @@
 
 import Foundation
 
-enum Tag {
-  case Clean, New, Popular, Dirty, Safe, CityArea
-  case BeginnerFriendly, Dangerous
-  func desc() -> String {
-    switch self {
-    case .Clean:
-      return "Clean"
-    case .New:
-      return "New"
-    case .Popular:
-      return "Popular"
-    case .Dirty:
-      return "Dirty"
-    case .Safe:
-      return "Safe"
-    case .CityArea:
-      return "City Area"
-    case .BeginnerFriendly:
-      return "Beginner Friendly"
-    case .Dangerous:
-      return "Dangerous"
-    }
-  }
+enum Tag: String {
+  case Clean = "Clean"
+  case New = "New"
+  case Popular = "Popular"
+  case Dirty = "Dirty"
+  case Safe = "Safe"
+  case CityArea = "City Area"
+  case BeginnerFriendly = "Beginner Friendly"
+  case Dangerous = "Dangerous"
 }

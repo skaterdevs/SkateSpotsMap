@@ -17,8 +17,14 @@ struct Reviewer: Identifiable, Codable {
   
   // MARK: Codable
   enum CodingKeys: String, CodingKey {
-    case id
+    case id = "user_id"
     case username
-    case avatar // is the right field name on firebase
+    case avatar = "photo"
   }
+  
+  // MARK: Example for SwiftUI
+  static let example = Reviewer(
+    id: "dsalfjdlfjcl",
+    username: "leftovercode",
+    avatar: "fake.picture")
 }
