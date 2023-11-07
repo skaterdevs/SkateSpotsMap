@@ -20,7 +20,7 @@ struct User: Identifiable, Codable, Comparable {
   enum CodingKeys: String, CodingKey {
     case id
     case username
-    case avatar
+    case avatar = "photo"
     case spots
   }
   
