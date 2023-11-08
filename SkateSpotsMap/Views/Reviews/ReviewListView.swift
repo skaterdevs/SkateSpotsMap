@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ReviewListView: View {
+  var skateSpot: SkateSpot
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-#Preview {
-    ReviewListView()
+struct ReviewListView_Previews: PreviewProvider {
+  static var previews: some View {
+    ReviewListView(skateSpot: SkateSpot.example)
+  }
 }
+
+//#Preview {
+//  ReviewListView(skateSpot: .example)
+//}
