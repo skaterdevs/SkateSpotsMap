@@ -35,8 +35,14 @@ struct User: Identifiable, Codable, Comparable {
   
   // MARK: Example for SwiftUI
   static let example = User(
-    id: "dsalfjdlfjcl",
+    id: "user1",
     username: "leftovercode",
     avatar: "fake.picture",
-    spots: [SkateSpot.example])
+    spots: [SkateSpot.example1, SkateSpot.example2])
+    
+    static let example1 = User(
+      id: "user2",
+      username: "leinard0",
+      avatar: "better.picture",
+      spots: [SkateSpot.example3])
 }

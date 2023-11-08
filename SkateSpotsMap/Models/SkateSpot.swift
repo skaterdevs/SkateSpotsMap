@@ -47,15 +47,39 @@ struct SkateSpot: Identifiable, Comparable, Codable {
   }
   
   // MARK: Example for SwiftUI
-  static let example = SkateSpot(
-    id: "dsalfjdlfjcl",
+  static let example1 = SkateSpot(
+    id: "spot1",
     name: "Schenely Park",
     location: GeoPoint(latitude: 3.2, longitude: 4.1),
     photos: ["basic.landscape"],
-    features: [Feature.banks.rawValue],
+    features: [Feature.walls.rawValue],
     overall_kickout: Kickout.low.rawValue,
-    rating_sum: 4,
-    rating_avg: 4.0,
-    tags: [Tag.CityArea.rawValue],
-    reviews: [Review.example])
+    rating_sum: 5,
+    rating_avg: 5.0,
+    tags: [Tag.Popular.rawValue, Tag.Clean.rawValue, Tag.Safe.rawValue],
+    reviews: [Review.example2])
+    
+    static let example2 = SkateSpot(
+      id: "spot2",
+      name: "Deathback Ridge",
+      location: GeoPoint(latitude: 20, longitude: -40),
+      photos: ["deathly.landscape"],
+      features: [Feature.banks.rawValue, Feature.ledges.rawValue],
+      overall_kickout: Kickout.medium.rawValue,
+      rating_sum: 3,
+      rating_avg: 1.5,
+      tags: [], //empty to test update
+      reviews: [Review.example3, Review.example4])
+    
+    static let example3 = SkateSpot(
+      id: "spot3",
+      name: "Point State Park",
+      location: GeoPoint(latitude: 200, longitude: -1),
+      photos: ["polluted.landscape"],
+      features: [Feature.curbs.rawValue],
+      overall_kickout: Kickout.high.rawValue,
+      rating_sum: 3,
+      rating_avg: 3.0,
+      tags: [Tag.CityArea.rawValue, Tag.New.rawValue],
+      reviews: [Review.example1])
 }
