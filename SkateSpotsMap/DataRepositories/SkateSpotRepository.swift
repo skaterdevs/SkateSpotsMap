@@ -64,4 +64,11 @@ class SkateSpotRepository: ObservableObject {
       }
     }
   }
+    
+    // MARK: Filtering Methods
+    // TODO: Radius
+    // TODO: Kickout Factor
+    // TODO: Minimum Rating
+    // TODO: Tags
+    // TODO: Features
 }
