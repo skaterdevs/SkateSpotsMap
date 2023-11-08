@@ -9,7 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    GoogleMapView()
+    TabView() {
+        MapView()
+        .tabItem {
+            Image(systemName: "rectangle.stack.person.crop.fill")
+            Text("Feed")
+        }.tag(1)
+        MapView()
+          .tabItem {
+            Image(systemName: "map.fill")
+            Text("Map")
+        }.tag(2)
+      }
   }
 }
 
