@@ -38,9 +38,9 @@ struct User: Identifiable, Codable, Comparable {
     id: "user1",
     username: "leftovercode",
     avatar: "fake.picture",
-    spots: [SkateSpot.example1, SkateSpot.example2])
+    spots: [SkateSpot.example, SkateSpot.example2])
     
-    static let example1 = User(
+    static let example2 = User(
       id: "user2",
       username: "leinard0",
       avatar: "better.picture",

@@ -47,7 +47,7 @@ struct SkateSpot: Identifiable, Comparable, Codable {
   }
   
   // MARK: Example for SwiftUI
-  static let example1 = SkateSpot(
+  static let example = SkateSpot(
     id: "spot1",
     name: "Schenely Park",
     location: GeoPoint(latitude: 3.2, longitude: 4.1),
@@ -81,5 +81,5 @@ struct SkateSpot: Identifiable, Comparable, Codable {
       rating_sum: 3,
       rating_avg: 3.0,
       tags: [Tag.CityArea.rawValue, Tag.New.rawValue],
-      reviews: [Review.example1])
+      reviews: [Review.example])
 }

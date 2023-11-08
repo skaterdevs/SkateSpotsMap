@@ -23,7 +23,7 @@ struct Reviewer: Identifiable, Codable {
   }
   
   // MARK: Example for SwiftUI
-    static let example1 = Reviewer(
+    static let example = Reviewer(
       id: "user1",
       username: "leftovercode",
       avatar: "fake.picture")
