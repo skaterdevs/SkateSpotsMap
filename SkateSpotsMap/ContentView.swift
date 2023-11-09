@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
   
   var body: some View {
+      var skateSpots = SkateSpotViewModel()
         TabView() {
             MapView()
             .tabItem {
@@ -21,6 +22,11 @@ struct ContentView: View {
                 Image(systemName: "map.fill")
                 Text("Map")
             }.tag(2)
+            SearchSpotsView()
+                .tabItem{
+                    Image(systemName: "map.fill")
+                    Text("Search")
+                }.environmentObject(skateSpots)
           }
       }
 }

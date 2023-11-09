@@ -100,9 +100,9 @@ struct NewReviewView: View {
       }
       
       // submit
-      Button("Submit Review") {
-//        addReview()
-      }.padding(20).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+//      Button("Submit Review") {
+////        addReview()
+//      }.padding(20).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
     }
     Spacer()
   }
