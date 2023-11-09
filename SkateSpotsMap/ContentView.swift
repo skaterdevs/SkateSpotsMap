@@ -24,7 +24,7 @@ struct ContentView: View {
             }.tag(2)
             SearchSpotsView()
                 .tabItem{
-                    Image(systemName: "map.fill")
+                    Image(systemName: "magnifyingglass.circle.fill")
                     Text("Search")
                 }.environmentObject(skateSpots)
           }
