@@ -32,7 +32,7 @@ struct SkateSpotOverviewView: View {
         Spacer()
       }
       
-      Divider()
+      Divider().frame(height: 15)
       
       VStack {
         HStack {
@@ -50,7 +50,7 @@ struct SkateSpotOverviewView: View {
         }
       }
       
-      Divider()
+      Divider().frame(height: 15)
       
       // TODO: Features
       

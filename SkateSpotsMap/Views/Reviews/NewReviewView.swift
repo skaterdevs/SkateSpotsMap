@@ -31,25 +31,25 @@ struct NewReviewView: View {
         Spacer()
       }
       
-      Divider()
+      Divider().frame(height: 15)
       
       // rating
       HStack {
         Spacer()
         VStack {
-          Text("Rate Experience")
+          Text("Rate Experience").fontWeight(.medium)
           
         }
         Spacer()
       }
       
-      Divider()
+      Divider().frame(height: 15)
       
       // tags
       HStack {
         Spacer()
         VStack {
-          Text("Select Tags")
+          Text("Select Tags").fontWeight(.medium)
           VStack {
             HStack(spacing: 20) {
               // TODO: make show skateSpot.photos
@@ -67,13 +67,13 @@ struct NewReviewView: View {
         Spacer()
       }
       
-      Divider()
+      Divider().frame(height: 15)
       
       // kickout factor
       HStack {
         Spacer()
         VStack {
-          Text("Select Kick-out Factor")
+          Text("Select Kick-out Factor").fontWeight(.medium)
           VStack {
               HStack(spacing: 20) {
                 // TODO: make show feature images
@@ -87,13 +87,13 @@ struct NewReviewView: View {
         Spacer()
       }
       
-      Divider()
+      Divider().frame(height: 15)
       
       // comment
       HStack {
         Spacer()
         VStack {
-          Text("Leave a Comment (Optional)")
+          Text("Leave a Comment (Optional)").fontWeight(.medium)
           TextField("Share your experience...", text: $comment)
         }
         Spacer()
@@ -103,6 +103,8 @@ struct NewReviewView: View {
       Button("Submit Review") {
 //        addReview()
       }.padding(20).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+      
+      Spacer()
     }
     Spacer()
   }
