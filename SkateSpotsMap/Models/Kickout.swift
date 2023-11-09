@@ -8,7 +8,8 @@
 import Foundation
 
 enum Kickout: String {
-  case low = "Low"
-  case medium = "Medium"
-  case high = "High"
+    case na = "N/A"
+    case low = "Low"
+    case medium = "Medium"
+    case high = "High"
 }
