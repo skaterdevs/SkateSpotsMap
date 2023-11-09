@@ -13,6 +13,6 @@ struct NewSkateSpotView: View {
     }
 }
 
-#Preview {
-    NewSkateSpotView()
-}
+//#Preview {
+//    NewSkateSpotView()
+//}

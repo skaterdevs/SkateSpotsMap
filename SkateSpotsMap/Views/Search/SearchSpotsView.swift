@@ -13,6 +13,6 @@ struct SearchSpotsView: View {
     }
 }
 
-#Preview {
-    SearchSpotsView()
-}
+//#Preview {
+//    SearchSpotsView()
+//}

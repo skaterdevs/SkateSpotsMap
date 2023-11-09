@@ -116,11 +116,12 @@ struct NewReviewView: View {
   
   private func addReview()
   {
-    let newReview = Review(rating: rating,
-                           tags: tags,
-                           reviewer: makeReviewer(),
-                           comment: comment,
-                           kickout: kickout)
+      let newReview = Review(id: UUID().uuidString,
+                             rating: rating,
+                             tags: tags,
+                             reviewer: makeReviewer(),
+                             comment: comment,
+                             kickout: kickout)
   }
 }
 
