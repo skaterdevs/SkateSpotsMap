@@ -11,11 +11,11 @@ import FirebaseFirestoreSwift
 
 struct Review: Identifiable, Codable, Comparable {
   // MARK: Fields
-  @DocumentID var id: String?
+  var id: String
   var rating: Int
   var tags: [String]
   var reviewer: Reviewer
-  var comment: String
+  var comment: String?
   var kickout: String
   
   // MARK: Codable
@@ -39,10 +39,34 @@ struct Review: Identifiable, Codable, Comparable {
   
   // MARK: Example for SwiftUI
   static let example = Review(
-    id: "dsalfjdlfjcl",
+    id: "review1",
     rating: 3,
-    tags: [Tag.Dangerous.rawValue],
+    tags: [Tag.CityArea.rawValue, Tag.New.rawValue],
     reviewer: Reviewer.example,
-    comment: "this place sucky",
+    comment: "ya know, ive been to better but ive also been to worse",
     kickout: Kickout.high.rawValue)
+    
+    static let example2 = Review(
+      id: "review2",
+      rating: 5,
+      tags: [Tag.Popular.rawValue, Tag.Clean.rawValue, Tag.Safe.rawValue],
+      reviewer: Reviewer.example2,
+      comment: "dangnabit this place do be popping my brother in christ",
+      kickout: Kickout.high.rawValue)
+    
+    static let example3 = Review(
+      id: "review3",
+      rating: 1,
+      tags: [Tag.Dangerous.rawValue, Tag.Dirty.rawValue],
+      reviewer: Reviewer.example,
+      comment: "this place sucky",
+      kickout: Kickout.high.rawValue)
+    
+    static let example4 = Review(
+      id: "review4",
+      rating: 2,
+      tags: [Tag.Dirty.rawValue],
+      reviewer: Reviewer.example,
+      comment: "its ight ya know",
+      kickout: Kickout.low.rawValue)
 }

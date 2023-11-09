@@ -20,7 +20,7 @@ struct User: Identifiable, Codable, Comparable {
   enum CodingKeys: String, CodingKey {
     case id
     case username
-    case avatar
+    case avatar = "photo"
     case spots
   }
   
@@ -35,8 +35,14 @@ struct User: Identifiable, Codable, Comparable {
   
   // MARK: Example for SwiftUI
   static let example = User(
-    id: "dsalfjdlfjcl",
+    id: "user1",
     username: "leftovercode",
     avatar: "fake.picture",
-    spots: [SkateSpot.example])
+    spots: [SkateSpot.example, SkateSpot.example2])
+    
+    static let example2 = User(
+      id: "user2",
+      username: "leinard0",
+      avatar: "better.picture",
+      spots: [SkateSpot.example3])
 }
