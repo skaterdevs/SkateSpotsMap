@@ -8,7 +8,9 @@
 import Foundation
 
 enum Kickout: String {
-  case low = "Low"
-  case medium = "Medium"
-  case high = "High"
+    case low = "Low"
+    case medium = "Medium"
+    case high = "High"
+    
+    static let allKickout = ["Low", "Medium", "High"]
 }
