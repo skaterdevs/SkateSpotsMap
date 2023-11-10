@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012C7CEF2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */; };
 		1546C075571D35341768FB36 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */; };
 		3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */; };
 		530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotGoogleMapViewModel.swift; sourceTree = "<group>"; };
 		11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.release.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.release.xcconfig"; sourceTree = "<group>"; };
 		1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */,
 				969B00F02AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift */,
 				969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */,
+				012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				57266DA32AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift in Sources */,
 				657B42A12AF9F79700785EBF /* Reviewer.swift in Sources */,
 				9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */,
+				012C7CEF2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift in Sources */,
 				57266DB22AFAA6D100DD9C69 /* ReviewViewModel.swift in Sources */,
 				65FDF93A2AFDC113005DEEED /* LocationManager.swift in Sources */,
 				57266DB42AFAA6D900DD9C69 /* UserViewModel.swift in Sources */,
