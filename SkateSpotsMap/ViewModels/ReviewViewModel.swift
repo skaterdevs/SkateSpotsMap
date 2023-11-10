@@ -20,7 +20,7 @@ class ReviewViewModel: ObservableObject {
         var skateSpot = skateSpot
         skateSpot.reviews.append(review)
         review.tags.forEach { tag in
-            if skateSpot.tags.contains(tag) {
+            if !skateSpot.tags.contains(tag) {
                 skateSpot.tags.append(tag)
             }
         }

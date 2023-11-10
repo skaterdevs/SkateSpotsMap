@@ -162,6 +162,7 @@ struct NewSkateSpotView: View {
         selectedItems = [PhotosPickerItem]()
         selectedImages = [Image]()
         selectedUIImage = [UIImage]()
+        photos = [String]()
     }
 }
 

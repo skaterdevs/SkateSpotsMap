@@ -12,7 +12,7 @@ struct SkateSpotDetailView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     @State var images = [UIImage]()
     var skateSpot: SkateSpot?
-  
+    
     var body: some View {
         VStack{
             HStack{
@@ -46,26 +46,7 @@ struct SkateSpotDetailView: View {
                 }
             }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
             
-            Divider().frame(height: 15)
-            
-            // overview and reviews
-            HStack {
-                Spacer()
-                NavigationLink(
-                    destination: SkateSpotOverviewView(skateSpot: skateSpot!),
-                    label: {
-                        Text("Overview")
-                    })
-                Spacer()
-                NavigationLink(
-                    destination: SkateSpotReviewsView(skateSpot: skateSpot!),
-                    label: {
-                        Text("Reviews")
-                    })
-                Spacer()
-            }
-          }
-        }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
+        }
         
         Divider().frame(height: 15)
         
@@ -74,7 +55,6 @@ struct SkateSpotDetailView: View {
         SkateSpotOverviewView(skateSpot: skateSpot!)
         
         Spacer()
-      }
     }
     
     func downloadImages(image_keys: [String]) {
