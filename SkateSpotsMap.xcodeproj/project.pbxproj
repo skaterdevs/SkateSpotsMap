@@ -28,6 +28,7 @@
 		657B42A32AF9F99800785EBF /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A22AF9F99800785EBF /* Review.swift */; };
 		657B42A52AFA00F500785EBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A42AFA00F500785EBF /* User.swift */; };
 		657B42A72AFA032400785EBF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A62AFA032400785EBF /* UserRepository.swift */; };
+		659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659513612AFD9260004DCCF5 /* GoogleDistance.swift */; };
 		9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */; };
 		9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE1A2AF35F5700F014C5 /* ContentView.swift */; };
 		9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636CE1C2AF35F6300F014C5 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		657B42A22AF9F99800785EBF /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		657B42A42AFA00F500785EBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		657B42A62AFA032400785EBF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		659513612AFD9260004DCCF5 /* GoogleDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDistance.swift; sourceTree = "<group>"; };
 		9636CE152AF35F5700F014C5 /* SkateSpotsMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateSpotsMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotsMapApp.swift; sourceTree = "<group>"; };
 		9636CE1A2AF35F5700F014C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				657B42A02AF9F79700785EBF /* Reviewer.swift */,
 				657B42A22AF9F99800785EBF /* Review.swift */,
 				657B42A42AFA00F500785EBF /* User.swift */,
+				659513612AFD9260004DCCF5 /* GoogleDistance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				657B42A72AFA032400785EBF /* UserRepository.swift in Sources */,
 				96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */,
 				57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */,
+				659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */,
 				57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */,
 				57266DB02AFAA6C400DD9C69 /* SkateSpotViewModel.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
