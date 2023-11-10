@@ -15,8 +15,11 @@ struct SkateSpotOverviewView: View {
   
   var body: some View {
     VStack {
-      
+        
+        OverviewReviewPartialView(skateSpot: skateSpot, isOverview: true)
+        Divider().padding(5)
       HStack {
+          
         Spacer()
         VStack {
           Text("Distance".uppercased()).fontWeight(.light)

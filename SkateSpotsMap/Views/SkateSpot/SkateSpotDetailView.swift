@@ -49,23 +49,6 @@ struct SkateSpotDetailView: View {
         Divider().frame(height: 15)
         
         // overview and reviews
-        HStack {
-          Spacer()
-          NavigationLink(
-            destination: SkateSpotOverviewView(skateSpot: skateSpot!),
-            label: {
-              Text("Overview")
-            })
-          Spacer()
-          NavigationLink(
-            destination: SkateSpotReviewsView(skateSpot: skateSpot!),
-            label: {
-              Text("Reviews")
-            })
-          Spacer()
-        }
-        
-        Divider().frame(height: 15)
         
         SkateSpotOverviewView(skateSpot: skateSpot!)
         

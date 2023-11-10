@@ -20,13 +20,6 @@ struct SkateSpotReviewsView: View {
             
             Divider()
             
-            //User Reviews
-            Text("Reviews")
-                .font(.title)
-                .fontWeight(.regular)
-                .padding(.top, 10)
-//                    .padding(.bottom,10)
-                .multilineTextAlignment(.center)
             //List of rows of reviews
             List{
                 ForEach(skateSpot.reviews){ review in
