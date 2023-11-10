@@ -51,49 +51,49 @@ struct SkateSpot: Identifiable, Comparable, Codable {
         return lhs.rating_avg < rhs.rating_avg
     }
   
-  // MARK: Example for SwiftUI
-  static let example = SkateSpot(
-    id: "spot1",
-    name: "Schenely Park",
-    location: GeoPoint(latitude: 3.2, longitude: 4.1),
-    photos: ["basic.landscape"],
-    features: [Feature.walls.rawValue],
-    overall_kickout: Kickout.high.rawValue,
-    low_kickout: 0,
-    medium_kickout: 0,
-    high_kickout: 1,
-    rating_sum: 5,
-    rating_avg: 5.0,
-    tags: [Tag.Popular.rawValue, Tag.Clean.rawValue, Tag.Safe.rawValue],
-    reviews: [Review.example2])
-    
+    // MARK: Example for SwiftUI
+    static let example = SkateSpot(
+        id: "spot1",
+        name: "Schenely Park",
+        location: GeoPoint(latitude: 3.2, longitude: 4.1),
+        photos: ["basic.landscape"],
+        features: [Feature.walls.rawValue],
+        overall_kickout: Kickout.high.rawValue,
+        low_kickout: 0,
+        medium_kickout: 0,
+        high_kickout: 1,
+        rating_sum: 5,
+        rating_avg: 5.0,
+        tags: [Tag.Popular.rawValue, Tag.Clean.rawValue, Tag.Safe.rawValue],
+        reviews: [Review.example2])
+
     static let example2 = SkateSpot(
-      id: "spot2",
-      name: "Deathback Ridge",
-      location: GeoPoint(latitude: 20, longitude: -40),
-      photos: ["deathly.landscape"],
-      features: [Feature.banks.rawValue, Feature.ledges.rawValue],
-      overall_kickout: Kickout.na.rawValue,
-      low_kickout: 1,
-      medium_kickout: 0,
-      high_kickout: 1,
-      rating_sum: 3,
-      rating_avg: 1.5,
-      tags: [], //empty to test update
-      reviews: [Review.example3, Review.example4])
-    
+        id: "spot2",
+        name: "Deathback Ridge",
+        location: GeoPoint(latitude: 20, longitude: -40),
+        photos: ["deathly.landscape"],
+        features: [Feature.banks.rawValue, Feature.ledges.rawValue],
+        overall_kickout: Kickout.na.rawValue,
+        low_kickout: 1,
+        medium_kickout: 0,
+        high_kickout: 1,
+        rating_sum: 3,
+        rating_avg: 1.5,
+        tags: [], //empty to test update
+        reviews: [Review.example3, Review.example4])
+
     static let example3 = SkateSpot(
-      id: "spot3",
-      name: "Point State Park",
-      location: GeoPoint(latitude: 200, longitude: -1),
-      photos: ["polluted.landscape"],
-      features: [Feature.curbs.rawValue],
-      overall_kickout: Kickout.high.rawValue,
-      low_kickout: 0,
-      medium_kickout: 0,
-      high_kickout: 1,
-      rating_sum: 3,
-      rating_avg: 3.0,
-      tags: [Tag.CityArea.rawValue, Tag.New.rawValue],
-      reviews: [Review.example])
+        id: "spot3",
+        name: "Point State Park",
+        location: GeoPoint(latitude: 200, longitude: -1),
+        photos: ["polluted.landscape"],
+        features: [Feature.curbs.rawValue],
+        overall_kickout: Kickout.high.rawValue,
+        low_kickout: 0,
+        medium_kickout: 0,
+        high_kickout: 1,
+        rating_sum: 3,
+        rating_avg: 3.0,
+        tags: [Tag.CityArea.rawValue, Tag.New.rawValue],
+        reviews: [Review.example])
 }
