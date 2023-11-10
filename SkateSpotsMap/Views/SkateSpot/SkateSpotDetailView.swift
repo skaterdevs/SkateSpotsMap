@@ -21,7 +21,7 @@ struct SkateSpotDetailView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
           Button{
-            skateSpotViewModel.appleMapsRedirect(skateSpot: skateSpot)
+            skateSpotViewModel.appleMapsRedirect(skateSpot: skateSpot!)
             } label: {
               Image(systemName: "arrow.triangle.turn.up.right.diamond.fill")
                 .resizable()
@@ -68,14 +68,9 @@ struct SkateSpotDetailView: View {
         
         Divider().frame(height: 15)
         
-<<<<<<< HEAD
-        SkateSpotOverviewView(skateSpot: skateSpot)
+        SkateSpotOverviewView(skateSpot: skateSpot!)
         
         Spacer()
-=======
-        SkateSpotOverviewView(skateSpot: skateSpot!)
-          Spacer()  // To force the content to the top
->>>>>>> c71bad4 (Created NavigationView for MapView)
       }
     }
 }
