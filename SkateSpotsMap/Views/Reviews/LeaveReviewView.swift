@@ -22,7 +22,7 @@ struct LeaveReviewView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .scaledToFit()
-                                .frame(width: 12)
+                                .frame(width: 15)
                         }
                     }
                 }
@@ -32,8 +32,8 @@ struct LeaveReviewView: View {
     }
 }
 
-//struct LeaveReviewHeader_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LeaveReviewHeader()
-//    }
-//}
+struct LeaveReviewView_Previews: PreviewProvider {
+    static var previews: some View {
+        LeaveReviewView(skateSpot: SkateSpot.example)
+    }
+}

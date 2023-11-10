@@ -11,7 +11,7 @@ import Foundation
 class ReviewViewModel: ObservableObject {
     private var skateSpotRepository = SkateSpotRepository()
     // threshhold for which kickoutlevel to assign to a spot
-    private let thresh = 5
+    private let thresh = 1
 
     init() {
     }
@@ -29,7 +29,7 @@ class ReviewViewModel: ObservableObject {
         skateSpot.overall_kickout = calculateKickout(skateSpot)
 
         skateSpot.rating_sum += review.rating
-        skateSpot.rating_avg /= Float(skateSpot.reviews.count)
+        skateSpot.rating_avg = Float(skateSpot.rating_sum) / Float(skateSpot.reviews.count)
         
         skateSpotRepository.update(skateSpot)
     }
@@ -43,7 +43,7 @@ class ReviewViewModel: ObservableObject {
         skateSpot.tags = skateSpot.tags.filter {!(removeTags.contains($0))}
         
         skateSpot.rating_sum -= review.rating
-        skateSpot.rating_avg /= Float(skateSpot.reviews.count)
+        skateSpot.rating_avg = Float(skateSpot.rating_sum) / Float(skateSpot.reviews.count)
         
         skateSpot = updateKickoutVotes(spot: skateSpot, kickout: review.kickout, x: -1)
         skateSpot.overall_kickout = calculateKickout(skateSpot)

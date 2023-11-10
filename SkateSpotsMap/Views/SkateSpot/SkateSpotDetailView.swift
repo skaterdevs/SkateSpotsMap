@@ -57,7 +57,7 @@ struct SkateSpotDetailView: View {
             })
           Spacer()
           NavigationLink(
-            destination: ReviewListView(skateSpot: skateSpot!),
+            destination: SkateSpotReviewsView(skateSpot: skateSpot!),
             label: {
               Text("Reviews")
 //                .foregroundColor(Color.red)
