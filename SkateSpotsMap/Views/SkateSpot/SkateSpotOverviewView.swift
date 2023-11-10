@@ -20,7 +20,7 @@ struct SkateSpotOverviewView: View {
         Spacer()
         VStack {
           Text("Distance".uppercased()).fontWeight(.light)
-          Text(distance ?? "").fontWeight(.bold)
+          Text(distance ?? "Unavailable").fontWeight(.bold)
         }
         Spacer()
         VStack {

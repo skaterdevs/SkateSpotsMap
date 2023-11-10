@@ -11,6 +11,8 @@ struct NewReviewView: View {
   var skateSpot: SkateSpot
   var user: User
   
+  let columns = [GridItem(.flexible()), GridItem(.flexible())]
+  
   @ObservedObject var reviewViewModel = ReviewViewModel()
   
   @State private var rating = 1

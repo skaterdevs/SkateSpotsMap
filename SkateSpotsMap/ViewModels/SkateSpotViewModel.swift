@@ -10,11 +10,6 @@ import SwiftUI
 
 class SkateSpotViewModel: ObservableObject {
     private var skateSpotRepository = SkateSpotRepository()
-    @Published var skateSpots: [SkateSpot]
-
-    init() {
-        self.skateSpots = skateSpotRepository.skate_spots
-    }
 
     func add(skateSpot: SkateSpot) {
         skateSpotRepository.create(skateSpot)
