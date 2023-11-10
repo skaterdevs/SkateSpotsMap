@@ -12,10 +12,14 @@ import SwiftUI
 struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
     @ObservedObject var markerViewModel = MarkerViewModel()
     
+    var goToSkateSpot: (SkateSpot?) -> ()
+    
     func makeUIViewController(context: Context) -> GoogleMapViewModel {
         let uiViewModel = GoogleMapViewModel()
         uiViewModel.mapView.delegate = context.coordinator
+        // Enable user location
         uiViewModel.mapView.isMyLocationEnabled = true
+        // Allow users to recenter
         uiViewModel.mapView.settings.myLocationButton = true
         return uiViewModel
     }
@@ -39,9 +43,9 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
         
         func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
             // Unpack SkateSpot object in the marker
-            let skateSpot = marker.userData as! SkateSpot
-            print("Tapped \(skateSpot.name)")
-            let skateSpotDetailsView = UIHostingController(rootView: SkateSpotDetailView(skateSpot: skateSpot))
+            let skateSpot = marker.userData as! SkateSpot?
+            self.googleMapViewModelBridge.goToSkateSpot(skateSpot)
+            print("Tapped \(skateSpot!.name)")
             return true
         }
     }

@@ -6,10 +6,22 @@
 //
 
 import SwiftUI
+import GoogleMaps
 
 struct MapView: View {
+    @State var selectedSkateSpot: SkateSpot?
+    @State var isActive: Bool = false
+    
     var body: some View {
-        GoogleMapViewModelBridge()
+        NavigationView {
+            VStack {
+                GoogleMapViewModelBridge(goToSkateSpot: { (skateSpot) in
+                    self.selectedSkateSpot = skateSpot
+                    self.isActive = true
+                })
+                NavigationLink(destination: SkateSpotDetailView(skateSpot: selectedSkateSpot), isActive: $isActive) { EmptyView() }
+            }
+        }
     }
 }
 

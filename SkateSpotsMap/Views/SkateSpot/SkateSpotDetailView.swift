@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SkateSpotDetailView: View {
-    var skateSpot: SkateSpot
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
+    var skateSpot: SkateSpot?
   
     var body: some View {
       VStack{
         
         HStack{
-          Text(skateSpot.name)
+          Text(skateSpot!.name)
             .font(.largeTitle)
             .fontWeight(.bold)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -36,7 +36,7 @@ struct SkateSpotDetailView: View {
         ScrollView(.horizontal) {
           HStack(spacing: 10) {
             // TODO: make show skateSpot.photos
-            ForEach(skateSpot.photos, id: \.self) { photo in
+            ForEach(skateSpot!.photos, id: \.self) { photo in
               Text("File name: \(photo)")
                   .foregroundStyle(.white)
                   .font(.largeTitle)
@@ -52,13 +52,13 @@ struct SkateSpotDetailView: View {
         HStack {
           Spacer()
           NavigationLink(
-            destination: SkateSpotOverviewView(skateSpot: skateSpot),
+            destination: SkateSpotOverviewView(skateSpot: skateSpot!),
             label: {
               Text("Overview")
             })
           Spacer()
           NavigationLink(
-            destination: ReviewListView(skateSpot: skateSpot),
+            destination: ReviewListView(skateSpot: skateSpot!),
             label: {
               Text("Reviews")
 //                .foregroundColor(Color.red)
@@ -68,11 +68,15 @@ struct SkateSpotDetailView: View {
         
         Divider().frame(height: 15)
         
+<<<<<<< HEAD
         SkateSpotOverviewView(skateSpot: skateSpot)
         
         Spacer()
+=======
+        SkateSpotOverviewView(skateSpot: skateSpot!)
+          Spacer()  // To force the content to the top
+>>>>>>> c71bad4 (Created NavigationView for MapView)
       }
-      Spacer()  // To force the content to the top
     }
 }
 
