@@ -8,9 +8,35 @@
 import SwiftUI
 
 struct ReviewListView: View {
-  var skateSpot: SkateSpot
+    var skateSpot: SkateSpot
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            VStack{
+                ReviewListHeaderView(skateSpot: skateSpot)
+                Divider()
+                //Leave a review
+                LeaveReviewView(skateSpot: skateSpot)
+                Divider()
+                //Reviews Stack
+                //VStack{
+                    Text("Reviews")
+                        .font(.title)
+                        .fontWeight(.light)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top, 10)
+                        .padding([.leading, .bottom],20)
+                    //List of rows of reviews
+                    List{
+                        ForEach([Review.example, Review.example2, Review.example3]){
+                            review in
+                                SingleReviewView(review:review)
+                        }
+                    }
+                    
+                //}
+
+            Spacer()
+            
+        }
     }
 }
 
