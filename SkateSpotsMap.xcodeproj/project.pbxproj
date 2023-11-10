@@ -197,6 +197,16 @@
 			path = Feed;
 			sourceTree = "<group>";
 		};
+		9160824D2AFE132400893EB5 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */,
+				969B00F02AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift */,
+				57266D962AFA9D1200DD9C69 /* MapView.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 		9636CE0C2AF35F5700F014C5 = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +294,6 @@
 				57266DB32AFAA6D900DD9C69 /* UserViewModel.swift */,
 				65FDF9392AFDC113005DEEED /* LocationManager.swift */,
 				969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */,
-				969B00F02AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift */,
 				969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */,
 			);
 			path = ViewModels;
@@ -293,12 +302,11 @@
 		968271C22AF6E222008A5994 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9160824D2AFE132400893EB5 /* Maps */,
 				916082482AFE10EB00893EB5 /* Feed */,
 				57266DA82AFA9DA800DD9C69 /* SkateSpot */,
 				57266DA62AFA9D6700DD9C69 /* Search */,
 				57266DA72AFA9D9F00DD9C69 /* Reviews */,
-				9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */,
-				57266D962AFA9D1200DD9C69 /* MapView.swift */,
 				9636CE1A2AF35F5700F014C5 /* ContentView.swift */,
 			);
 			path = Views;
