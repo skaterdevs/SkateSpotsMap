@@ -41,7 +41,7 @@ struct SkateSpotDetailView: View {
                 Image(uiImage: image)
                     .frame(width: 200, height: 200)
                     .clipShape(Rectangle())
-                    .padding()
+                    .padding([.leading, .vertical], 5)
             }
           }
         }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
