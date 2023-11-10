@@ -9,6 +9,9 @@ import SwiftUI
 
 struct SkateSpotOverviewView: View {
   var skateSpot: SkateSpot
+  @State var distance: String?
+  @StateObject var locationManager = LocationManager()
+  @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
   
   var body: some View {
     VStack {
@@ -17,7 +20,7 @@ struct SkateSpotOverviewView: View {
         Spacer()
         VStack {
           Text("Distance".uppercased()).fontWeight(.light)
-          Text("2.1 mi").fontWeight(.bold)
+          Text(distance ?? "").fontWeight(.bold)
         }
         Spacer()
         VStack {
@@ -56,13 +59,23 @@ struct SkateSpotOverviewView: View {
       
       VStack {
         HStack(spacing: 20) {
-          // TODO: make show feature images
           ForEach(skateSpot.features, id: \.self) { feature in
             Text(feature)
           }
         }
       }
       
+    }.task {
+      
+      do {
+        let sLat = locationManager.userLatitude()
+        let sLong = locationManager.userLongitude()
+        let dLat = skateSpot.location.latitude
+        let dLong = skateSpot.location.longitude
+        distance = try await skateSpotViewModel.getDist(sLat: sLat, sLong: sLong, dLat: dLat, dLong: dLong)
+      } catch {
+        distance = nil
+      }
     }
   }
 }

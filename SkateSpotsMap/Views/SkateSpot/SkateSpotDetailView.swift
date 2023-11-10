@@ -13,7 +13,6 @@ struct SkateSpotDetailView: View {
   
     var body: some View {
       VStack{
-        
         HStack{
           Text(skateSpot!.name)
             .font(.largeTitle)
