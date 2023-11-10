@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Amplify
 
 struct SkateSpotDetailView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
+    @State var images = [UIImage]()
     var skateSpot: SkateSpot?
   
     var body: some View {
@@ -35,15 +37,14 @@ struct SkateSpotDetailView: View {
         ScrollView(.horizontal) {
           HStack(spacing: 10) {
             // TODO: make show skateSpot.photos
-            ForEach(skateSpot!.photos, id: \.self) { photo in
-              Text("File name: \(photo)")
-                  .foregroundStyle(.white)
-                  .font(.largeTitle)
-                  .frame(width: 200, height: 200)
-                  .background(.red)
+            ForEach(images, id: \.self) { image in
+                Image(uiImage: image)
+                    .frame(width: 200, height: 200)
+                    .clipShape(Rectangle())
+                    .padding()
             }
           }
-        }
+        }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
         
         Divider().frame(height: 15)
         
@@ -70,6 +71,22 @@ struct SkateSpotDetailView: View {
         
         Spacer()
       }
+    }
+    
+    func downloadImages(image_keys: [String]) {
+        image_keys.forEach { image_key in
+            Amplify.Storage.downloadData(key: image_key) {
+                result in
+                switch result {
+                case .success(let data):
+                    DispatchQueue.main.async {
+                        self.images.append(UIImage(data: data)!)
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
 }
 
