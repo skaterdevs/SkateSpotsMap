@@ -43,7 +43,7 @@ struct NewReviewView: View {
               Text("3").tag(3)
               Text("4").tag(4)
               Text("5").tag(5)
-            }
+            }.pickerStyle(.segmented)
           }
           Spacer()
         }
@@ -98,7 +98,8 @@ struct NewReviewView: View {
               ForEach(Kickout.allKickout, id: \.self) { value in
                 Text(value)
               }
-            }
+            }.pickerStyle(.segmented)
+
           }
           Spacer()
         }
