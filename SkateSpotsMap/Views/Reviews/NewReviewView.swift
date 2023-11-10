@@ -121,6 +121,7 @@ struct NewReviewView: View {
                     // submit
                     Button("Submit Button") {
                         addReview()
+                        clearFields()
                     }
                     .padding()
                     .background(.blue)
@@ -153,6 +154,13 @@ struct NewReviewView: View {
     private func addReview() {
         let newReview: Review = createReview()
         reviewViewModel.add(skateSpot: skateSpot, review: newReview)
+    }
+    
+    private func clearFields() {
+        rating = 1
+        tags = [String]()
+        comment = ""
+        kickout = ""
     }
 }
 
