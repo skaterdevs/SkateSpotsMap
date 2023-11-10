@@ -11,7 +11,7 @@ struct NewReviewView: View {
   var skateSpot: SkateSpot
   var user: User
   
-  let columns = [GridItem(.flexible()), GridItem(.flexible())]
+  let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
   
   @ObservedObject var reviewViewModel = ReviewViewModel()
   
@@ -57,27 +57,29 @@ struct NewReviewView: View {
                     Spacer()
                     VStack {
                         Text("Select Tags").fontWeight(.medium)
-                        VStack {
-                            HStack(spacing: 20) {
-                                ForEach(skateSpot.tags, id: \.self) { tag in
-                                    Button(action: {
-                                        if let index = tags.firstIndex(of: tag) {
+                        ScrollView {
+                            HStack {
+                                LazyVGrid(columns: columns) {
+                                      ForEach(Tag.allTags, id: \.self) { tag in
+                                        Button(action: {
+                                          if let index = tags.firstIndex(of: tag) {
                                             tags.remove(at: index)
-                                        } else {
+                                          } else {
                                             tags.append(tag)
-                                        }
-                                    }) {
-                                        Text("\(tag)")
-                                        if tags.contains(tag) {
+                                          }
+                                        }) {
+                                            Text("\(tag)")
+                                          if tags.contains(tag) {
                                             Image(systemName: "checkmark")
+                                          }
+                                        }
+                                        .padding(10)
+                                        .overlay(
+                                          RoundedRectangle(cornerRadius: 30)
+                                            .stroke(Color.black, lineWidth: 1)
+                                        )
                                         }
                                     }
-                                    .padding(10)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 30)
-                                            .stroke(Color.black, lineWidth: 1)
-                                    )
-                                }
                             }
                         }
                     }
@@ -97,7 +99,6 @@ struct NewReviewView: View {
                                 Text(value)
                             }
                         }.pickerStyle(.segmented)
-                        
                     }
                     Spacer()
                 }
@@ -114,7 +115,7 @@ struct NewReviewView: View {
                             .padding()
                     }
                     Spacer()
-                }.padding(.bottom, 30.0)
+                }.padding(.bottom, 10.0)
                 
                 // submit
                 Button("Submit Button") {
