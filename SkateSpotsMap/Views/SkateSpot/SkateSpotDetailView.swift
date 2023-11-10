@@ -72,7 +72,6 @@ struct SkateSpotDetailView: View {
         
         Spacer()
       }
-      Spacer()  // To force the content to the top
     }
 }
 
