@@ -11,6 +11,8 @@ struct NewReviewView: View {
   var skateSpot: SkateSpot
   var user: User
   
+  let columns = [GridItem(.flexible()), GridItem(.flexible())]
+  
   @ObservedObject var reviewViewModel = ReviewViewModel()
   
   @State private var rating = 1
@@ -55,28 +57,30 @@ struct NewReviewView: View {
         // tags
         HStack {
           Spacer()
-          VStack {
+          ScrollView {
             Text("Select Tags").fontWeight(.medium)
             VStack {
-              HStack(spacing: 20) {
-                ForEach(skateSpot.tags, id: \.self) { tag in
-                  Button(action: {
-                    if let index = tags.firstIndex(of: tag) {
-                      tags.remove(at: index)
-                    } else {
-                      tags.append(tag)
+              HStack {
+                LazyVGrid(columns: columns) {
+                  ForEach(Tag.allTags, id: \.self) { tag in
+                    Button(action: {
+                      if let index = tags.firstIndex(of: tag) {
+                        tags.remove(at: index)
+                      } else {
+                        tags.append(tag)
+                      }
+                    }) {
+                      Text("\(tag)")
+                      if tags.contains(tag) {
+                        Image(systemName: "checkmark")
+                      }
                     }
-                   }) {
-                     Text("\(tag)")
-                     if tags.contains(tag) {
-                         Image(systemName: "checkmark")
-                     }
+                    .padding(10)
+                    .overlay(
+                      RoundedRectangle(cornerRadius: 30)
+                        .stroke(Color.black, lineWidth: 1)
+                    )
                   }
-                  .padding(10)
-                  .overlay(
-                    RoundedRectangle(cornerRadius: 30)
-                      .stroke(Color.black, lineWidth: 1)
-                  )
                 }
               }
             }

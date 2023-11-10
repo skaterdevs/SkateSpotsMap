@@ -60,7 +60,6 @@ struct SkateSpotDetailView: View {
             destination: ReviewListView(skateSpot: skateSpot!),
             label: {
               Text("Reviews")
-//                .foregroundColor(Color.red)
             })
           Spacer()
         }
