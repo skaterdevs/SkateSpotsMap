@@ -25,6 +25,12 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewModel: GoogleMapViewModel, context: Context) {
+        // Default camera position to user location
+        let userLat = uiViewModel.mapView.myLocation?.coordinate.latitude
+        let userLong = uiViewModel.mapView.myLocation?.coordinate.longitude
+        uiViewModel.mapView.camera = GMSCameraPosition.camera(withLatitude: userLat ?? 0,
+                                                              longitude: userLong ?? 0,
+                                                              zoom: 15)
         markerViewModel.skateSpotMarkers.forEach { marker in
             marker.map = uiViewModel.mapView
         }
