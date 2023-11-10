@@ -31,4 +31,16 @@ class SkateSpotViewModel: ObservableObject {
         UIApplication.shared.open(mapsURL!,options: [:],
         completionHandler: nil)
     }
+    
+    func getDist(sLat: Double, sLong: Double, dLat: Double, dLong: Double) async throws -> String {
+        let apiKey = ProcessInfo.processInfo.environment["MAPS_API_KEY"]
+        let url = URL(string:
+                      "https://maps.googleapis.com/maps/api/distancematrix/json?destinations=\(dLat)%2C\(dLong)&mode=walking&origins=\(sLat)%2C\(sLong)&units=imperial&key=\(apiKey!)")!
+        let (data, _) = try await URLSession.shared.data(from: url)
+        let distMatrix = try JSONDecoder().decode(DistanceMatrix.self, from: data)
+        if distMatrix.error_message == nil {
+            return distMatrix.rows[0].elements[0].distance?.text ?? "N/A"
+        }
+        return "N/A"
+    }
 }

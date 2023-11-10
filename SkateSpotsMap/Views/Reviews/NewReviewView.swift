@@ -11,6 +11,7 @@ struct NewReviewView: View {
   var skateSpot: SkateSpot
   var user: User
   
+  @ObservedObject var reviewViewModel = ReviewViewModel()
   
   @State private var rating = 1
   @State private var tags = [String]()
@@ -24,87 +25,104 @@ struct NewReviewView: View {
       Text("\(skateSpot.name) Review").font(.largeTitle).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
       HStack {
         Spacer()
-//        Text(user.avatar)
         Image("userIcon").resizable()
           .frame(width: 30.0, height: 30.0).clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
         Text(user.username)
         Spacer()
       }
       
-      Divider()
+      Divider().frame(height: 15)
       
-      // rating
       HStack {
-        Spacer()
-        VStack {
-          Text("Rate Experience")
-          
-        }
-        Spacer()
-      }
-      
-      Divider()
-      
-      // tags
-      HStack {
-        Spacer()
-        VStack {
-          Text("Select Tags")
+          Spacer()
           VStack {
-            HStack(spacing: 20) {
-              // TODO: make show skateSpot.photos
-              ForEach(skateSpot.tags, id: \.self) { tag in
-                Text(tag)
+            Text("Rate Experience").fontWeight(.medium)
+            Picker(selection: $rating, label: Text("Rating")) {
+              Text("1").tag(1)
+              Text("2").tag(2)
+              Text("3").tag(3)
+              Text("4").tag(4)
+              Text("5").tag(5)
+            }
+          }
+          Spacer()
+        }
+        
+        VStack {
+          Divider().frame(height: 15)
+        }
+        
+        // tags
+        HStack {
+          Spacer()
+          VStack {
+            Text("Select Tags").fontWeight(.medium)
+            VStack {
+              HStack(spacing: 20) {
+                ForEach(skateSpot.tags, id: \.self) { tag in
+                  Button(action: {
+                    if let index = tags.firstIndex(of: tag) {
+                      tags.remove(at: index)
+                    } else {
+                      tags.append(tag)
+                    }
+                   }) {
+                     Text("\(tag)")
+                     if tags.contains(tag) {
+                         Image(systemName: "checkmark")
+                     }
+                  }
                   .padding(10)
                   .overlay(
                     RoundedRectangle(cornerRadius: 30)
                       .stroke(Color.black, lineWidth: 1)
                   )
+                }
               }
             }
           }
+          Spacer()
         }
-        Spacer()
-      }
-      
-      Divider()
-      
-      // kickout factor
-      HStack {
-        Spacer()
-        VStack {
-          Text("Select Kick-out Factor")
-          VStack {
-              HStack(spacing: 20) {
-                // TODO: make show feature images
-                ForEach(skateSpot.features, id: \.self) { feature in
-                  Text(feature)
-                }
-              }
         
-          }
-        }
-        Spacer()
-      }
-      
-      Divider()
-      
-      // comment
-      HStack {
-        Spacer()
         VStack {
-          Text("Leave a Comment (Optional)")
-          TextField("Share your experience...", text: $comment)
+          Divider().frame(height: 15)
         }
-        Spacer()
-      }
+        
+        // kickout factor
+        HStack {
+          Spacer()
+          VStack {
+            Text("Select Kick-out Factor").fontWeight(.medium)
+            
+            Picker(selection: $kickout, label: Text("Kick-out Factor")) {
+              ForEach(Kickout.allKickout, id: \.self) { value in
+                Text(value)
+              }
+            }
+          }
+          Spacer()
+        }
       
-      // submit
-//      Button("Submit Review") {
-////        addReview()
-//      }.padding(20).border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+        Divider().frame(height: 15)
+        
+        // comment
+        HStack {
+          Spacer()
+          VStack {
+            Text("Leave a Comment (Optional)").fontWeight(.medium)
+            TextField("Share your experience...", text: $comment, axis: .vertical).padding()
+              .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
+              .padding()
+          }
+          Spacer()
+        }
+        
+        // submit
+        Button("Submit Review") {
+          reviewViewModel.add(skateSpot: skateSpot, review: createReview())
+        }
+      Spacer()
     }
-    Spacer()
   }
   
   private func makeReviewer() -> Reviewer {
@@ -114,14 +132,15 @@ struct NewReviewView: View {
     return reviewer
   }
   
-  private func addReview()
+  private func createReview() -> Review
   {
-      let newReview = Review(id: UUID().uuidString,
+    let newReview = Review(id: UUID().uuidString,
                              rating: rating,
                              tags: tags,
                              reviewer: makeReviewer(),
                              comment: comment,
                              kickout: kickout)
+    return newReview
   }
 }
 

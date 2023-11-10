@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>SkateSpot app is requesting your location while you are using the app in order to properly calculate distances and show releveant skate spots in your area</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>SkateSpot app is requesting your location in order to properly calculate distances and show releveant skate spots in your area</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
