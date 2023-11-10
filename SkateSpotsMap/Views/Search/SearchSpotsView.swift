@@ -92,13 +92,12 @@ struct SearchSpotsView: View {
                                 }
                             })
                     }
-                }.navigationTitle("Skate Spots")//.frame(width:widthTest, height:heightTest)
-            }.searchable(text: $searchText).refreshable
-            {
+                }//.frame(width:widthTest, height:heightTest)
+            }.searchable(text: $searchText).refreshable{
                 
             }
             
-        }
+        }.padding(.top, -50)
         
     }
 }
