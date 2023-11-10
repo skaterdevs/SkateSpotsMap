@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   var skateSpotList = SkateSpotViewModel()
+    
   var body: some View {
       
         TabView() {

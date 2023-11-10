@@ -8,19 +8,27 @@
 import SwiftUI
 
 struct SearchSpotsView: View {
-    @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
-    var searchResults : [SkateSpot] = []
+    //var skateSpotViewModel = SkateSpotRepository().skate_spots
+    @ObservedObject var skateSpotViewModel = SkateSpotRepository()
+    //@ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     //@Published var test = SkateSpotViewModel().skateSpots
     @State private var searchText = ""
-    
+    var searchResults: [SkateSpot] {
+        if searchText.isEmpty {
+            return skateSpotViewModel.skate_spots
+        } else {
+            return skateSpotViewModel.skate_spots.filter { $0.name.contains(searchText) }
+        }
+    }
     var body: some View {
-        //Text(String(skateSpotsList.skateSpots.count))
+        //let skateSpots = skateSpotViewModel.skate_spots
+        //let skateSpots = skateSpotViewModel.skateSpots
         //Will need to be separated into SpotRowView at a later point
         VStack {
             NavigationView {
                 List{
-                    Text(String(skateSpotViewModel.skateSpots.count))
-                    //ForEach (skateSpotViewModel.skateSpots) { skateSpot in
+                    //Text(String(skateSpotViewModel.count))
+                    //ForEach (skateSpots) { skateSpot in
                     ForEach (searchResults) { skateSpot in
                         NavigationLink(
                             //destination: SkateSpotDetailView(skateSpot: SkateSpot.example),
@@ -36,7 +44,7 @@ struct SearchSpotsView: View {
                                                 //var rating_string = String(format: "%.2f", skateSpot.rating_avg)
                                                 var rating_string = String(format: "%.2f", skateSpot.rating_avg)
                                                 Text(rating_string).multilineTextAlignment(.leading)
-                                                    .font(.headline)
+                                                    .font(.system(size:10))
                                                     .fontWeight(.light)
                                                 Image(systemName: "star.fill")
                                                     .resizable()
@@ -45,29 +53,27 @@ struct SearchSpotsView: View {
                                                     .frame(width: 12)
                                                     .foregroundStyle(.yellow)
                                                 //Text("(102)").multilineTextAlignment(.leading)
-                                                Text(String((skateSpot.reviews).count)).multilineTextAlignment(.leading)
-                                                    .font(.headline)
+                                                Text("(" + String((skateSpot.reviews).count) + ")").multilineTextAlignment(.leading)
+                                                    .font(.system(size:10))
                                                     .fontWeight(.light)
                                             }
                                         HStack{
-                                            Text("Tags:").font(.headline)
+                                            Text("Tags:").font(.system(size:14)).multilineTextAlignment(.leading)
                                             //ForEach(skateSpot.tags, id: \.self){ tag in
                                             ForEach(skateSpot.tags, id: \.self){ tag in
-                                                Text(tag).fontWeight(.light)
+                                                Text(tag).fontWeight(.light).font(.system(size:10)).padding(.top, 2)
                                             }
                                         }
                                         HStack{
-                                            Text("Features:").font(.headline)
-                                            //ForEach(skateSpot.features, id: \.self){ feature in
+                                            Text("Features:").font(.system(size:14)).multilineTextAlignment(.leading)
                                             ForEach(skateSpot.features, id: \.self){ feature in
-                                                Text(feature).fontWeight(.light)
+                                                Text(feature).fontWeight(.light).font(.system(size:10)).padding(.top, 2)
                                             }
                                         }
-
                                     }
-
+                                    Spacer()
                                     VStack {
-                                        Text("Distance").fontWeight(.semibold)
+                                        Text("Directions").fontWeight(.semibold).font(.system(size:14))
                                         //zstack potentially for button
                                         Button{
                                             var lat = skateSpot.location.latitude //replace with lat from skatespot geopoint
@@ -80,7 +86,7 @@ struct SearchSpotsView: View {
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(width: 40)
                                                 .foregroundStyle(.green)
-                                        }
+                                        }.buttonStyle(.plain)
 
                                     }
                                 }
@@ -93,13 +99,7 @@ struct SearchSpotsView: View {
             }
             
         }
-        var searchResults: [SkateSpot] {
-            if searchText.isEmpty {
-                return skateSpotViewModel.skateSpots
-            } else {
-                return skateSpotViewModel.skateSpots.filter { $0.name.contains(searchText) }
-            }
-        }
+        
     }
 }
 //#Preview {
