@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SkateSpotDetailView: View {
     var skateSpot: SkateSpot
+    @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
   
     var body: some View {
       VStack{
@@ -19,6 +20,16 @@ struct SkateSpotDetailView: View {
             .fontWeight(.bold)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
+          Button{
+            skateSpotViewModel.appleMapsRedirect(skateSpot: skateSpot)
+            } label: {
+              Image(systemName: "arrow.triangle.turn.up.right.diamond.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 40)
+                .foregroundStyle(.green)
+          }
+          Spacer()
         }
         
         // image carousel
@@ -35,6 +46,8 @@ struct SkateSpotDetailView: View {
           }
         }
         
+        Divider().frame(height: 15)
+        
         // overview and reviews
         HStack {
           Spacer()
@@ -48,14 +61,16 @@ struct SkateSpotDetailView: View {
             destination: ReviewListView(skateSpot: skateSpot),
             label: {
               Text("Reviews")
-                .foregroundColor(Color.red)
+//                .foregroundColor(Color.red)
             })
           Spacer()
         }
         
-        Divider()
+        Divider().frame(height: 15)
         
         SkateSpotOverviewView(skateSpot: skateSpot)
+        
+        Spacer()
       }
       Spacer()  // To force the content to the top
     }
