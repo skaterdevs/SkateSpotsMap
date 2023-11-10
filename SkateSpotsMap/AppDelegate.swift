@@ -10,13 +10,13 @@ import GoogleMaps
 import FirebaseCore
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
-    let apiKey = ProcessInfo.processInfo.environment["MAPS_API_KEY"]
-    GMSServices.provideAPIKey(apiKey!)
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> Bool {
+        let apiKey = ProcessInfo.processInfo.environment["MAPS_API_KEY"]
+        GMSServices.provideAPIKey(apiKey!)
         
-    // Firebase
-    FirebaseApp.configure()
+        // Firebase
+        FirebaseApp.configure()
         
-    return true
-  }
+        return true
+    } 
 }

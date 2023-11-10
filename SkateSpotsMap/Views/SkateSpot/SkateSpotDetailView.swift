@@ -64,13 +64,17 @@ struct SkateSpotDetailView: View {
                     })
                 Spacer()
             }
-            
-            Divider().frame(height: 15)
-            
-            SkateSpotOverviewView(skateSpot: skateSpot!)
-            
-            Spacer()
-        }
+          }
+        }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
+        
+        Divider().frame(height: 15)
+        
+        // overview and reviews
+        
+        SkateSpotOverviewView(skateSpot: skateSpot!)
+        
+        Spacer()
+      }
     }
     
     func downloadImages(image_keys: [String]) {

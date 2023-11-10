@@ -15,32 +15,32 @@ struct ReviewHeaderView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
-            
-            HStack{
-                Text(String(skateSpot.rating_avg))
-                    .fontWeight(.semibold)
-//                    .multilineTextAlignment(.center)
-                
-                //Stars for average rating
-                ForEach(0..<Int(skateSpot.rating_avg)){_ in
-                    Image(systemName: "star.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 15)
-                    
-                }
-                ForEach(0..<5-Int(skateSpot.rating_avg)){_ in
-                    Image(systemName: "star")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .scaledToFit()
-                        .frame(width: 15)
-                }
-                
-                Text("(\(skateSpot.reviews.count))")
-                    .fontWeight(.regular)
-            }.padding(.bottom, 20)
+            OverviewReviewPartialView(skateSpot: skateSpot, isOverview: false)
         }
+        HStack{
+            Text(String(skateSpot.rating_avg))
+                .fontWeight(.semibold)
+//                    .multilineTextAlignment(.center)
+            
+            //Stars for average rating
+            ForEach(0..<Int(skateSpot.rating_avg)){_ in
+                Image(systemName: "star.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 15)
+                
+            }
+            ForEach(0..<5-Int(skateSpot.rating_avg)){_ in
+                Image(systemName: "star")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaledToFit()
+                    .frame(width: 15)
+            }
+            
+            Text("(\(skateSpot.reviews.count))")
+                .fontWeight(.regular)
+        }.padding(.vertical, 20)
     }
 }
 

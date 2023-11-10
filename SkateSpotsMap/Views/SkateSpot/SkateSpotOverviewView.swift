@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct SkateSpotOverviewView: View {
-    var skateSpot: SkateSpot
-    @State var distance: String?
-    @StateObject var locationManager = LocationManager()
-    @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
-    
-    var body: some View {
+  var skateSpot: SkateSpot
+  @State var distance: String?
+  @StateObject var locationManager = LocationManager()
+  @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
+  
+  var body: some View {
+    VStack {
+        
+        OverviewReviewPartialView(skateSpot: skateSpot, isOverview: true)
+        Divider().padding(5)
+      HStack {
+          
+        Spacer()
         VStack {
             
             HStack {
