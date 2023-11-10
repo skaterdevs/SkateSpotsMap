@@ -121,10 +121,8 @@ struct NewReviewView: View {
         Button("Submit Review") {
           reviewViewModel.add(skateSpot: skateSpot, review: createReview())
         }
-      
       Spacer()
     }
-    Spacer()
   }
   
   private func makeReviewer() -> Reviewer {
