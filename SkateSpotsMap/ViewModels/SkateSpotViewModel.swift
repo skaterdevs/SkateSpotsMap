@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class SkateSpotViewModel: ObservableObject {
-    private var skateSpotRepository = SkateSpotRepository()
+    @Published var skateSpotRepository = SkateSpotRepository()
 
     func add(skateSpot: SkateSpot) {
         skateSpotRepository.create(skateSpot)

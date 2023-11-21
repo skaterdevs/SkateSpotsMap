@@ -35,68 +35,70 @@ struct NewSkateSpotView: View {
                 
                 Divider()
             }
-            // location selection
-            Text("Location").font(.title3).fontWeight(.semibold)
-            AddSpotGoogleMapViewModel(selectedMarker: $selectedMarker)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 200.00)
-        
-            // name field
-            Text("Name").font(.title3).fontWeight(.semibold)
-            TextField("Name your new spot...", text: $name)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
-            
-            ScrollView(.horizontal) {
-                HStack {
-                    ForEach(0..<selectedImages.count, id: \.self) { i in
-                        selectedImages[i]
-                            .resizable()
-                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                            .frame(width: 150, height: 150, alignment: .center)
-                            .clipShape(Rectangle())
+            VStack {
+                // location selection
+                Text("Location").font(.title3).fontWeight(.semibold)
+                AddSpotGoogleMapViewModel(selectedMarker: $selectedMarker)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 200.00)
+                
+                // name field
+                Text("Name").font(.title3).fontWeight(.semibold)
+                TextField("Name your new spot...", text: $name)
+                    .padding()
+                    .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
+                
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(0..<selectedImages.count, id: \.self) { i in
+                            selectedImages[i]
+                                .resizable()
+                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                .frame(width: 150, height: 150, alignment: .center)
+                                .clipShape(Rectangle())
+                        }
                     }
                 }
-            }
-            
-            // photo entry field
-            Text("Photos").font(.title3).fontWeight(.semibold)
-            PhotosPicker("Select Images", selection: $selectedItems, matching: .images)
-                .onChange(of: selectedItems) { _ in
-                    Task {
-                        selectedImages.removeAll()
-                        
-                        for item in selectedItems {
-                            if let data = try? await item.loadTransferable(type: Data.self) {
-                                if let uiImage = UIImage(data: data) {
-                                    let image = Image(uiImage: uiImage)
-                                    selectedUIImage.append(uiImage)
-                                    selectedImages.append(image)
+                
+                // photo entry field
+                Text("Photos").font(.title3).fontWeight(.semibold)
+                PhotosPicker("Select Images", selection: $selectedItems, matching: .images)
+                    .onChange(of: selectedItems) { _ in
+                        Task {
+                            selectedImages.removeAll()
+                            
+                            for item in selectedItems {
+                                if let data = try? await item.loadTransferable(type: Data.self) {
+                                    if let uiImage = UIImage(data: data) {
+                                        let image = Image(uiImage: uiImage)
+                                        selectedUIImage.append(uiImage)
+                                        selectedImages.append(image)
+                                    }
                                 }
                             }
+                        }}
+                
+                // feature selection
+                Text("Select Available Features").font(.title3).fontWeight(.semibold)
+                HStack {
+                    ForEach(Feature.allFeatures, id: \.self) { value in
+                        Button(action: {
+                            if let index = features.firstIndex(of: value) {
+                                features.remove(at: index)
+                            } else {
+                                features.append(value)
+                            }
+                        }) {
+                            Text("\(value)").font(.system(size: 10))
+                            if features.contains(value) {
+                                Image(systemName: "checkmark")
+                            }
                         }
-                    }}
-            
-            // feature selection
-            Text("Select Available Features").font(.title3).fontWeight(.semibold)
-            HStack {
-                ForEach(Feature.allFeatures, id: \.self) { value in
-                    Button(action: {
-                        if let index = features.firstIndex(of: value) {
-                          features.remove(at: index)
-                        } else {
-                          features.append(value)
-                        }
-                    }) {
-                        Text("\(value)").font(.system(size: 10))
-                        if features.contains(value) {
-                            Image(systemName: "checkmark")
-                        }
+                        .padding(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
                     }
-                    .padding(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 30)
-                          .stroke(Color.black, lineWidth: 1)
-                    )
                 }
             }
             

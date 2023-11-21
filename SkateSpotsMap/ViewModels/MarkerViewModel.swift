@@ -21,6 +21,7 @@ class MarkerViewModel: ObservableObject {
                 let marker = GMSMarker(position: coordinate)
                 marker.title = skateSpot.name
                 marker.userData = skateSpot
+                print("Name: \(skateSpot.name), Reviews: \(skateSpot.reviews.count)")
                 return marker
             }
         }

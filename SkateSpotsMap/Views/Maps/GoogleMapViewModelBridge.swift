@@ -10,8 +10,9 @@ import GoogleMaps
 import SwiftUI
 
 struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
-    @ObservedObject var markerViewModel = MarkerViewModel()
+//    @ObservedObject var markerViewModel = MarkerViewModel()
     
+    var markerViewModel: MarkerViewModel
     var goToSkateSpot: (SkateSpot?) -> ()
     
     func makeUIViewController(context: Context) -> GoogleMapViewModel {
@@ -31,6 +32,7 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
         uiViewModel.mapView.camera = GMSCameraPosition.camera(withLatitude: userLat ?? 0,
                                                               longitude: userLong ?? 0,
                                                               zoom: 15)
+        uiViewModel.mapView.clear()
         markerViewModel.skateSpotMarkers.forEach { marker in
             marker.map = uiViewModel.mapView
         }
@@ -51,7 +53,7 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
             // Unpack SkateSpot object in the marker
             let skateSpot = marker.userData as! SkateSpot?
             self.googleMapViewModelBridge.goToSkateSpot(skateSpot)
-            print("Tapped \(skateSpot!.name)")
+            print("Tapped \(skateSpot!.name) with \(skateSpot?.reviews.count) reviews")
             return true
         }
     }

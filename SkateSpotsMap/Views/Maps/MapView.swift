@@ -9,6 +9,7 @@ import SwiftUI
 import GoogleMaps
 
 struct MapView: View {
+    @ObservedObject var markerViewModel = MarkerViewModel()
     @State var selectedSkateSpot: SkateSpot?
     @State var isActive: Bool = false
     
@@ -16,8 +17,9 @@ struct MapView: View {
         NavigationView {
             ZStack{
                 VStack {
-                    GoogleMapViewModelBridge(goToSkateSpot: { (skateSpot) in
+                    GoogleMapViewModelBridge(markerViewModel: markerViewModel, goToSkateSpot: { (skateSpot) in
                         self.selectedSkateSpot = skateSpot
+                        _ = print("Selected Skate Spot\nName: \(skateSpot?.name), Reviews: \(skateSpot?.reviews.count)")
                         self.isActive = true
                     })
                     NavigationLink(destination: SkateSpotDetailView(skateSpot: selectedSkateSpot), isActive: $isActive) { EmptyView() }

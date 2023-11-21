@@ -11,10 +11,13 @@ import Amplify
 struct SkateSpotDetailView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     @State var images = [UIImage]()
-    var skateSpot: SkateSpot?
+    @State var skateSpot: SkateSpot?
     
     var body: some View {
-        VStack{
+        VStack {
+            Button("Get Review Count") {
+                print(skateSpot?.reviews.count)
+            }
             HStack{
                 Text(skateSpot!.name)
                     .font(.largeTitle)
@@ -46,7 +49,7 @@ struct SkateSpotDetailView: View {
                 }
             }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
             
-        }
+        }.task( { reloadSkateSpot() })
         
         Divider().frame(height: 15)
         
@@ -72,13 +75,26 @@ struct SkateSpotDetailView: View {
             }
         }
     }
+    
+    private func reloadSkateSpot() {
+        sleep(2)
+        var filtered: [SkateSpot] = self.skateSpotViewModel.skateSpotRepository.skate_spots.filter { upToDateSkateSpot in
+            return upToDateSkateSpot == self.skateSpot
+        }
+        print(filtered.count)
+        if filtered.count > 0 {
+            print(filtered[0])
+            self.skateSpot = filtered[0]
+        }
+    }
+    
 }
 
-struct SkateSpotDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        SkateSpotDetailView(skateSpot: SkateSpot.example)
-    }
-}
+//struct SkateSpotDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SkateSpotDetailView(skateSpot: SkateSpot.example)
+//    }
+//}
 
 //#Preview {
 //  SkateSpotDetailView(skateSpot: .example)
