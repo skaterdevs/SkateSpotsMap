@@ -12,6 +12,7 @@ import GoogleMaps
 class MarkerViewModel: ObservableObject {
     @Published var skateSpotRepository = SkateSpotRepository()
     @Published var skateSpotMarkers: [GMSMarker] = []
+    @Published var selectedSkateSpot: SkateSpot?
     private var cancellables: Set<AnyCancellable> = []
     
     init() {

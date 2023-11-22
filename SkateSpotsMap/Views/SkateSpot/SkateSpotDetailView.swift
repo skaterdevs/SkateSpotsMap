@@ -11,7 +11,7 @@ import Amplify
 struct SkateSpotDetailView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     @State var images = [UIImage]()
-    @State var skateSpot: SkateSpot?
+    var skateSpot: SkateSpot?
     
     var body: some View {
         VStack {
@@ -49,7 +49,7 @@ struct SkateSpotDetailView: View {
                 }
             }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
             
-        }.task( { reloadSkateSpot() })
+        }
         
         Divider().frame(height: 15)
         
@@ -73,18 +73,6 @@ struct SkateSpotDetailView: View {
                     print(error)
                 }
             }
-        }
-    }
-    
-    private func reloadSkateSpot() {
-        sleep(2)
-        var filtered: [SkateSpot] = self.skateSpotViewModel.skateSpotRepository.skate_spots.filter { upToDateSkateSpot in
-            return upToDateSkateSpot == self.skateSpot
-        }
-        print(filtered.count)
-        if filtered.count > 0 {
-            print(filtered[0])
-            self.skateSpot = filtered[0]
         }
     }
     

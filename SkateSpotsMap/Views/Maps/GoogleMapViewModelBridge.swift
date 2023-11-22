@@ -13,7 +13,7 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
 //    @ObservedObject var markerViewModel = MarkerViewModel()
     
     var markerViewModel: MarkerViewModel
-    var goToSkateSpot: (SkateSpot?) -> ()
+    var goToSkateSpot: () -> ()
     
     func makeUIViewController(context: Context) -> GoogleMapViewModel {
         let uiViewModel = GoogleMapViewModel()
@@ -52,7 +52,8 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
         func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
             // Unpack SkateSpot object in the marker
             let skateSpot = marker.userData as! SkateSpot?
-            self.googleMapViewModelBridge.goToSkateSpot(skateSpot)
+            self.googleMapViewModelBridge.goToSkateSpot()
+            self.googleMapViewModelBridge.markerViewModel.selectedSkateSpot = skateSpot
             print("Tapped \(skateSpot!.name) with \(skateSpot?.reviews.count) reviews")
             return true
         }

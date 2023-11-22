@@ -10,19 +10,16 @@ import GoogleMaps
 
 struct MapView: View {
     @ObservedObject var markerViewModel = MarkerViewModel()
-    @State var selectedSkateSpot: SkateSpot?
     @State var isActive: Bool = false
     
     var body: some View {
         NavigationView {
             ZStack{
                 VStack {
-                    GoogleMapViewModelBridge(markerViewModel: markerViewModel, goToSkateSpot: { (skateSpot) in
-                        self.selectedSkateSpot = skateSpot
-                        _ = print("Selected Skate Spot\nName: \(skateSpot?.name), Reviews: \(skateSpot?.reviews.count)")
+                    GoogleMapViewModelBridge(markerViewModel: markerViewModel, goToSkateSpot: {
                         self.isActive = true
                     })
-                    NavigationLink(destination: SkateSpotDetailView(skateSpot: selectedSkateSpot), isActive: $isActive) { EmptyView() }
+                    NavigationLink(destination: SkateSpotDetailView(skateSpot: markerViewModel.selectedSkateSpot), isActive: $isActive) { EmptyView() }
                 }
                 
                 // Add SkateSpot Button
