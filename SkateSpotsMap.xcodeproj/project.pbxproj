@@ -44,6 +44,7 @@
 		969B00EF2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */; };
 		969B00F12AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B00F02AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift */; };
 		969B00F32AFD77FB00FF3EB7 /* MarkerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */; };
+		96BA2E082B150A8300CACC9E /* contents.txt in Resources */ = {isa = PBXBuildFile; fileRef = 96BA2E072B150A8300CACC9E /* contents.txt */; };
 		96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */; };
 		96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D22F972AF6FBA600657EF2 /* SkateSpot.swift */; };
 		D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513A44E2AFDC98800E86B14 /* ReviewHeaderView.swift */; };
@@ -111,6 +112,7 @@
 		969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewModel.swift; sourceTree = "<group>"; };
 		969B00F02AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewModelBridge.swift; sourceTree = "<group>"; };
 		969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerViewModel.swift; sourceTree = "<group>"; };
+		96BA2E072B150A8300CACC9E /* contents.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = contents.txt; sourceTree = "<group>"; };
 		96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotRepository.swift; sourceTree = "<group>"; };
 		96D22F972AF6FBA600657EF2 /* SkateSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpot.swift; sourceTree = "<group>"; };
 		C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkateSpotsMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +239,7 @@
 		9636CE172AF35F5700F014C5 /* SkateSpotsMap */ = {
 			isa = PBXGroup;
 			children = (
+				96BA2E072B150A8300CACC9E /* contents.txt */,
 				968271C02AF6E222008A5994 /* Models */,
 				968271C12AF6E222008A5994 /* ViewModels */,
 				968271C22AF6E222008A5994 /* Views */,
@@ -437,6 +440,7 @@
 				9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */,
 				96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */,
 				1546C075571D35341768FB36 /* awsconfiguration.json in Resources */,
+				96BA2E082B150A8300CACC9E /* contents.txt in Resources */,
 				530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
