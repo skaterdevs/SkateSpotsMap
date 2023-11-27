@@ -28,9 +28,16 @@ class SkateSpotViewModel: ObservableObject {
     }
     
     func getDist(sLat: Double, sLong: Double, dLat: Double, dLong: Double) async throws -> String {
-        let apiKey = ProcessInfo.processInfo.environment["MAPS_API_KEY"]
+        // Retrieving API key
+        let apiData = Bundle.main.path(forResource: "contents", ofType: "txt")
+        var apiKey = try String(contentsOfFile: apiData!)
+        // Xcode adds a newline character to all .txt files
+        // URL does not like strings with \n in them so it is removed
+        apiKey.remove(at: apiKey.firstIndex(of: "\n")!)
+        
+        // Calling Google DistanceMatrix API
         let url = URL(string:
-                      "https://maps.googleapis.com/maps/api/distancematrix/json?destinations=\(dLat)%2C\(dLong)&mode=walking&origins=\(sLat)%2C\(sLong)&units=imperial&key=\(apiKey!)")!
+                      "https://maps.googleapis.com/maps/api/distancematrix/json?destinations=\(dLat)%2C\(dLong)&mode=walking&origins=\(sLat)%2C\(sLong)&units=imperial&key=\(apiKey)")!
         let (data, _) = try await URLSession.shared.data(from: url)
         let distMatrix = try JSONDecoder().decode(DistanceMatrix.self, from: data)
         if distMatrix.error_message == nil {
