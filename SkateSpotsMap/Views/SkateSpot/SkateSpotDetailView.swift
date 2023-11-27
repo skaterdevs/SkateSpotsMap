@@ -11,6 +11,7 @@ import Amplify
 struct SkateSpotDetailView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     @State var images = [UIImage]()
+    @State var notDownloaded = true
     var skateSpot: SkateSpot?
     
     var body: some View {
@@ -58,18 +59,21 @@ struct SkateSpotDetailView: View {
     }
     
     func downloadImages(image_keys: [String]) {
-        image_keys.forEach { image_key in
-            Amplify.Storage.downloadData(key: image_key) {
-                result in
-                switch result {
-                case .success(let data):
-                    DispatchQueue.main.async {
-                        self.images.append(UIImage(data: data)!)
+        if notDownloaded {
+            image_keys.forEach { image_key in
+                Amplify.Storage.downloadData(key: image_key) {
+                    result in
+                    switch result {
+                    case .success(let data):
+                        DispatchQueue.main.async {
+                            self.images.append(UIImage(data: data)!)
+                        }
+                    case .failure(let error):
+                        print(error)
                     }
-                case .failure(let error):
-                    print(error)
                 }
             }
+            notDownloaded = false
         }
     }
 }
