@@ -47,14 +47,8 @@ struct SkateSpotOverviewView: View {
                     VStack {
                         HStack {
                             HStack(spacing: 20) {
-                                // TODO: make show skateSpot.photos
                                 ForEach(skateSpot.tags, id: \.self) { tag in
                                     Text(tag)
-                                        .padding(10)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 30)
-                                                .stroke(Color.black, lineWidth: 1)
-                                        )
                                 }
                             }
                         }
