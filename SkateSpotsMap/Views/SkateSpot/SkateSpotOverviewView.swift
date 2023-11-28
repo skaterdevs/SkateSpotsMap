@@ -13,6 +13,8 @@ struct SkateSpotOverviewView: View {
     @StateObject var locationManager = LocationManager()
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     
+    let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
         VStack {
             
@@ -46,13 +48,14 @@ struct SkateSpotOverviewView: View {
                     
                     VStack {
                         HStack {
-                            HStack(spacing: 20) {
+                            LazyVGrid(columns: columns) {
                                 ForEach(skateSpot.tags, id: \.self) { tag in
                                     Text(tag)
                                 }
                             }
                         }
                     }
+                    
                     
                     Divider().frame(height: 15)
                     
