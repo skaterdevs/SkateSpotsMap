@@ -27,9 +27,9 @@ struct NewSkateSpotView: View {
     var body: some View {
         VStack {
             
-            Text("Add Skate Spot")
-                .font(.largeTitle)
-                .fontWeight(.bold)
+//            Text("Add Skate Spot")
+//                .font(.largeTitle)
+//                .fontWeight(.bold)
             
             VStack(alignment: .center, spacing: 12) {
                 
@@ -101,11 +101,11 @@ struct NewSkateSpotView: View {
             }
             
             // submit
-            Button("Submit Button") {
-                addSkateSpot()
-                let _ = print(photos)
-                clearFields()
-            }
+//            Button("Submit Button") {
+//                addSkateSpot()
+//                let _ = print(photos)
+//                clearFields()
+//            }
             .padding()
             .background(.blue)
             .cornerRadius(10)

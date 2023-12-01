@@ -35,6 +35,6 @@ struct OverviewReviewPartialView: View {
     }
 }
 
-#Preview {
-    OverviewReviewPartialView(skateSpot: SkateSpot.example, isOverview: false)
-}
+//#Preview {
+//    OverviewReviewPartialView(skateSpot: SkateSpot.example, isOverview: false)
+//}
