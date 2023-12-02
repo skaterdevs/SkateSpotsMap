@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct iOSCheckboxToggleStyle: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+    func makeBody(configuration: Configuration) -> some View {
+            // 1
+            Button(action: {
 
+                // 2
+                configuration.isOn.toggle()
+
+            }, label: {
+                HStack {
+                    // 3
+                    Image(systemName: configuration.isOn ? "checkmark.square" : "square")
+
+                    configuration.label
+                }
+            })
+        }
+}
+Toggle(isOn: $checked) {
+    Text("The label")
+}
+.toggleStyle(CheckboxStyle())
 struct iOSCheckboxToggleStyle_Previews: PreviewProvider {
     static var previews: some View {
         iOSCheckboxToggleStyle()

@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct RadiusView: View {
+    @State private var distance = 5.0
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Slider(
+                value: $distance,
+                in: 0...20,
+                step: 1
+            ) {
+                Text("Distance")
+            } minimumValueLabel: {
+                Text("0")
+            } maximumValueLabel: {
+                Text("20")
+            }
+            Text("\(Int(distance)) miles")
+        }
+        
     }
 }
 

@@ -71,13 +71,13 @@ struct TagView: View {
 
     private func item(for text: String, isSelected: Bool) -> some View {
         Text(text)
-            .foregroundColor(isSelected ? Colors.primaryBarBackground : Colors.textColor)
+            .foregroundColor(isSelected ? .gray:.teal)
             .padding()
             .lineLimit(1)
-            .background(isSelected ? Colors.primaryBlue : Colors.primaryBarBackground)
+            .background(isSelected ? .blue:.gray)
             .frame(height: 36)
             .cornerRadius(18)
-            .overlay(Capsule().stroke(Colors.primaryBlue, lineWidth: 1))
+            .overlay(Capsule().stroke(.blue, lineWidth: 1))
     }
 
     private func viewHeightReader(_ binding: Binding<CGFloat>) -> some View {

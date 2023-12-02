@@ -49,6 +49,9 @@
 		D52A05E42B1AB65700CB69F4 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05E32B1AB65700CB69F4 /* StarRatingView.swift */; };
 		D52A05E62B1AB88B00CB69F4 /* StarRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05E52B1AB88B00CB69F4 /* StarRowView.swift */; };
 		D52A05E82B1ABD5A00CB69F4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05E72B1ABD5A00CB69F4 /* TagView.swift */; };
+		D52A05EB2B1AC50400CB69F4 /* SelectionList in Frameworks */ = {isa = PBXBuildFile; productRef = D52A05EA2B1AC50400CB69F4 /* SelectionList */; };
+		D52A05F22B1AC99300CB69F4 /* TagTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05F12B1AC99300CB69F4 /* TagTestView.swift */; };
+		D52A05F42B1ACDEE00CB69F4 /* RadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05F32B1ACDEE00CB69F4 /* RadiusView.swift */; };
 		D5A0178C2B1A97F5008C1D9A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178B2B1A97F5008C1D9A /* awsconfiguration.json */; };
 		D5A0178E2B1A97F9008C1D9A /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178D2B1A97F9008C1D9A /* amplifyconfiguration.json */; };
 		D5A017902B1A980D008C1D9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178F2B1A980D008C1D9A /* GoogleService-Info.plist */; };
@@ -124,6 +127,8 @@
 		D52A05E32B1AB65700CB69F4 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		D52A05E52B1AB88B00CB69F4 /* StarRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRowView.swift; sourceTree = "<group>"; };
 		D52A05E72B1ABD5A00CB69F4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		D52A05F12B1AC99300CB69F4 /* TagTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTestView.swift; sourceTree = "<group>"; };
+		D52A05F32B1ACDEE00CB69F4 /* RadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusView.swift; sourceTree = "<group>"; };
 		D5A0178B2B1A97F5008C1D9A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		D5A0178D2B1A97F9008C1D9A /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
 		D5A0178F2B1A980D008C1D9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -139,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */,
+				D52A05EB2B1AC50400CB69F4 /* SelectionList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +359,8 @@
 				D52A05E32B1AB65700CB69F4 /* StarRatingView.swift */,
 				D52A05E52B1AB88B00CB69F4 /* StarRowView.swift */,
 				D52A05E72B1ABD5A00CB69F4 /* TagView.swift */,
+				D52A05F12B1AC99300CB69F4 /* TagTestView.swift */,
+				D52A05F32B1ACDEE00CB69F4 /* RadiusView.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -382,6 +390,9 @@
 			dependencies = (
 			);
 			name = SkateSpotsMap;
+			packageProductDependencies = (
+				D52A05EA2B1AC50400CB69F4 /* SelectionList */,
+			);
 			productName = SkateSpotsMap;
 			productReference = 9636CE152AF35F5700F014C5 /* SkateSpotsMap.app */;
 			productType = "com.apple.product-type.application";
@@ -454,6 +465,9 @@
 				Base,
 			);
 			mainGroup = 9636CE0C2AF35F5700F014C5;
+			packageReferences = (
+				D52A05E92B1AC50400CB69F4 /* XCRemoteSwiftPackageReference "SelectionList" */,
+			);
 			productRefGroup = 9636CE162AF35F5700F014C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -549,12 +563,14 @@
 				57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */,
 				D52A05E42B1AB65700CB69F4 /* StarRatingView.swift in Sources */,
 				57266DB02AFAA6C400DD9C69 /* SkateSpotViewModel.swift in Sources */,
+				D52A05F22B1AC99300CB69F4 /* TagTestView.swift in Sources */,
 				D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
 				D52A05E62B1AB88B00CB69F4 /* StarRowView.swift in Sources */,
 				57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */,
 				657B429F2AF9F4E800785EBF /* Tag.swift in Sources */,
 				969B00F12AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift in Sources */,
+				D52A05F42B1ACDEE00CB69F4 /* RadiusView.swift in Sources */,
 				965283422AF978D100E7299E /* Kickout.swift in Sources */,
 				96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */,
 				969B00EF2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift in Sources */,
@@ -911,6 +927,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D52A05E92B1AC50400CB69F4 /* XCRemoteSwiftPackageReference "SelectionList" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yonat/SelectionList";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D52A05EA2B1AC50400CB69F4 /* SelectionList */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D52A05E92B1AC50400CB69F4 /* XCRemoteSwiftPackageReference "SelectionList" */;
+			productName = SelectionList;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9636CE0D2AF35F5700F014C5 /* Project object */;
 }

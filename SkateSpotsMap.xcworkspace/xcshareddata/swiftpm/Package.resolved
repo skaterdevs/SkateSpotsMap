@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "selectionlist",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yonat/SelectionList",
+      "state" : {
+        "revision" : "ac9b20ebe62817b7eee07db002cbf81a8687f775",
+        "version" : "1.4.2"
+      }
+    }
+  ],
+  "version" : 2
+}
