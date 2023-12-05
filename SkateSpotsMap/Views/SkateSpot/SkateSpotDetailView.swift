@@ -40,9 +40,10 @@ struct SkateSpotDetailView: View {
                     // TODO: make show skateSpot.photos
                     ForEach(images, id: \.self) { image in
                         Image(uiImage: image)
-                            .frame(width: 200, height: 200)
+                            .resizable()
+                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            .frame(width: 150, height: 150, alignment: .center)
                             .clipShape(Rectangle())
-                            .padding([.leading, .vertical], 5)
                     }
                 }
             }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
