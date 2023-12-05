@@ -26,6 +26,7 @@ struct SearchSpotsView: View {
                         NavigationLink(
                             destination: SkateSpotDetailView(skateSpot: skateSpot),
                             label: {
+                                //ADD KICKOUT
                                 SingleSpotView(skateSpot: skateSpot)
                             }
                         )

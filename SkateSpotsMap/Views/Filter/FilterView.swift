@@ -7,9 +7,51 @@
 
 import SwiftUI
 
+//class isPressed: ObservableObject{
+//    @Published var pressed = false
+//}
+
 struct FilterView: View {
+    @State private var pressed:Bool = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+//            HStack{
+//                StarRowView()
+//                RadiusView()
+//            }
+            HStack{
+                ForEach(Feature.allFeatures, id: \.self){ feature in
+                    self.pressed:false
+                    
+                    Text(feature).onTapGesture{
+                        //pressed.toggle()
+                        //FeatureView(selected:feature)
+                    }
+                    //pressed.onChange()
+//                    Button{
+//                        pressed = true
+//
+//                    }
+//                    label:{
+//                        Text(feature)
+//
+//                    }
+//                    if pressed {
+//                        FeatureView(selected:feature)
+//                        //can't toggle for some reason
+//                        //resetState()
+//                    }
+//                    //resetState()
+//                    Button(feature) {
+//                        FeatureView(selected:feature)
+//                    }
+//
+                }
+            }
+            
+            //FilterView()
+        }
     }
 }
 
