@@ -18,22 +18,56 @@ struct SearchSpotsView: View {
         }
     }
     var body: some View {
-        //Will need to be separated into SpotRowView at a later point
-        VStack {
-            NavigationStack {
-                List{
-                    ForEach (searchResults) { skateSpot in
-                        NavigationLink(
-                            destination: SkateSpotDetailView(skateSpot: skateSpot),
-                            label: {
-                                //ADD KICKOUT
-                                SingleSpotView(skateSpot: skateSpot)
-                            }
-                        )
+//        VStack {
+//            HStack{
+//                FilterButtonView()
+//                TextField("Search:", text: $searchText)
+//
+//    //                .overlay(
+//    //                    Rectangle()
+//    //                    .stroke(lineWidth: 1)
+//    //                )
+//
+//            }
+//
+//            NavigationStack {
+//                List{
+//                    ForEach (searchResults) { skateSpot in
+//                        NavigationLink(
+//                            destination: SkateSpotDetailView(skateSpot: skateSpot),
+//                            label: {
+//                                //ADD KICKOUT
+//                                SingleSpotView(skateSpot: skateSpot)
+//                            }
+//                        )
+//                    }
+//                }
+//            }//.searchable(text: $searchText).refreshable{}
+//        }//.padding(.top, -50)
+        
+        NavigationStack{
+            HStack{
+                NavigationLink(
+                    destination: FilterView(),
+                    label:{
+                        FilterButtonView()
                     }
+                    )
+                TextField("Search:", text: $searchText)
                 }
-            }.searchable(text: $searchText).refreshable{}
-        }.padding(.top, -50)
+            List{
+                ForEach (searchResults) { skateSpot in
+                    NavigationLink(
+                        destination: SkateSpotDetailView(skateSpot: skateSpot),
+                        label: {
+                            //ADD KICKOUT
+                            SingleSpotView(skateSpot: skateSpot)
+                        }
+                    )
+                }
+            }
+        }
+        
     }
 }
 //#Preview {

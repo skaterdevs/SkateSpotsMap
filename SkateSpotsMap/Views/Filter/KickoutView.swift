@@ -17,7 +17,7 @@ struct KickoutView: View {
                 Text("Low")
             }
             .background(.green)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .buttonStyle(.bordered)
             .cornerRadius(8)
             
@@ -39,7 +39,7 @@ struct KickoutView: View {
                 Text("High")
             }
             .background(.red)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .buttonStyle(.bordered)
             .cornerRadius(8)
             
@@ -47,8 +47,8 @@ struct KickoutView: View {
     }
 }
 
-struct KickoutView_Previews: PreviewProvider {
-    static var previews: some View {
-        KickoutView()
-    }
-}
+//struct KickoutView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        KickoutView()
+//    }
+//}

@@ -40,8 +40,8 @@ struct StarRowView: View {
     }
 }
 
-struct StarRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        StarRowView()
-    }
-}
+//struct StarRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StarRowView()
+//    }
+//}

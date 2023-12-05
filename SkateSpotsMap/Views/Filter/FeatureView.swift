@@ -37,9 +37,9 @@ struct FeatureView: View {
     }
 }
 
-struct FeatureView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeatureView()
-    }
-}
+//struct FeatureView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FeatureView()
+//    }
+//}
 

@@ -25,8 +25,8 @@ struct StarRatingView: View {
     }
 }
 
-struct StarRatingView_Previews: PreviewProvider {
-    static var previews: some View {
-        StarRatingView(filled:3)
-    }
-}
+//struct StarRatingView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StarRatingView(filled:3)
+//    }
+//}
