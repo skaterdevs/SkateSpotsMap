@@ -13,6 +13,7 @@ import Amplify
 
 struct NewSkateSpotView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
+    @Binding var userCoords: CLLocationCoordinate2D?
     @State private var location = 1
     @State private var name = String()
     @State private var photos = [String]()
@@ -35,25 +36,28 @@ struct NewSkateSpotView: View {
                 
                 Divider()
             }
-            // location selection
-            Text("Location").font(.title3).fontWeight(.semibold)
-            AddSpotGoogleMapViewModel(selectedMarker: $selectedMarker)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 200.00)
-        
-            // name field
-            Text("Name").font(.title3).fontWeight(.semibold)
-            TextField("Name your new spot...", text: $name)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
             
-            ScrollView(.horizontal) {
-                HStack {
-                    ForEach(0..<selectedImages.count, id: \.self) { i in
-                        selectedImages[i]
-                            .resizable()
-                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                            .frame(width: 150, height: 150, alignment: .center)
-                            .clipShape(Rectangle())
+            VStack {
+                // location selection
+                Text("Location").font(.title3).fontWeight(.semibold)
+                AddSpotGoogleMapViewModel(selectedMarker: $selectedMarker, userCoords: userCoords)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 200.00)
+                
+                // name field
+                Text("Name").font(.title3).fontWeight(.semibold)
+                TextField("Name your new spot...", text: $name)
+                    .padding()
+                    .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
+                
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(0..<selectedImages.count, id: \.self) { i in
+                            selectedImages[i]
+                                .resizable()
+                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                .frame(width: 150, height: 150, alignment: .center)
+                                .clipShape(Rectangle())
+                        }
                     }
                 }
             }

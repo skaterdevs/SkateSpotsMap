@@ -12,6 +12,7 @@ import SwiftUI
 struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
     var markerViewModel: MarkerViewModel
     var goToSkateSpot: () -> ()
+    var refreshUserCoords: (CLLocationCoordinate2D) -> ()
     
     func makeUIViewController(context: Context) -> GoogleMapViewModel {
         let uiViewModel = GoogleMapViewModel()
@@ -30,6 +31,7 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
         uiViewModel.mapView.camera = GMSCameraPosition.camera(withLatitude: userLat ?? 0,
                                                               longitude: userLong ?? 0,
                                                               zoom: 15)
+        refreshUserCoords(CLLocationCoordinate2D(latitude: userLat ?? 0, longitude: userLong ?? 0))
         uiViewModel.mapView.clear()
         markerViewModel.skateSpotMarkers.forEach { marker in
             marker.map = uiViewModel.mapView

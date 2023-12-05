@@ -11,6 +11,7 @@ import GoogleMaps
 struct MapView: View {
     @ObservedObject var markerViewModel = MarkerViewModel()
     @State var isActive: Bool = false
+    @State var userCoords: CLLocationCoordinate2D?
     
     var body: some View {
         NavigationView {
@@ -18,6 +19,8 @@ struct MapView: View {
                 VStack {
                     GoogleMapViewModelBridge(markerViewModel: markerViewModel, goToSkateSpot: {
                         self.isActive = true
+                    }, refreshUserCoords: { (updatedCoords) in
+                        self.userCoords = updatedCoords;
                     })
                     NavigationLink(destination: SkateSpotDetailView(skateSpot: markerViewModel.selectedSkateSpot), isActive: $isActive) { EmptyView() }
                 }
@@ -27,7 +30,7 @@ struct MapView: View {
                     Spacer()
                     VStack{
                         Spacer()
-                        NavigationLink(destination: NewSkateSpotView()) {
+                        NavigationLink(destination: NewSkateSpotView(userCoords: $userCoords)) {
                             Image(systemName: "plus")
                                 .resizable()
                                 .padding(6)
