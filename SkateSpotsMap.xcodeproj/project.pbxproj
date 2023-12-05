@@ -66,6 +66,9 @@
 		D5A017942B1A9AD8008C1D9A /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A017932B1A9AD8008C1D9A /* SearchBarView.swift */; };
 		D5A017982B1A9E64008C1D9A /* TextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A017972B1A9E64008C1D9A /* TextFieldTest.swift */; };
 		D5A0179A2B1AA177008C1D9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A017992B1AA177008C1D9A /* ViewController.swift */; };
+		D5A047D02B1FC83D000A0C61 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A047CF2B1FC83D000A0C61 /* UserView.swift */; };
+		D5A047D22B1FC8A0000A0C61 /* ClipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A047D12B1FC8A0000A0C61 /* ClipsView.swift */; };
+		D5A047D52B1FC8B5000A0C61 /* SpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A047D42B1FC8B5000A0C61 /* SpotsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +153,9 @@
 		D5A017932B1A9AD8008C1D9A /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		D5A017972B1A9E64008C1D9A /* TextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTest.swift; sourceTree = "<group>"; };
 		D5A017992B1AA177008C1D9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5A047CF2B1FC83D000A0C61 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		D5A047D12B1FC8A0000A0C61 /* ClipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsView.swift; sourceTree = "<group>"; };
+		D5A047D42B1FC8B5000A0C61 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +356,7 @@
 		968271C22AF6E222008A5994 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5A047CE2B1FC7FB000A0C61 /* User */,
 				D52A05E02B1AB60200CB69F4 /* Filter */,
 				9160824D2AFE132400893EB5 /* Maps */,
 				916082482AFE10EB00893EB5 /* Feed */,
@@ -391,6 +398,16 @@
 			children = (
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D5A047CE2B1FC7FB000A0C61 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D5A047CF2B1FC83D000A0C61 /* UserView.swift */,
+				D5A047D12B1FC8A0000A0C61 /* ClipsView.swift */,
+				D5A047D42B1FC8B5000A0C61 /* SpotsView.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -584,12 +601,14 @@
 				659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */,
 				57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */,
 				D52A05E42B1AB65700CB69F4 /* StarRatingView.swift in Sources */,
+				D5A047D52B1FC8B5000A0C61 /* SpotsView.swift in Sources */,
 				57266DB02AFAA6C400DD9C69 /* SkateSpotViewModel.swift in Sources */,
 				D52A05F22B1AC99300CB69F4 /* TagTestView.swift in Sources */,
 				D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
 				D52A05E62B1AB88B00CB69F4 /* StarRowView.swift in Sources */,
 				57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */,
+				D5A047D02B1FC83D000A0C61 /* UserView.swift in Sources */,
 				657B429F2AF9F4E800785EBF /* Tag.swift in Sources */,
 				D572715B2B1F32D600E4F6CB /* FilterView.swift in Sources */,
 				969B00F12AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift in Sources */,
@@ -625,6 +644,7 @@
 				D572716B2B1F65DD00E4F6CB /* KickoutView.swift in Sources */,
 				969B00F32AFD77FB00FF3EB7 /* MarkerViewModel.swift in Sources */,
 				57266DE12AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift in Sources */,
+				D5A047D22B1FC8A0000A0C61 /* ClipsView.swift in Sources */,
 				D513A4512AFDCA7700E86B14 /* LeaveReviewView.swift in Sources */,
 				9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */,
 			);
