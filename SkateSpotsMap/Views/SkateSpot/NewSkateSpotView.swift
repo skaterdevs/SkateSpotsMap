@@ -35,16 +35,18 @@ struct NewSkateSpotView: View {
                 
                 Divider()
             }
-            // location selection
-            Text("Location").font(.title3).fontWeight(.semibold)
-            AddSpotGoogleMapViewModel(selectedMarker: $selectedMarker)
-                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 200.00)
-        
-            // name field
-            Text("Name").font(.title3).fontWeight(.semibold)
-            TextField("Name your new spot...", text: $name)
-                .padding()
-                .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
+            VStack{
+                // location selection
+                Text("Location").font(.title3).fontWeight(.semibold)
+                AddSpotGoogleMapViewModel(selectedMarker: $selectedMarker)
+                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 200.00)
+                
+                // name field
+                Text("Name").font(.title3).fontWeight(.semibold)
+                TextField("Name your new spot...", text: $name)
+                    .padding()
+                    .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
+            }
             
             ScrollView(.horizontal) {
                 HStack {
