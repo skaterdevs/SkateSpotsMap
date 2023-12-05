@@ -52,6 +52,11 @@
 		D52A05EB2B1AC50400CB69F4 /* SelectionList in Frameworks */ = {isa = PBXBuildFile; productRef = D52A05EA2B1AC50400CB69F4 /* SelectionList */; };
 		D52A05F22B1AC99300CB69F4 /* TagTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05F12B1AC99300CB69F4 /* TagTestView.swift */; };
 		D52A05F42B1ACDEE00CB69F4 /* RadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05F32B1ACDEE00CB69F4 /* RadiusView.swift */; };
+		D57271592B1F314600E4F6CB /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57271582B1F314600E4F6CB /* FilterButtonView.swift */; };
+		D572715B2B1F32D600E4F6CB /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572715A2B1F32D600E4F6CB /* FilterView.swift */; };
+		D572715D2B1F389C00E4F6CB /* SingleSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572715C2B1F389C00E4F6CB /* SingleSpotView.swift */; };
+		D572715F2B1F3D9F00E4F6CB /* SearchRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572715E2B1F3D9F00E4F6CB /* SearchRatingView.swift */; };
+		D57271612B1F3EF500E4F6CB /* TagsAndFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57271602B1F3EF500E4F6CB /* TagsAndFeaturesView.swift */; };
 		D5A0178C2B1A97F5008C1D9A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178B2B1A97F5008C1D9A /* awsconfiguration.json */; };
 		D5A0178E2B1A97F9008C1D9A /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178D2B1A97F9008C1D9A /* amplifyconfiguration.json */; };
 		D5A017902B1A980D008C1D9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178F2B1A980D008C1D9A /* GoogleService-Info.plist */; };
@@ -129,6 +134,11 @@
 		D52A05E72B1ABD5A00CB69F4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		D52A05F12B1AC99300CB69F4 /* TagTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTestView.swift; sourceTree = "<group>"; };
 		D52A05F32B1ACDEE00CB69F4 /* RadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusView.swift; sourceTree = "<group>"; };
+		D57271582B1F314600E4F6CB /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
+		D572715A2B1F32D600E4F6CB /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		D572715C2B1F389C00E4F6CB /* SingleSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSpotView.swift; sourceTree = "<group>"; };
+		D572715E2B1F3D9F00E4F6CB /* SearchRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRatingView.swift; sourceTree = "<group>"; };
+		D57271602B1F3EF500E4F6CB /* TagsAndFeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsAndFeaturesView.swift; sourceTree = "<group>"; };
 		D5A0178B2B1A97F5008C1D9A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		D5A0178D2B1A97F9008C1D9A /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
 		D5A0178F2B1A980D008C1D9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -189,6 +199,9 @@
 				D5A017932B1A9AD8008C1D9A /* SearchBarView.swift */,
 				D5A017972B1A9E64008C1D9A /* TextFieldTest.swift */,
 				D5A017992B1AA177008C1D9A /* ViewController.swift */,
+				D572715C2B1F389C00E4F6CB /* SingleSpotView.swift */,
+				D572715E2B1F3D9F00E4F6CB /* SearchRatingView.swift */,
+				D57271602B1F3EF500E4F6CB /* TagsAndFeaturesView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -361,6 +374,8 @@
 				D52A05E72B1ABD5A00CB69F4 /* TagView.swift */,
 				D52A05F12B1AC99300CB69F4 /* TagTestView.swift */,
 				D52A05F32B1ACDEE00CB69F4 /* RadiusView.swift */,
+				D57271582B1F314600E4F6CB /* FilterButtonView.swift */,
+				D572715A2B1F32D600E4F6CB /* FilterView.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -556,6 +571,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57271612B1F3EF500E4F6CB /* TagsAndFeaturesView.swift in Sources */,
 				657B42A72AFA032400785EBF /* UserRepository.swift in Sources */,
 				96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */,
 				57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */,
@@ -569,9 +585,12 @@
 				D52A05E62B1AB88B00CB69F4 /* StarRowView.swift in Sources */,
 				57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */,
 				657B429F2AF9F4E800785EBF /* Tag.swift in Sources */,
+				D572715B2B1F32D600E4F6CB /* FilterView.swift in Sources */,
 				969B00F12AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift in Sources */,
+				D57271592B1F314600E4F6CB /* FilterButtonView.swift in Sources */,
 				D52A05F42B1ACDEE00CB69F4 /* RadiusView.swift in Sources */,
 				965283422AF978D100E7299E /* Kickout.swift in Sources */,
+				D572715D2B1F389C00E4F6CB /* SingleSpotView.swift in Sources */,
 				96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */,
 				969B00EF2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift in Sources */,
 				D5A017982B1A9E64008C1D9A /* TextFieldTest.swift in Sources */,
@@ -581,6 +600,7 @@
 				657B42A32AF9F99800785EBF /* Review.swift in Sources */,
 				5747FDC32AFE180100793AAE /* OverviewReviewPartialView.swift in Sources */,
 				D5A0179A2B1AA177008C1D9A /* ViewController.swift in Sources */,
+				D572715F2B1F3D9F00E4F6CB /* SearchRatingView.swift in Sources */,
 				57266DA12AFA9D4200DD9C69 /* SkateSpotDetailView.swift in Sources */,
 				9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */,
 				657B42A52AFA00F500785EBF /* User.swift in Sources */,

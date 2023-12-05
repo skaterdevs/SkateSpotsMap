@@ -25,9 +25,9 @@ struct iOSCheckboxToggleStyle: View {
             })
         }
 }
-Toggle(isOn: $checked) {
-    Text("The label")
-}
+//Toggle(isOn: $checked) {
+//    Text("The label")
+//}
 .toggleStyle(CheckboxStyle())
 struct iOSCheckboxToggleStyle_Previews: PreviewProvider {
     static var previews: some View {

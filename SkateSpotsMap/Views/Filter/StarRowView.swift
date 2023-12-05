@@ -13,19 +13,28 @@ struct StarRowView: View {
             Text("Minimum Rating:")
             Button{
                 
-            }label:{ StarRatingView(filled: 5)}
+            }
+            label:{ StarRatingView(filled: 5)}.padding(2)
+            
             Button{
                 
-            }label:{ StarRatingView(filled: 4)}
+            }
+            label:{ StarRatingView(filled: 4)}.padding(5)
+            
             Button{
                 
-            }label:{ StarRatingView(filled: 3)}
+            }
+            label:{ StarRatingView(filled: 3)}.padding(5)
+            
             Button{
                 
-            }label:{ StarRatingView(filled: 2)}
+            }
+        
+            label:{ StarRatingView(filled: 2)}.padding(5)
+            
             Button{
                 
-            }label:{ StarRatingView(filled: 1)}
+            }label:{ StarRatingView(filled: 1)}.padding(5)
         }
     }
 }
