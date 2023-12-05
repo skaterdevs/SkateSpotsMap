@@ -1,92 +1,40 @@
-//
-//  TagView.swift
-//  EventApp
-//
-//  Created by Ahmadreza on 10/15/21.
-//  Copyright © 2021 Alexani. All rights reserved.
-//
-
 import SwiftUI
 
-struct TagViewItem: Hashable {
-    
-    var title: String
-    var isSelected: Bool
-    
-    static func == (lhs: TagViewItem, rhs: TagViewItem) -> Bool {
-        return lhs.isSelected == rhs.isSelected
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(title)
-        hasher.combine(isSelected)
+struct TagView: View {
+    var body: some View {
+        HStack{
+            ForEach(Tag.allTags, id: \.self){ tag in
+                Button{
+                    //same as feature
+                    //tag.switchStates or something like that which in would address inclusion in filter
+                    //tag.switchColors - keep a record of current colors, switch it to the other colors
+                    //to indicate selection, could be grouped with switchStates
+                }
+                label:{
+                    Text(tag)//need to switch to icons
+                }
+//                .background(.white)
+//                .foregroundColor(.blue)
+                //or
+                .background(.blue)
+                .foregroundColor(.white)
+                .buttonStyle(.bordered)
+                .cornerRadius(10) // 4
+
+                
+//                label:
+//                {
+//                    //could switch to image w/ background
+//                    Text(tag)
+//                        .backgroundColor(.blue)
+//                }
+            }
+        }
     }
 }
 
-struct TagView: View {
-    @State var tags: [TagViewItem]
-    @State private var totalHeight = CGFloat.zero       // << variant for ScrollView/List //    = CGFloat.infinity   // << variant for VStack
-    var body: some View {
-        VStack {
-            GeometryReader { geometry in
-                self.generateContent(in: geometry)
-            }
-        }
-        .frame(height: totalHeight)// << variant for ScrollView/List
-        //.frame(maxHeight: totalHeight) // << variant for VStack
-    }
-
-    private func generateContent(in g: GeometryProxy) -> some View {
-        var width = CGFloat.zero
-        var height = CGFloat.zero
-        return ZStack(alignment: .topLeading) {
-            ForEach(tags.indices) { index in
-                item(for: tags[index].title, isSelected: tags[index].isSelected)
-                    .padding([.horizontal, .vertical], 4)
-                    .alignmentGuide(.leading, computeValue: { d in
-                        if (abs(width - d.width) > g.size.width) {
-                            width = 0
-                            height -= d.height
-                        }
-                        let result = width
-                        if tags[index].title == self.tags.last!.title {
-                            width = 0 //last item
-                        } else {
-                            width -= d.width
-                        }
-                        return result
-                    })
-                    .alignmentGuide(.top, computeValue: {d in
-                        let result = height
-                        if tags[index].title == self.tags.last!.title {
-                            height = 0 // last item
-                        }
-                        return result
-                    }).onTapGesture {
-                        tags[index].isSelected.toggle()
-                    }
-            }
-        }.background(viewHeightReader($totalHeight))
-    }
-
-    private func item(for text: String, isSelected: Bool) -> some View {
-        Text(text)
-            .foregroundColor(isSelected ? .gray:.teal)
-            .padding()
-            .lineLimit(1)
-            .background(isSelected ? .blue:.gray)
-            .frame(height: 36)
-            .cornerRadius(18)
-            .overlay(Capsule().stroke(.blue, lineWidth: 1))
-    }
-
-    private func viewHeightReader(_ binding: Binding<CGFloat>) -> some View {
-        return GeometryReader { geometry -> Color in
-            let rect = geometry.frame(in: .local)
-            DispatchQueue.main.async {
-                binding.wrappedValue = rect.size.height
-            }
-            return .clear
-        }
+struct TagView_Previews: PreviewProvider {
+    static var previews: some View {
+        TagView()
     }
 }

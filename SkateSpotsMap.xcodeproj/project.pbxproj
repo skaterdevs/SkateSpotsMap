@@ -58,7 +58,7 @@
 		D572715F2B1F3D9F00E4F6CB /* SearchRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572715E2B1F3D9F00E4F6CB /* SearchRatingView.swift */; };
 		D57271612B1F3EF500E4F6CB /* TagsAndFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57271602B1F3EF500E4F6CB /* TagsAndFeaturesView.swift */; };
 		D57271632B1F42EC00E4F6CB /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57271622B1F42EC00E4F6CB /* FeatureView.swift */; };
-		D57271672B1F565600E4F6CB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57271662B1F565600E4F6CB /* CustomButton.swift */; };
+		D572716B2B1F65DD00E4F6CB /* KickoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572716A2B1F65DD00E4F6CB /* KickoutView.swift */; };
 		D5A0178C2B1A97F5008C1D9A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178B2B1A97F5008C1D9A /* awsconfiguration.json */; };
 		D5A0178E2B1A97F9008C1D9A /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178D2B1A97F9008C1D9A /* amplifyconfiguration.json */; };
 		D5A017902B1A980D008C1D9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5A0178F2B1A980D008C1D9A /* GoogleService-Info.plist */; };
@@ -142,7 +142,7 @@
 		D572715E2B1F3D9F00E4F6CB /* SearchRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRatingView.swift; sourceTree = "<group>"; };
 		D57271602B1F3EF500E4F6CB /* TagsAndFeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsAndFeaturesView.swift; sourceTree = "<group>"; };
 		D57271622B1F42EC00E4F6CB /* FeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
-		D57271662B1F565600E4F6CB /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D572716A2B1F65DD00E4F6CB /* KickoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickoutView.swift; sourceTree = "<group>"; };
 		D5A0178B2B1A97F5008C1D9A /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		D5A0178D2B1A97F9008C1D9A /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
 		D5A0178F2B1A980D008C1D9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -381,7 +381,7 @@
 				D57271582B1F314600E4F6CB /* FilterButtonView.swift */,
 				D572715A2B1F32D600E4F6CB /* FilterView.swift */,
 				D57271622B1F42EC00E4F6CB /* FeatureView.swift */,
-				D57271662B1F565600E4F6CB /* CustomButton.swift */,
+				D572716A2B1F65DD00E4F6CB /* KickoutView.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -581,7 +581,6 @@
 				657B42A72AFA032400785EBF /* UserRepository.swift in Sources */,
 				96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */,
 				57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */,
-				D57271672B1F565600E4F6CB /* CustomButton.swift in Sources */,
 				659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */,
 				57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */,
 				D52A05E42B1AB65700CB69F4 /* StarRatingView.swift in Sources */,
@@ -623,6 +622,7 @@
 				D52A05E82B1ABD5A00CB69F4 /* TagView.swift in Sources */,
 				57266DB42AFAA6D900DD9C69 /* UserViewModel.swift in Sources */,
 				9160824C2AFE117900893EB5 /* FeedView.swift in Sources */,
+				D572716B2B1F65DD00E4F6CB /* KickoutView.swift in Sources */,
 				969B00F32AFD77FB00FF3EB7 /* MarkerViewModel.swift in Sources */,
 				57266DE12AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift in Sources */,
 				D513A4512AFDCA7700E86B14 /* LeaveReviewView.swift in Sources */,

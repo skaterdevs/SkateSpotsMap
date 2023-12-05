@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RadiusView: View {
-    @State private var distance = 5.0
-
+    @State private var distance = 20.0
+    //just needs a way to add to filter
     var body: some View {
         VStack{
             Slider(

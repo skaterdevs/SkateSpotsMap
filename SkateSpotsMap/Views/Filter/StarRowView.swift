@@ -11,6 +11,7 @@ struct StarRowView: View {
     var body: some View{
         VStack{
             Text("Minimum Rating:")
+            //Need a way to add to filters
             Button{
                 
             }

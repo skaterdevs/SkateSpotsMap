@@ -9,30 +9,37 @@ import SwiftUI
 
 
 struct FeatureView: View {
-    //replace with features
-    var selected : String
-    var features = Feature.allFeatures
+    @State private var allFeatures = Feature.allFeatures
+    var backColor = Color.white //both temporary
+    var textColor = Color.blue
     var body: some View {
-//        HStack(spacing: 0) {
-//            ForEach(features, id: \.self) {feature in
-//                if feature != selected{
-//                    Image(systemName:"star.fill")
-//                }
-//                else{
-//                    Image(systemName:"star")
-//                }
-//                
-//            }
-////            ForEach(filled..<5, id: \.self) {_ in
-////                return Image(systemName:"star")
-////            }
+        HStack{
+            ForEach(allFeatures, id: \.self){ feature in
+                Button{
+                    //same as feature
+                    //feature.switchStates or something like that which in would address inclusion in filter
+                    //feature.switchColors - keep a record of current colors, switch it to the other colors
+                    //to indicate selection, could be grouped with switchStates
+                }
+                label:{
+                    Text(feature)//need to switch to icons
+                }
+                .background(backColor)
+                .foregroundColor(textColor)
+                .buttonStyle(.bordered)
+                .cornerRadius(8)
+//                    or
+//                .background(.white)
+//                .foregroundColor(.blue)
+            }
         }
+        
     }
 }
 
 struct FeatureView_Previews: PreviewProvider {
     static var previews: some View {
-        FeatureView(selected:"goodbye")
+        FeatureView()
     }
 }
 
