@@ -29,13 +29,14 @@
 		657B42A52AFA00F500785EBF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A42AFA00F500785EBF /* User.swift */; };
 		657B42A72AFA032400785EBF /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A62AFA032400785EBF /* UserRepository.swift */; };
 		659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659513612AFD9260004DCCF5 /* GoogleDistance.swift */; };
+		65B4EB852B1EC72F00A83E05 /* FirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B4EB842B1EC72F00A83E05 /* FirebaseTests.swift */; };
+		65B4EB872B1ECB9D00A83E05 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B4EB862B1ECB9D00A83E05 /* ModelTests.swift */; };
 		65FDF93A2AFDC113005DEEED /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDF9392AFDC113005DEEED /* LocationManager.swift */; };
 		9160824C2AFE117900893EB5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9160824B2AFE117900893EB5 /* FeedView.swift */; };
 		9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */; };
 		9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE1A2AF35F5700F014C5 /* ContentView.swift */; };
 		9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636CE1C2AF35F6300F014C5 /* Assets.xcassets */; };
 		9636CE202AF35F6300F014C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636CE1F2AF35F6300F014C5 /* Preview Assets.xcassets */; };
-		9636CE2A2AF35F6500F014C5 /* SkateSpotsMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE292AF35F6500F014C5 /* SkateSpotsMapTests.swift */; };
 		965283402AF977C800E7299E /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652833F2AF977C800E7299E /* Feature.swift */; };
 		965283422AF978D100E7299E /* Kickout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965283412AF978D100E7299E /* Kickout.swift */; };
 		96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96645AE12AF492B70017C298 /* GoogleService-Info.plist */; };
@@ -92,6 +93,8 @@
 		657B42A42AFA00F500785EBF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		657B42A62AFA032400785EBF /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		659513612AFD9260004DCCF5 /* GoogleDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDistance.swift; sourceTree = "<group>"; };
+		65B4EB842B1EC72F00A83E05 /* FirebaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTests.swift; sourceTree = "<group>"; };
+		65B4EB862B1ECB9D00A83E05 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		65FDF9392AFDC113005DEEED /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		9160824B2AFE117900893EB5 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		9636CE152AF35F5700F014C5 /* SkateSpotsMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateSpotsMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +103,6 @@
 		9636CE1C2AF35F6300F014C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9636CE1F2AF35F6300F014C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9636CE252AF35F6500F014C5 /* SkateSpotsMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkateSpotsMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9636CE292AF35F6500F014C5 /* SkateSpotsMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotsMapTests.swift; sourceTree = "<group>"; };
 		9636CE2F2AF35F6500F014C5 /* SkateSpotsMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkateSpotsMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9636CE422AF368ED00F014C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9652833F2AF977C800E7299E /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
@@ -262,7 +264,8 @@
 		9636CE282AF35F6500F014C5 /* SkateSpotsMapTests */ = {
 			isa = PBXGroup;
 			children = (
-				9636CE292AF35F6500F014C5 /* SkateSpotsMapTests.swift */,
+				65B4EB842B1EC72F00A83E05 /* FirebaseTests.swift */,
+				65B4EB862B1ECB9D00A83E05 /* ModelTests.swift */,
 			);
 			path = SkateSpotsMapTests;
 			sourceTree = "<group>";
@@ -546,7 +549,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9636CE2A2AF35F6500F014C5 /* SkateSpotsMapTests.swift in Sources */,
+				65B4EB852B1EC72F00A83E05 /* FirebaseTests.swift in Sources */,
+				65B4EB872B1ECB9D00A83E05 /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
