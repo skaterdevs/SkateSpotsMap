@@ -14,7 +14,11 @@ struct User: Identifiable, Codable, Comparable {
     @DocumentID var id: String?
     var username: String
     var avatar: String
-    var spots: [SkateSpot]
+    var spots: [String] // UUIDs
+    var clips: [String] // UUIDs
+    var followers: [String] // UUIDs
+    var following: [String] // UUIDs
+    var interactions: [(String, String)] // UUIDs + Interaction
   
     // MARK: Codable
     enum CodingKeys: String, CodingKey {
@@ -22,6 +26,10 @@ struct User: Identifiable, Codable, Comparable {
         case username
         case avatar = "photo"
         case spots
+        case clips
+        case followers
+        case following
+        case interactions
     }
   
     // MARK: Identifiable
@@ -38,11 +46,29 @@ struct User: Identifiable, Codable, Comparable {
         id: "user1",
         username: "leftovercode",
         avatar: "fake.picture",
-        spots: [SkateSpot.example, SkateSpot.example2])
+        spots: [SkateSpot.example.id ?? "", SkateSpot.example2.id ?? ""],
+        clips: [],
+        followers: [],
+        following: [],
+        interactions: [])
     
     static let example2 = User(
       id: "user2",
       username: "leinard0",
       avatar: "better.picture",
-      spots: [SkateSpot.example3])
+      spots: [SkateSpot.example3.id ?? ""],
+      clips: [],
+      followers: [],
+      following: [],
+      interactions: [])
+    
+    static let example3 = User(
+      id: "user3",
+      username: "sk8trh8tr",
+      avatar: "better.picture",
+      spots: [],
+      clips: [],
+      followers: [],
+      following: [User.example2.id ?? ""],
+      interactions: [])
 }
