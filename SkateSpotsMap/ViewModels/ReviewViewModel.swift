@@ -51,7 +51,7 @@ class ReviewViewModel: ObservableObject {
         skateSpotRepository.update(skateSpot)
     }
 
-    private func updateKickoutVotes(spot: SkateSpot, kickout: String, x: Int) -> SkateSpot {
+    func updateKickoutVotes(spot: SkateSpot, kickout: String, x: Int) -> SkateSpot {
         var spot = spot
         switch kickout {
         case "High":
@@ -65,7 +65,8 @@ class ReviewViewModel: ObservableObject {
         }
         return spot
     }
-    private func calculateKickout(_ spot: SkateSpot) -> String {
+    
+    func calculateKickout(_ spot: SkateSpot) -> String {
         if spot.low_kickout > (max(spot.medium_kickout,spot.high_kickout)+thresh) {
             return Kickout.low.rawValue
         } else if spot.medium_kickout > (max(spot.low_kickout,spot.high_kickout)+thresh) {

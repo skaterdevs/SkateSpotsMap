@@ -10,36 +10,36 @@ import XCTest
 
 final class ViewModelTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-        var changeling = SkateSpot.example3
-        changeling.id = "spot1"
-        XCTAssert(SkateSpot.example != SkateSpot.example2)
-        XCTAssert(SkateSpot.example != SkateSpot.example3)
-        XCTAssert(SkateSpot.example2 != SkateSpot.example3)
-        XCTAssert(SkateSpot.example == SkateSpot.example)
-        XCTAssert(SkateSpot.example == changeling)
-        changeling.id = nil
-        XCTAssert(SkateSpot.example3 == changeling)
+    
+    // MARK: SkateSpot View Model
+    // No tests as everything is either firebase or async
+    
+    // MARK: Review View Model
+    func testUpdateKickoutVotes() {
+        
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testCalculateKickout() {
+        
     }
-
+    
+    // MARK: User View Model
+    // No tests as everything is firebase
+    
+    // MARK: Location Manager
+    // No test because setting testing locations is inaccurate
+    
+    // MARK: Google Map View Model
+    // Nothing to test
+    
+    // MARK: Marker View Model
+    // Nothing to test
+    
+    // MARK: Add Spot Google Map View Model
+    // No tests as everything is UI
 }
