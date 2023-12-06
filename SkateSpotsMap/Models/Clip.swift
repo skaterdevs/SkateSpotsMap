@@ -18,6 +18,7 @@ struct Clip: Identifiable, Comparable, Codable {
     var location: String
     var likes: Int
     var dislikes: Int
+    var timestamp: Timestamp
     
     // MARK: Codable
     enum CodingKeys: String, CodingKey {
@@ -27,6 +28,7 @@ struct Clip: Identifiable, Comparable, Codable {
         case location
         case likes
         case dislikes
+        case timestamp
     }
     
     // MARK: Identifiable
@@ -35,6 +37,7 @@ struct Clip: Identifiable, Comparable, Codable {
     }
     
     static func <(lhs: Clip, rhs: Clip) -> Bool {
-        return lhs.likes < rhs.likes
+        // The left operand is smaller than the right operand
+        return lhs.timestamp.compare(rhs.timestamp) == ComparisonResult.orderedAscending
     }
 }
