@@ -14,11 +14,12 @@ struct User: Identifiable, Codable, Comparable {
     @DocumentID var id: String?
     var username: String
     var avatar: String
-    var spots: [String] // UUIDs
-    var clips: [String] // UUIDs
-    var followers: [String] // UUIDs
-    var following: [String] // UUIDs
-    var interactions: [(String, String)] // UUIDs + Interaction
+    var spots: [String] // SkateSpot UUIDs
+    var clips: [String] // Clip UUIDs
+    var followers: [String] // User UUIDs
+    var following: [String] // User UUIDs
+    var liked: [String] // Clip UUID
+    var disliked: [String] // Clip UUID
   
     // MARK: Codable
     enum CodingKeys: String, CodingKey {
@@ -29,12 +30,13 @@ struct User: Identifiable, Codable, Comparable {
         case clips
         case followers
         case following
-        case interactions
+        case liked
+        case disliked
     }
   
     // MARK: Identifiable
     static func ==(lhs: User, rhs: User) -> Bool {
-        return lhs.username == rhs.username
+        return lhs.id == rhs.id
     }
 
     static func <(lhs: User, rhs: User) -> Bool {
@@ -50,7 +52,8 @@ struct User: Identifiable, Codable, Comparable {
         clips: [],
         followers: [],
         following: [],
-        interactions: [])
+        liked: [],
+        disliked: [])
     
     static let example2 = User(
       id: "user2",
@@ -60,7 +63,8 @@ struct User: Identifiable, Codable, Comparable {
       clips: [],
       followers: [],
       following: [],
-      interactions: [])
+      liked: [],
+      disliked: [])
     
     static let example3 = User(
       id: "user3",
@@ -70,5 +74,6 @@ struct User: Identifiable, Codable, Comparable {
       clips: [],
       followers: [],
       following: [User.example2.id ?? ""],
-      interactions: [])
+      liked: [],
+      disliked: [])
 }
