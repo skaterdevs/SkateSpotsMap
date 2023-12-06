@@ -67,7 +67,6 @@ struct User: Identifiable, Codable, Comparable {
       disliked: [])
     
     static let example3 = User(
-      id: "user3",
       username: "sk8trh8tr",
       avatar: "better.picture",
       spots: [],
