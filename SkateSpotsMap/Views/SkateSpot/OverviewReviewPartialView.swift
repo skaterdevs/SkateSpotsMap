@@ -34,7 +34,3 @@ struct OverviewReviewPartialView: View {
         Divider().padding(5)
     }
 }
-
-#Preview {
-    OverviewReviewPartialView(skateSpot: SkateSpot.example, isOverview: false)
-}
