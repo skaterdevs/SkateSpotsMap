@@ -83,9 +83,8 @@ struct SkateSpot: Identifiable, Comparable, Codable {
         reviews: [Review.example3, Review.example4])
 
     static let example3 = SkateSpot(
-        id: "spot3",
         name: "Point State Park",
-        location: GeoPoint(latitude: 200, longitude: -1),
+        location: GeoPoint(latitude: 90, longitude: -1),
         photos: ["polluted.landscape"],
         features: [Feature.curbs.rawValue],
         overall_kickout: Kickout.high.rawValue,
