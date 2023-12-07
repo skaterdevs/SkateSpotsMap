@@ -62,7 +62,24 @@ final class ViewModelTests: XCTestCase {
     }
     
     // MARK: User View Model
-    // No tests as everything is firebase
+    func testFindUser() {
+        var target = findUser(User.example.id ?? "")
+        XCTAssertEqual(target, User.example)
+        target = findUser(User.example2.id ?? "")
+        XCTAssertEqual(target, User.example2)
+        target = findUser(User.example3.id ?? "")
+        XCTAssertNil(target)
+    }
+    
+    // Same func in UserViewModel.swift but uses list of test users
+    func findUser(_ id: String) -> User? {
+        let users = [User.example, User.example2, User.example3]
+        if let user = users.first(where: {$0.id == id}) {
+            return user
+        } else {
+            return nil
+        }
+    }
     
     // MARK: Location Manager
     // No test because unable to set precise coordiates for testing.
