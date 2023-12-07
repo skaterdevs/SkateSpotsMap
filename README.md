@@ -55,3 +55,30 @@ GitHub now requires tokens to authenticate whenever making any changes to a repo
 #### Amplify
 In order to use AWS S3 (storage), we must interface with it through a package called Amplify. This has already been installed and set up. However, if you just do a fresh clone, it will not build as two files are missing. These files will be provided to you upon request.
 
+
+# Testing Issues
+## Firebase Usage and Data Repositories
+No unit tests were writting for functions that directly dealt with Firebase (including the data repositories) as testing proved difficult due to the time needed to communicate with Firebase itself. Since none of the functions were explicitly async or used async functions, testing in async wasn't possible. Additionally, using system delays to provide time for Firebase communication caused XCTAsserts to be meaningless (passing when it should fail). As such, these activites (i.e. creating Firebase objects or updating them) were testing manually using the Firebase Web UI and the device simulator.
+
+The following files contain firebase functions:
+1. SkateSpotRepository.swift
+2. UserRepository.swift
+3. SkateSpotViewModel.swift (add & destroy)
+4. ReviewViewModel.swift (add & destroy)
+5. UserViewModel.swift (add & destroy)
+
+## Core Location
+Functions involving Core Location were left without unit tests as we were unable to find a way to artifically set precise latitude and longitude for unit testing purposes. However, it was possible to set precise latitude and longitude for the device simulator, as such, function testing for core location was done manually using the simulator.
+
+The following files contain functions that specifically use Core Location:
+1. LocationManager.swift
+2. SkateSpotViewModel.swift (getDist)
+
+## UI
+For the purposes of this project, no UI tests were implemented meaning any functionality in View files didn't receive unit tests, but were instead testing manually.
+
+Additionally, some ViewModel files contained functions that dealt specifically with UI features and as such were left without unit tests and were tested manually. The following View Model files contain UI functions:
+1. SkateSpotViewModel.swift (appleMapsRedirect)
+2. GoogleMapViewModel
+3. MarkerViewModel
+4. AddSpotGoogleMapViewModel
