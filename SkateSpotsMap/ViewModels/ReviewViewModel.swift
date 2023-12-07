@@ -10,8 +10,6 @@ import Foundation
 
 class ReviewViewModel: ObservableObject {
     private var skateSpotRepository = SkateSpotRepository()
-    // threshhold for which kickoutlevel to assign to a spot
-    private let thresh = 1
 
     init() {
     }
@@ -67,11 +65,11 @@ class ReviewViewModel: ObservableObject {
     }
     
     func calculateKickout(_ spot: SkateSpot) -> String {
-        if spot.low_kickout > (max(spot.medium_kickout,spot.high_kickout)+thresh) {
+        if spot.low_kickout > (max(spot.medium_kickout,spot.high_kickout)) {
             return Kickout.low.rawValue
-        } else if spot.medium_kickout > (max(spot.low_kickout,spot.high_kickout)+thresh) {
+        } else if spot.medium_kickout > (max(spot.low_kickout,spot.high_kickout)) {
             return Kickout.medium.rawValue
-        } else if spot.high_kickout > (max(spot.low_kickout,spot.medium_kickout)+thresh) {
+        } else if spot.high_kickout > (max(spot.low_kickout,spot.medium_kickout)) {
             return Kickout.high.rawValue
         }
         return spot.overall_kickout

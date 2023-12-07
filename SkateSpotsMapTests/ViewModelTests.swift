@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import SkateSpotsMap
 
 final class ViewModelTests: XCTestCase {
@@ -17,22 +18,55 @@ final class ViewModelTests: XCTestCase {
     }
     
     // MARK: SkateSpot View Model
-    // No tests as everything is either firebase or async
+    // No tests as everything is either firebase or using core location unable to set precise coords for testing
+    // Manually tested using device simulator
     
     // MARK: Review View Model
-    func testUpdateKickoutVotes() {
+    func testCalculateOverallKickout() {
+        let reviewVM = ReviewViewModel()
+        var spot = SkateSpot.example3
+        XCTAssertEqual(spot.overall_kickout, Kickout.high.rawValue)
+        XCTAssertEqual(spot.high_kickout, 1)
+        XCTAssertEqual(spot.medium_kickout, 0)
+        XCTAssertEqual(spot.low_kickout, 0)
         
-    }
-    
-    func testCalculateKickout() {
+        spot = reviewVM.updateKickoutVotes(spot: spot, kickout: Kickout.medium.rawValue, x: 1)
+        spot.overall_kickout = reviewVM.calculateKickout(spot)
+        XCTAssertEqual(spot.overall_kickout, Kickout.high.rawValue)
+        XCTAssertEqual(spot.high_kickout, 1)
+        XCTAssertEqual(spot.medium_kickout, 1)
+        XCTAssertEqual(spot.low_kickout, 0)
         
+        spot = reviewVM.updateKickoutVotes(spot: spot, kickout: Kickout.medium.rawValue, x: 1)
+        spot.overall_kickout = reviewVM.calculateKickout(spot)
+        XCTAssertEqual(spot.overall_kickout, Kickout.medium.rawValue)
+        XCTAssertEqual(spot.high_kickout, 1)
+        XCTAssertEqual(spot.medium_kickout, 2)
+        XCTAssertEqual(spot.low_kickout, 0)
+        
+        spot = reviewVM.updateKickoutVotes(spot: spot, kickout: Kickout.low.rawValue, x: 1)
+        spot = reviewVM.updateKickoutVotes(spot: spot, kickout: Kickout.low.rawValue, x: 1)
+        spot.overall_kickout = reviewVM.calculateKickout(spot)
+        XCTAssertEqual(spot.overall_kickout, Kickout.medium.rawValue)
+        XCTAssertEqual(spot.high_kickout, 1)
+        XCTAssertEqual(spot.medium_kickout, 2)
+        XCTAssertEqual(spot.low_kickout, 2)
+        
+        spot = reviewVM.updateKickoutVotes(spot: spot, kickout: Kickout.medium.rawValue, x: -1)
+        spot.overall_kickout = reviewVM.calculateKickout(spot)
+        XCTAssertNotEqual(spot.overall_kickout, Kickout.medium.rawValue) // Sanity
+        XCTAssertEqual(spot.overall_kickout, Kickout.low.rawValue)
+        XCTAssertEqual(spot.high_kickout, 1)
+        XCTAssertEqual(spot.medium_kickout, 1)
+        XCTAssertEqual(spot.low_kickout, 2)
     }
     
     // MARK: User View Model
     // No tests as everything is firebase
     
     // MARK: Location Manager
-    // No test because setting testing locations is inaccurate
+    // No test because unable to set precise coordiates for testing.
+    // Manually tested using device simulator
     
     // MARK: Google Map View Model
     // Nothing to test
