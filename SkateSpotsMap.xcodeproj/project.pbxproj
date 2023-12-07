@@ -52,6 +52,7 @@
 		D52A05EB2B1AC50400CB69F4 /* SelectionList in Frameworks */ = {isa = PBXBuildFile; productRef = D52A05EA2B1AC50400CB69F4 /* SelectionList */; };
 		D52A05F22B1AC99300CB69F4 /* TagTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05F12B1AC99300CB69F4 /* TagTestView.swift */; };
 		D52A05F42B1ACDEE00CB69F4 /* RadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A05F32B1ACDEE00CB69F4 /* RadiusView.swift */; };
+		D55B25722B222F69003F07F5 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B25712B222F69003F07F5 /* SearchViewModel.swift */; };
 		D57271592B1F314600E4F6CB /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57271582B1F314600E4F6CB /* FilterButtonView.swift */; };
 		D572715B2B1F32D600E4F6CB /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572715A2B1F32D600E4F6CB /* FilterView.swift */; };
 		D572715D2B1F389C00E4F6CB /* SingleSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D572715C2B1F389C00E4F6CB /* SingleSpotView.swift */; };
@@ -69,6 +70,8 @@
 		D5A047D02B1FC83D000A0C61 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A047CF2B1FC83D000A0C61 /* UserView.swift */; };
 		D5A047D22B1FC8A0000A0C61 /* ClipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A047D12B1FC8A0000A0C61 /* ClipsView.swift */; };
 		D5A047D52B1FC8B5000A0C61 /* SpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A047D42B1FC8B5000A0C61 /* SpotsView.swift */; };
+		D5CD47692B2220AA00640B0E /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD47682B2220AA00640B0E /* TabView.swift */; };
+		D5CD476E2B2221A700640B0E /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CD476D2B2221A700640B0E /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +142,7 @@
 		D52A05E72B1ABD5A00CB69F4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		D52A05F12B1AC99300CB69F4 /* TagTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTestView.swift; sourceTree = "<group>"; };
 		D52A05F32B1ACDEE00CB69F4 /* RadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusView.swift; sourceTree = "<group>"; };
+		D55B25712B222F69003F07F5 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		D57271582B1F314600E4F6CB /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
 		D572715A2B1F32D600E4F6CB /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		D572715C2B1F389C00E4F6CB /* SingleSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSpotView.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		D5A047CF2B1FC83D000A0C61 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		D5A047D12B1FC8A0000A0C61 /* ClipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsView.swift; sourceTree = "<group>"; };
 		D5A047D42B1FC8B5000A0C61 /* SpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotsView.swift; sourceTree = "<group>"; };
+		D5CD47682B2220AA00640B0E /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		D5CD476D2B2221A700640B0E /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +355,7 @@
 				969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */,
 				969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */,
 				012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */,
+				D55B25712B222F69003F07F5 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -356,6 +363,7 @@
 		968271C22AF6E222008A5994 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D5CD476A2B22216B00640B0E /* Tests */,
 				D5A047CE2B1FC7FB000A0C61 /* User */,
 				D52A05E02B1AB60200CB69F4 /* Filter */,
 				9160824D2AFE132400893EB5 /* Maps */,
@@ -408,6 +416,15 @@
 				D5A047D42B1FC8B5000A0C61 /* SpotsView.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		D5CD476A2B22216B00640B0E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D5CD47682B2220AA00640B0E /* TabView.swift */,
+				D5CD476D2B2221A700640B0E /* Test.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -621,6 +638,7 @@
 				D5A017982B1A9E64008C1D9A /* TextFieldTest.swift in Sources */,
 				9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */,
 				57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */,
+				D5CD476E2B2221A700640B0E /* Test.swift in Sources */,
 				D513A4532AFDCB4C00E86B14 /* ReviewRowView.swift in Sources */,
 				657B42A32AF9F99800785EBF /* Review.swift in Sources */,
 				5747FDC32AFE180100793AAE /* OverviewReviewPartialView.swift in Sources */,
@@ -643,9 +661,11 @@
 				9160824C2AFE117900893EB5 /* FeedView.swift in Sources */,
 				D572716B2B1F65DD00E4F6CB /* KickoutView.swift in Sources */,
 				969B00F32AFD77FB00FF3EB7 /* MarkerViewModel.swift in Sources */,
+				D55B25722B222F69003F07F5 /* SearchViewModel.swift in Sources */,
 				57266DE12AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift in Sources */,
 				D5A047D22B1FC8A0000A0C61 /* ClipsView.swift in Sources */,
 				D513A4512AFDCA7700E86B14 /* LeaveReviewView.swift in Sources */,
+				D5CD47692B2220AA00640B0E /* TabView.swift in Sources */,
 				9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

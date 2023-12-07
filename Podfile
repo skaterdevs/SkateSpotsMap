@@ -11,6 +11,7 @@ target 'SkateSpotsMap' do
   pod 'Amplify'
   pod 'AmplifyPlugins/AWSS3StoragePlugin'
   pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
+
 end
 
 workspace 'SkateSpotsMap'

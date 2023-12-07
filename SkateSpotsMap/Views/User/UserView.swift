@@ -20,7 +20,7 @@ struct UserView: View {
                 Text("Follow")
             }
             ClipsView()
-            SpotsView()
+//            SpotsView()
         }
     }
 }
