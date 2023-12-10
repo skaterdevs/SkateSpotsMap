@@ -26,6 +26,8 @@
 		57266DB42AFAA6D900DD9C69 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DB32AFAA6D900DD9C69 /* UserViewModel.swift */; };
 		57266DE12AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DE02AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift */; };
 		5747FDC32AFE180100793AAE /* OverviewReviewPartialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747FDC22AFE180100793AAE /* OverviewReviewPartialView.swift */; };
+		575316312B26131F003544B8 /* ClipRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575316302B26131F003544B8 /* ClipRowView.swift */; };
+		575316332B261724003544B8 /* ClipUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575316322B261724003544B8 /* ClipUploadView.swift */; };
 		657B429F2AF9F4E800785EBF /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B429E2AF9F4E800785EBF /* Tag.swift */; };
 		657B42A12AF9F79700785EBF /* Reviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A02AF9F79700785EBF /* Reviewer.swift */; };
 		657B42A32AF9F99800785EBF /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A22AF9F99800785EBF /* Review.swift */; };
@@ -94,6 +96,8 @@
 		57266DB32AFAA6D900DD9C69 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		57266DE02AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotOverviewView.swift; sourceTree = "<group>"; };
 		5747FDC22AFE180100793AAE /* OverviewReviewPartialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewReviewPartialView.swift; sourceTree = "<group>"; };
+		575316302B26131F003544B8 /* ClipRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipRowView.swift; sourceTree = "<group>"; };
+		575316322B261724003544B8 /* ClipUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipUploadView.swift; sourceTree = "<group>"; };
 		657B429E2AF9F4E800785EBF /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		657B42A02AF9F79700785EBF /* Reviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviewer.swift; sourceTree = "<group>"; };
 		657B42A22AF9F99800785EBF /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				9160824B2AFE117900893EB5 /* FeedView.swift */,
+				575316302B26131F003544B8 /* ClipRowView.swift */,
+				575316322B261724003544B8 /* ClipUploadView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -538,10 +544,12 @@
 				57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */,
 				D513A4532AFDCB4C00E86B14 /* ReviewRowView.swift in Sources */,
 				657B42A32AF9F99800785EBF /* Review.swift in Sources */,
+				575316312B26131F003544B8 /* ClipRowView.swift in Sources */,
 				5747FDC32AFE180100793AAE /* OverviewReviewPartialView.swift in Sources */,
 				57266DA12AFA9D4200DD9C69 /* SkateSpotDetailView.swift in Sources */,
 				9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */,
 				657B42A52AFA00F500785EBF /* User.swift in Sources */,
+				575316332B261724003544B8 /* ClipUploadView.swift in Sources */,
 				57266D9F2AFA9D3A00DD9C69 /* SkateSpotRowView.swift in Sources */,
 				01678CA62B1FED870010A29D /* ClipsRepository.swift in Sources */,
 				57266DA32AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift in Sources */,

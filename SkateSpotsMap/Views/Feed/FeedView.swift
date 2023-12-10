@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct FeedView: View {
+    @ObservedObject var clipViewModel = ClipsRepository()
+    
+    @State var allClips = [Clip]()
+    
     var body: some View {
-        Text("Feed Coming Soon...")
-            .font(.headline)
+        ScrollView(.vertical) {
+            VStack {
+                Text("Spot Feed")
+                    .font(.title)
+                ForEach(allClips) { clip in
+                    ClipRowView(clip: clip)
+                }
+            }
+        }.onAppear{allClips = clipViewModel.clips}
     }
 }
 
