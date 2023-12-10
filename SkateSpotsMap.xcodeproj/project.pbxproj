@@ -59,6 +59,7 @@
 		D558C9802B266F090054FBBD /* RadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C97F2B266F090054FBBD /* RadiusView.swift */; };
 		D558C9822B266F1B0054FBBD /* TagButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9812B266F1B0054FBBD /* TagButtonView.swift */; };
 		D558C9842B266F280054FBBD /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9832B266F280054FBBD /* TagView.swift */; };
+		D55A60652B26728700AB1C13 /* SearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A60642B26728700AB1C13 /* SearchRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		D558C97F2B266F090054FBBD /* RadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusView.swift; sourceTree = "<group>"; };
 		D558C9812B266F1B0054FBBD /* TagButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonView.swift; sourceTree = "<group>"; };
 		D558C9832B266F280054FBBD /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		D55A60642B26728700AB1C13 /* SearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				57266D9C2AFA9D2F00DD9C69 /* SearchSpotsView.swift */,
+				D55A60642B26728700AB1C13 /* SearchRowView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */,
 				659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */,
 				57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */,
+				D55A60652B26728700AB1C13 /* SearchRowView.swift in Sources */,
 				57266DB02AFAA6C400DD9C69 /* SkateSpotViewModel.swift in Sources */,
 				D558C97A2B266EBF0054FBBD /* FilterButtonView.swift in Sources */,
 				D558C9722B266E200054FBBD /* SearchViewModel.swift in Sources */,
