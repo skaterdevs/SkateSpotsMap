@@ -17,14 +17,16 @@ struct SearchSpotsView: View {
             return skateSpotViewModel.skate_spots.filter { $0.name.lowercased().contains(searchText.lowercased()) }
         }
     }
+    
     var body: some View {
         //Will need to be separated into SpotRowView at a later point
+        //TextField("Search: ", text:$searchText)
         VStack {
-            TextField("Search: ", text:$searchText)
             NavigationView {
                 List{
-                    ForEach (searchResults) { skateSpot in
-                        SkateSpotRowView(skateSpot: skateSpot)
+                    ForEach (skateSpotViewModel.skate_spots) { skateSpot in
+                        SearchRowView(skateSpot: skateSpot)
+                        //Text(skateSpot.name)
                     }
                 }
             }

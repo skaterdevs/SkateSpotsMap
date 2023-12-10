@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchRowView: View {
     var skateSpot : SkateSpot
+    //let frameWidth = UIScreen.main.bounds.width
     var body: some View {
         NavigationLink(
             destination: SkateSpotDetailView(skateSpot: skateSpot),
@@ -18,7 +19,7 @@ struct SearchRowView: View {
                         Text(skateSpot.name)
                             .fontWeight(.bold)
                             .font(.title3)
-                        SearchRatingView(skateSpot:skateSpot)
+                        SearchRatingView(skateSpot:skateSpot).padding(.top, -10)
                         SearchTagsView(skateSpot: skateSpot)
                         SearchFeaturesView(skateSpot: skateSpot)
                     }
@@ -32,7 +33,11 @@ struct SearchRowView: View {
                             let mapsURL = URL(string: "maps://?dirflg=w&saddr=&daddr=\(lat),\(long)")
                             UIApplication.shared.open(mapsURL!,options: [:],completionHandler: nil)
                         } label: {
-                            DirectionsButtonView()
+                            Image(systemName: "arrow.triangle.turn.up.right.diamond.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 40)
+                                .foregroundStyle(.green)
                         }.buttonStyle(.plain)
                     }
                 }
@@ -43,6 +48,6 @@ struct SearchRowView: View {
 
 //struct SearchRowView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        SearchRowView()
+//        SearchRowView(skateSpot : SkateSpotRepository().skate_spots[0])
 //    }
 //}

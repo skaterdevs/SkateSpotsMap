@@ -9,11 +9,13 @@ import SwiftUI
 
 struct DirectionsButtonView: View {
     var body: some View {
-        Image(systemName: "arrow.triangle.turn.up.right.diamond.fill")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(width: 40)
-            .foregroundStyle(.green)
+//        Image(systemName: "arrow.triangle.turn.up.right.diamond.fill")
+//            .resizable()
+//            .aspectRatio(contentMode: .fit)
+//            .frame(width: 40)
+//            .foregroundStyle(.red)
+        
+        Text("????")
     }
 }
 

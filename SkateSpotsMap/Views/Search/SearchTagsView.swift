@@ -9,7 +9,9 @@ import SwiftUI
 
 struct SearchTagsView: View {
     var skateSpot : SkateSpot
+
     var body: some View {
+
         HStack{
             Text("Tags:").font(.system(size:14)).multilineTextAlignment(.leading)
             //ForEach(skateSpot.tags, id: \.self){ tag in

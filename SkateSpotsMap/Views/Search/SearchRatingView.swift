@@ -10,7 +10,8 @@ import SwiftUI
 struct SearchRatingView: View {
     var skateSpot : SkateSpot
     var body: some View {
-        HStack(spacing: 4){
+        HStack(){
+
             var rating_string = String(format: "%.2f", skateSpot.rating_avg)
             Text(rating_string).multilineTextAlignment(.leading)
                 .font(.system(size:10))
