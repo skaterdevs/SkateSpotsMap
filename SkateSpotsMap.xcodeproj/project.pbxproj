@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		012C7CEF2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */; };
-		1546C075571D35341768FB36 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */; };
 		3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */; };
-		530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */; };
 		57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D962AFA9D1200DD9C69 /* MapView.swift */; };
 		57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9A2AFA9D2700DD9C69 /* NewSkateSpotView.swift */; };
 		57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9C2AFA9D2F00DD9C69 /* SearchSpotsView.swift */; };
@@ -39,7 +37,6 @@
 		9636CE202AF35F6300F014C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636CE1F2AF35F6300F014C5 /* Preview Assets.xcassets */; };
 		965283402AF977C800E7299E /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652833F2AF977C800E7299E /* Feature.swift */; };
 		965283422AF978D100E7299E /* Kickout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965283412AF978D100E7299E /* Kickout.swift */; };
-		96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96645AE12AF492B70017C298 /* GoogleService-Info.plist */; };
 		9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */; };
 		9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */; };
 		969B00EF2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */; };
@@ -50,6 +47,10 @@
 		D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513A44E2AFDC98800E86B14 /* ReviewHeaderView.swift */; };
 		D513A4512AFDCA7700E86B14 /* LeaveReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513A4502AFDCA7700E86B14 /* LeaveReviewView.swift */; };
 		D513A4532AFDCB4C00E86B14 /* ReviewRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513A4522AFDCB4C00E86B14 /* ReviewRowView.swift */; };
+		D558C9622B266B780054FBBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D558C9612B266B780054FBBD /* GoogleService-Info.plist */; };
+		D558C9642B266B850054FBBD /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D558C9632B266B850054FBBD /* awsconfiguration.json */; };
+		D558C9662B266B8A0054FBBD /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D558C9652B266B8A0054FBBD /* amplifyconfiguration.json */; };
+		D558C96A2B266CDE0054FBBD /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9692B266CDD0054FBBD /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +73,6 @@
 /* Begin PBXFileReference section */
 		012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotGoogleMapViewModel.swift; sourceTree = "<group>"; };
 		11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.release.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.release.xcconfig"; sourceTree = "<group>"; };
-		1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
-		1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		3AD1F795D6D71255438CF639 /* Pods-SkateSpotsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.debug.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.debug.xcconfig"; sourceTree = "<group>"; };
 		57266D962AFA9D1200DD9C69 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		57266D9A2AFA9D2700DD9C69 /* NewSkateSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSkateSpotView.swift; sourceTree = "<group>"; };
@@ -107,7 +106,6 @@
 		9636CE422AF368ED00F014C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9652833F2AF977C800E7299E /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		965283412AF978D100E7299E /* Kickout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kickout.swift; sourceTree = "<group>"; };
-		96645AE12AF492B70017C298 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
 		969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewModel.swift; sourceTree = "<group>"; };
@@ -119,6 +117,10 @@
 		D513A44E2AFDC98800E86B14 /* ReviewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHeaderView.swift; sourceTree = "<group>"; };
 		D513A4502AFDCA7700E86B14 /* LeaveReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveReviewView.swift; sourceTree = "<group>"; };
 		D513A4522AFDCB4C00E86B14 /* ReviewRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRowView.swift; sourceTree = "<group>"; };
+		D558C9612B266B780054FBBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D558C9632B266B850054FBBD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
+		D558C9652B266B8A0054FBBD /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
+		D558C9692B266CDD0054FBBD /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = "../../../../untitled folder 2/SearchViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +160,8 @@
 		4A1C6FF1A267805FBACBDB9C /* AmplifyConfig */ = {
 			isa = PBXGroup;
 			children = (
-				1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */,
-				1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */,
+				D558C9652B266B8A0054FBBD /* amplifyconfiguration.json */,
+				D558C9632B266B850054FBBD /* awsconfiguration.json */,
 			);
 			name = AmplifyConfig;
 			sourceTree = "<group>";
@@ -243,7 +245,7 @@
 				968271C12AF6E222008A5994 /* ViewModels */,
 				968271C22AF6E222008A5994 /* Views */,
 				968271BF2AF6E108008A5994 /* DataRepositories */,
-				96645AE12AF492B70017C298 /* GoogleService-Info.plist */,
+				D558C9612B266B780054FBBD /* GoogleService-Info.plist */,
 				9636CE422AF368ED00F014C5 /* Info.plist */,
 				9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */,
 				9636CE1C2AF35F6300F014C5 /* Assets.xcassets */,
@@ -297,6 +299,7 @@
 		968271C12AF6E222008A5994 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				D558C9692B266CDD0054FBBD /* SearchViewModel.swift */,
 				57266DAF2AFAA6C400DD9C69 /* SkateSpotViewModel.swift */,
 				57266DB12AFAA6D100DD9C69 /* ReviewViewModel.swift */,
 				57266DB32AFAA6D900DD9C69 /* UserViewModel.swift */,
@@ -311,6 +314,7 @@
 		968271C22AF6E222008A5994 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D558C9682B266CCF0054FBBD /* Filter */,
 				9160824D2AFE132400893EB5 /* Maps */,
 				916082482AFE10EB00893EB5 /* Feed */,
 				57266DA82AFA9DA800DD9C69 /* SkateSpot */,
@@ -328,6 +332,13 @@
 				11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D558C9682B266CCF0054FBBD /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,9 +449,9 @@
 			files = (
 				9636CE202AF35F6300F014C5 /* Preview Assets.xcassets in Resources */,
 				9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */,
-				96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */,
-				1546C075571D35341768FB36 /* awsconfiguration.json in Resources */,
-				530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */,
+				D558C9642B266B850054FBBD /* awsconfiguration.json in Resources */,
+				D558C9662B266B8A0054FBBD /* amplifyconfiguration.json in Resources */,
+				D558C9622B266B780054FBBD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +524,7 @@
 				659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */,
 				57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */,
 				57266DB02AFAA6C400DD9C69 /* SkateSpotViewModel.swift in Sources */,
+				D558C96A2B266CDE0054FBBD /* SearchViewModel.swift in Sources */,
 				D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
 				57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */,
