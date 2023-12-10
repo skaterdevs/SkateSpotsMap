@@ -20,14 +20,15 @@ struct SearchSpotsView: View {
     var body: some View {
         //Will need to be separated into SpotRowView at a later point
         VStack {
+            TextField("Search: ", text:$searchText)
             NavigationView {
                 List{
                     ForEach (searchResults) { skateSpot in
                         SkateSpotRowView(skateSpot: skateSpot)
                     }
                 }
-            }.searchable(text: $searchText).refreshable{}
-        }.padding(.top, -50)
+            }
+        }
     }
 }
 //#Preview {
