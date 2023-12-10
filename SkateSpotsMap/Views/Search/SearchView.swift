@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchSpotsView: View {
+struct SearchView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotRepository()
     @State private var searchText = ""
     var searchResults: [SkateSpot] {
@@ -33,6 +33,3 @@ struct SearchSpotsView: View {
         }
     }
 }
-//#Preview {
-//    SearchSpotsView()
-//}

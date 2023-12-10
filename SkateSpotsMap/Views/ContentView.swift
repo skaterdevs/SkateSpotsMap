@@ -17,7 +17,7 @@ struct ContentView: View {
                 Image(systemName: "map.fill")
                 Text("Map")
             }.tag(1)
-            SearchSpotsView()
+            SearchView()
             .tabItem{
                 Image(systemName: "magnifyingglass.circle.fill")
                 Text("Search")

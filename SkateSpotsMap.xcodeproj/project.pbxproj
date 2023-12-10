@@ -11,7 +11,7 @@
 		3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */; };
 		57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D962AFA9D1200DD9C69 /* MapView.swift */; };
 		57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9A2AFA9D2700DD9C69 /* NewSkateSpotView.swift */; };
-		57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9C2AFA9D2F00DD9C69 /* SearchSpotsView.swift */; };
+		57266D9D2AFA9D2F00DD9C69 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9C2AFA9D2F00DD9C69 /* SearchView.swift */; };
 		57266D9F2AFA9D3A00DD9C69 /* SkateSpotRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9E2AFA9D3A00DD9C69 /* SkateSpotRowView.swift */; };
 		57266DA12AFA9D4200DD9C69 /* SkateSpotDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DA02AFA9D4200DD9C69 /* SkateSpotDetailView.swift */; };
 		57266DA32AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DA22AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift */; };
@@ -89,7 +89,7 @@
 		3AD1F795D6D71255438CF639 /* Pods-SkateSpotsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.debug.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.debug.xcconfig"; sourceTree = "<group>"; };
 		57266D962AFA9D1200DD9C69 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		57266D9A2AFA9D2700DD9C69 /* NewSkateSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSkateSpotView.swift; sourceTree = "<group>"; };
-		57266D9C2AFA9D2F00DD9C69 /* SearchSpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSpotsView.swift; sourceTree = "<group>"; };
+		57266D9C2AFA9D2F00DD9C69 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		57266D9E2AFA9D3A00DD9C69 /* SkateSpotRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotRowView.swift; sourceTree = "<group>"; };
 		57266DA02AFA9D4200DD9C69 /* SkateSpotDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotDetailView.swift; sourceTree = "<group>"; };
 		57266DA22AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotReviewsView.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		57266DA62AFA9D6700DD9C69 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				57266D9C2AFA9D2F00DD9C69 /* SearchSpotsView.swift */,
+				57266D9C2AFA9D2F00DD9C69 /* SearchView.swift */,
 				D55A60642B26728700AB1C13 /* SearchRowView.swift */,
 				D55A60662B26736200AB1C13 /* SearchRatingView.swift */,
 				D55A60682B2673EB00AB1C13 /* SearchTagsView.swift */,
@@ -568,7 +568,7 @@
 				D558C9722B266E200054FBBD /* SearchViewModel.swift in Sources */,
 				D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
-				57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */,
+				57266D9D2AFA9D2F00DD9C69 /* SearchView.swift in Sources */,
 				657B429F2AF9F4E800785EBF /* Tag.swift in Sources */,
 				D558C9762B266EAC0054FBBD /* FeatureButtonView.swift in Sources */,
 				969B00F12AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift in Sources */,
