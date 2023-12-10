@@ -2,19 +2,42 @@
 //  TagButtonView.swift
 //  SkateSpotsMap
 //
-//  Created by Dillon Shu on 12/10/23.
+//  Created by Dillon Shu on 12/9/23.
 //
 
 import SwiftUI
 
 struct TagButtonView: View {
+    @EnvironmentObject var searchViewModel : SearchViewModel
+    var tag : String
+    var isSelected : Bool?
+    var buttonColors : [Color] {
+        guard let unwrapped = isSelected else{
+            return [.red, .red]
+        }
+        if unwrapped{
+            return [.blue, .white]
+        }
+        else{
+            return [.white, .blue]
+        }
+        
+    }
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(tag, action: {
+            searchViewModel.updateTagState(tag:tag)
+        })
+        .background(buttonColors[0])
+        .foregroundColor(buttonColors[1])
+        .buttonStyle(.bordered)
+        .cornerRadius(8)
     }
 }
 
-struct TagButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        TagButtonView()
-    }
-}
+//struct TagButtonView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TagButtonView()
+//    }
+//}
