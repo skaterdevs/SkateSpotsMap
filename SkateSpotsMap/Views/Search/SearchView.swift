@@ -33,25 +33,33 @@ struct SearchView: View {
             VStack {
                 NavigationStack {
                     HStack{
-                        //ZStack{
-                        Spacer()
-                        TextField("Search:", text: $searchText)
-                            .textFieldStyle(.roundedBorder)
-                            .overlay(RoundedRectangle(cornerRadius: 3)
-                                .stroke(.gray, lineWidth: 1))
-                            
-                        Spacer()
-                            NavigationLink(
-                                destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
-                                                        inputRating: filterViewModel.minAvgRating),
-                                label:{
-                                    FilterButtonView()
-                                }
-                            )
-                            
-                        //}
-                        Spacer()
-                    }.padding(.top, 10)//.padding(.trailing, 10)
+                        HStack{
+                            //ZStack{
+                            Spacer()
+                            TextField("Search:", text: $searchText)
+                                
+                            Spacer()
+                                NavigationLink(
+                                    destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
+                                                            inputRating: filterViewModel.minAvgRating),
+                                    label:{
+                                        FilterButtonView()
+                                    }
+                                )
+                                
+                            //}
+                            Spacer()
+                        }
+                        .overlay(RoundedRectangle(cornerRadius: 3)
+                            .stroke(.gray, lineWidth: 1))
+                        .padding(.leading, 10)
+                        .padding(.trailing, 10)
+                        .background(Color(.white))
+                    }
+                    .background(Color(UIColor.lightGray))
+                    .padding(.bottom, -4)
+                    
+                    
 
                     List{
                         ForEach (searchResults) { skateSpot in
@@ -68,7 +76,7 @@ struct SearchView: View {
 //                            }
 
                         }
-                    }
+                    }.background(Color(UIColor.lightGray))
                 }
             }
     }

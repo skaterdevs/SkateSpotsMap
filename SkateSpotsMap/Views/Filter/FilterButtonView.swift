@@ -10,7 +10,9 @@ import SwiftUI
 struct FilterButtonView: View {
     var body: some View {
         Image(systemName: "line.3.horizontal.decrease.circle")
-            .foregroundColor(.black)
+            .foregroundColor(.gray)
+            .font(.title)
+
 
     }
 
