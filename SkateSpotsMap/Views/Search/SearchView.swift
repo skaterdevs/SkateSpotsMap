@@ -46,16 +46,16 @@ struct SearchView: View {
                         
                     }.padding(.top, 10)
                     List{
-//                        ForEach (searchResults) { skateSpot in
-//                            if(filterViewModel.validSpots().contains(skateSpot)){
-//                                SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
-//                            }
-//
-//                            //Text(skateSpot.name)
-//                        }
-                        ForEach (filterViewModel.validSpots()) { skateSpot in
-                            SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
+                        ForEach (searchResults) { skateSpot in
+                            if(filterViewModel.validSpots().contains(skateSpot)){
+                                SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
+                            }
+
+                            //Text(skateSpot.name)
                         }
+//                        ForEach (filterViewModel.validSpots()) { skateSpot in
+//                            SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
+//                        }
                     }
                 }
             }

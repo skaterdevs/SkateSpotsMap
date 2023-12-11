@@ -10,8 +10,8 @@ import Foundation
 class FilterViewModel: ObservableObject {
     private var skateSpotRepository = SkateSpotRepository()
     //@Published var test : String = ""
-    @Published var kickout : String = "Low"
-    @Published var minAvgRating : Int = 3
+    @Published var kickout : String = "N/A"
+    @Published var minAvgRating : Int = 1
     @Published var maxDistance : Double = 5.0
     @Published var selectedFeatures : [String:Bool] = ["Walls" : false,
                                                        "Banks" : false,
@@ -82,17 +82,25 @@ class FilterViewModel: ObservableObject {
         for spot in skateSpotRepository.skate_spots{
             if validFeatures(skateSpot: spot)
                 && validTags(skateSpot: spot)
-                && validRating(skateSpot: spot)
-            {
-                spots.append(spot)
-            }
+                //&& validRating(skateSpot: spot)
+                && validDistance(skateSpot: spot)
+                && validKickout(skateSpot: spot)
+                {
+                    spots.append(spot)
+                }
         }
 
         return spots
     }
+    
     func validFeatures(skateSpot : SkateSpot) -> Bool{
         let validFeatures : [String] = selectedFeatures.filter{$0.value == true}.map({ $0.key })
         if (skateSpot.features.filter{validFeatures.contains($0)}).count == validFeatures.count || validFeatures.count == 0{
+            //print(validFeatures)
+            print(skateSpot.name)
+            print(skateSpot.features)
+            print("")
+            
             return true
         }
         return false
@@ -113,10 +121,21 @@ class FilterViewModel: ObservableObject {
         return false
     }
     
-    func validKickout(skateSpot : SkateSpot) -> Bool {
-        
+    //not functioning
+    func validDistance(skateSpot : SkateSpot) -> Bool{
+        return true
     }
     
+    func validKickout(skateSpot : SkateSpot) -> Bool {
+
+        if skateSpot.overall_kickout == kickout || skateSpot.overall_kickout == Kickout.na.rawValue || kickout == "N/A" {
+            return true
+        }
+        else{
+            return false
+        }
+    }
+////
     
 
     
