@@ -74,6 +74,7 @@
 		D5E0A0AE2B277FB200EF18AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5E0A0AD2B277FB200EF18AB /* GoogleService-Info.plist */; };
 		D5E0A0B02B277FBB00EF18AB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5E0A0AF2B277FBB00EF18AB /* awsconfiguration.json */; };
 		D5E0A0B22B277FC000EF18AB /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5E0A0B12B277FC000EF18AB /* amplifyconfiguration.json */; };
+		D5E0A0B42B278F9E00EF18AB /* KickoutDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E0A0B32B278F9E00EF18AB /* KickoutDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		D5E0A0AD2B277FB200EF18AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5E0A0AF2B277FBB00EF18AB /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		D5E0A0B12B277FC000EF18AB /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
+		D5E0A0B32B278F9E00EF18AB /* KickoutDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickoutDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				D55A606C2B26749200AB1C13 /* DirectionsButtonView.swift */,
 				D55A606E2B268B0300AB1C13 /* SearchKickoutView.swift */,
 				D55A60702B268F1800AB1C13 /* SearchDistanceView.swift */,
+				D5E0A0B32B278F9E00EF18AB /* KickoutDataView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				57266DB02AFAA6C400DD9C69 /* SkateSpotViewModel.swift in Sources */,
 				D558C97A2B266EBF0054FBBD /* FilterButtonView.swift in Sources */,
 				D558C9722B266E200054FBBD /* FilterViewModel.swift in Sources */,
+				D5E0A0B42B278F9E00EF18AB /* KickoutDataView.swift in Sources */,
 				91038BAC2B262D70001FE35C /* UserSkateSpotsView.swift in Sources */,
 				D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,

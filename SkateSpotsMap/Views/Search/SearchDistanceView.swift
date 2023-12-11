@@ -16,13 +16,22 @@ struct SearchDistanceView: View {
         HStack{
             //Text("Distance".uppercased()).fontWeight(.light)
             //Text(distance ?? "Unavailable").fontWeight(.bold)
-            Image("destinationIcon").resizable().aspectRatio(contentMode: .fit).frame(height: 20).padding(.trailing, -5)
+            Image(systemName: "location.fill")
+                .foregroundColor(Color(UIColor.darkGray))
+                .frame(height: 20)
+                .padding(.trailing, -4)
+            
+            Text("Distance:").font(.subheadline)
+                .foregroundColor(Color(UIColor.darkGray))
+                .fontWeight(.semibold)
+                .padding(.trailing, -4)
+            
             if let unwrapped = distance{
                 //Text(unwrapped + " miles away!").font(.subheadline)
                 Text(unwrapped ).font(.subheadline)
             }
             else{
-                Text("Unavailable").font(.subheadline)
+                Text("Data Unavailable").font(.subheadline)
             }
         }.task {
             do {

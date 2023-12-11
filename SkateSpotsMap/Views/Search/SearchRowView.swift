@@ -18,7 +18,7 @@ struct SearchRowView: View {
                     VStack(alignment: .leading) {
                         Text(skateSpot.name)
                             .fontWeight(.bold)
-                            .font(.title2)
+                            .font(.title3)
                             .padding(.bottom, 0.5)
                         
                         SearchKickoutView(skateSpot : skateSpot, levelColor : .black).padding(.bottom, 0.5)

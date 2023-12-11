@@ -15,68 +15,77 @@ struct SearchKickoutView: View {
             
             switch skateSpot.overall_kickout{
                 case Kickout.high.rawValue:
-                    Image(systemName:"exclamationmark.triangle.fill")
-                    .padding(.trailing, -5)
-                    .foregroundColor(.red)
-                    .scaledToFit()
+                    KickoutDataView(skateSpot: skateSpot, kickoutColor: .red)
                 
-                    Text("Kickout Rating:")
-                    .font(.subheadline)
-                    .foregroundColor(Color(UIColor.darkGray))
-                    .fontWeight(.semibold)
-                
-                    Text(skateSpot.overall_kickout)
-                    .foregroundColor(.red)
-                    .font(.subheadline)
-                    //.fontWeight(.semibold)
-                    .padding(.leading, -4)
+//                    Image(systemName:"exclamationmark.triangle.fill")
+//                    .padding(.trailing, -4)
+//                    .foregroundColor(.red)
+//                    .scaledToFit()
+//
+//                    Text("Kickout Rating:")
+//                    .font(.subheadline)
+//                    .foregroundColor(Color(UIColor.darkGray))
+//                    .fontWeight(.semibold)
+//
+//                    Text(skateSpot.overall_kickout)
+//                    .foregroundColor(.red)
+//                    .font(.subheadline)
+//                    //.fontWeight(.semibold)
+//                    .padding(.leading, -4)
                 
                 case Kickout.medium.rawValue:
-                Image(systemName:"exclamationmark.triangle.fill")
-                    .padding(.trailing, -5)
-                    .foregroundColor(.orange)
-                    .scaledToFit()
+                    KickoutDataView(skateSpot: skateSpot, kickoutColor: .orange)
                 
-                    Text("Kickout Rating:")
-                    .font(.subheadline)
-                    .foregroundColor(Color(UIColor.darkGray))
-                    .fontWeight(.semibold)
-                
-                    Text(skateSpot.overall_kickout)
-                    .foregroundColor(.orange)
-                    .font(.subheadline)
-                    //.fontWeight(.semibold)
-                    .padding(.leading, -4)
+//                Image(systemName:"exclamationmark.triangle.fill")
+//                    .padding(.trailing, -4)
+//                    .foregroundColor(.orange)
+//                    .scaledToFit()
+//
+//                    Text("Kickout Rating:")
+//                    .font(.subheadline)
+//                    .foregroundColor(Color(UIColor.darkGray))
+//                    .fontWeight(.semibold)
+//
+//                    Text(skateSpot.overall_kickout)
+//                    .foregroundColor(.orange)
+//                    .font(.subheadline)
+//                    //.fontWeight(.semibold)
+//                    .padding(.leading, -4)
                     
                 case Kickout.low.rawValue:
-                Image(systemName:"exclamationmark.triangle.fill")
-                    .padding(.trailing, -5)
-                    .foregroundColor(.green)
-                    .scaledToFit()
+                    KickoutDataView(skateSpot: skateSpot, kickoutColor: .green)
                 
-                    Text("Kickout Rating:")
-                    .font(.subheadline)
-                    .foregroundColor(.green)
-                    .fontWeight(.semibold)
-                
-                    Text(skateSpot.overall_kickout)
-                    .foregroundColor(.green)
-                    .font(.subheadline)
-                    //.fontWeight(.semibold)
-                    .padding(.leading, -4)
+//                    Image(systemName:"exclamationmark.triangle.fill")
+//                    .padding(.trailing, -4)
+//                    .foregroundColor(.green)
+//                    .scaledToFit()
+//
+//                    Text("Kickout Rating:")
+//                    .font(.subheadline)
+//                    .foregroundColor(.green)
+//                    .fontWeight(.semibold)
+//
+//                    Text(skateSpot.overall_kickout)
+//                    .foregroundColor(.green)
+//                    .font(.subheadline)
+//                    //.fontWeight(.semibold)
+//                    .padding(.leading, -4)
                 
                 default:
-                    Image(systemName:"exclamationmark.triangle.fill")
-                    .padding(.trailing, -5)
-                    .foregroundColor(Color(UIColor.darkGray))
-                    .scaledToFit()
+                    KickoutDataView(skateSpot: skateSpot, kickoutColor: .black)
                 
-                    Text("Kickout Rating:").font(.subheadline)
-                    .foregroundColor(Color(UIColor.darkGray))
-                    .fontWeight(.semibold)
-                
-                    Text("N/A")
-                    .font(.subheadline)
+//                    Image(systemName:"exclamationmark.triangle.fill")
+//                    .padding(.trailing, -4)
+//                    .foregroundColor(Color(UIColor.darkGray))
+//                    //.scaledToFit()
+//
+//                    Text("Kickout Rating:").font(.subheadline)
+//                    .foregroundColor(Color(UIColor.darkGray))
+//                    .fontWeight(.semibold)
+//
+//                    Text("N/A")
+//                    .font(.subheadline)
+//                    .padding(.leading, -4)
             }
         }
     }
