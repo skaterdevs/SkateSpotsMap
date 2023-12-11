@@ -21,18 +21,17 @@ struct SearchView: View {
     var body: some View {
         //Will need to be separated into SpotRowView at a later point
         //TextField("Search: ", text:$searchText)
-        ScrollView{
             VStack {
                 NavigationView {
                     List{
                         ForEach (skateSpotViewModel.skate_spots) { skateSpot in
-                            SearchRowView(skateSpot: SkateSpot.exampleTemp).frame(maxHeight:.infinity)
+                            SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
                             //Text(skateSpot.name)
                         }
                     }
                 }
             }
-        }
+        
         
     }
 }
