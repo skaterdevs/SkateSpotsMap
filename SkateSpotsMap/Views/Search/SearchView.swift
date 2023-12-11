@@ -25,17 +25,21 @@ struct SearchView: View {
             VStack {
                 NavigationStack {
                     HStack{
-                        NavigationLink(
-                            destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
-                                                    inputRating: filterViewModel.minAvgRating),
-                            label:{
-                                FilterButtonView()
-                            }
+                        //ZStack{
+                            TextField("Search:", text: $searchText).textFieldStyle(.roundedBorder)
+                            NavigationLink(
+                                destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
+                                                        inputRating: filterViewModel.minAvgRating),
+                                label:{
+                                    FilterButtonView().frame(alignment : .trailing)
+                                }
                             )
-                        TextField("Search:", text: $searchText)
-                    }
+                            
+                        //}
+                        
+                    }.padding(.top, 10)
                     List{
-                        ForEach (skateSpotViewModel.skate_spots) { skateSpot in
+                        ForEach (searchResults) { skateSpot in
                             SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
                             //Text(skateSpot.name)
                         }
