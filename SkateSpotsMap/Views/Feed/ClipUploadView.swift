@@ -178,3 +178,7 @@ struct ClipUploadView: View {
         timestamp = Timestamp()
     }
 }
+
+//#Preview {
+//    ClipUploadView()
+//}

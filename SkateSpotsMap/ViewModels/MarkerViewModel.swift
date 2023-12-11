@@ -55,7 +55,19 @@ class MarkerViewModel: ObservableObject {
                 let marker = GMSMarker(position: coordinate)
                 marker.title = skateSpot.name
                 marker.userData = skateSpot
-                marker.icon = UIImage(named: "skatespoticon")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                
+                // Set marker icon based on kickout factor
+                switch skateSpot.overall_kickout {
+                case Kickout.low.rawValue:
+                    marker.icon = UIImage(named: "low")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                case Kickout.medium.rawValue:
+                    marker.icon = UIImage(named: "medium")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                case Kickout.high.rawValue:
+                    marker.icon = UIImage(named: "high")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                default:
+                    marker.icon = UIImage(named: "neutral")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                }
+                
                 return marker
             }
         }

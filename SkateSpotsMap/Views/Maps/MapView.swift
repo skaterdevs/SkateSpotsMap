@@ -21,7 +21,7 @@ struct MapView: View {
                         self.isActive = true
                     }, refreshUserCoords: { (updatedCoords) in
                         self.userCoords = updatedCoords;
-                    })
+                    }).frame(height: UIScreen.main.bounds.height)
                     NavigationLink(destination: SkateSpotDetailView(skateSpot: markerViewModel.selectedSkateSpot), isActive: $isActive) { EmptyView() }
                 }
                 
@@ -39,7 +39,7 @@ struct MapView: View {
                                 .clipShape(Circle())
                                 .foregroundColor(.white)
                         }
-                    }.padding(.bottom, 80)
+                    }.padding(.bottom, 150)
                 }.padding(.trailing, 10)
             }
         }
