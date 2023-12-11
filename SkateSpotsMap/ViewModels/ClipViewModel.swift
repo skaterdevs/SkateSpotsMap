@@ -13,4 +13,12 @@ class ClipViewModel: ObservableObject {
     func post(clip: Clip) {
         clipRepository.create(clip)
     }
+    
+    func findClip(_ id: String) -> Clip? {
+        if let clip = clipRepository.clips.first(where: {$0.id == id}) {
+            return clip
+        } else {
+            return nil
+        }
+    }
 }

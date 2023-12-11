@@ -27,6 +27,11 @@ struct ContentView: View {
                         Image(systemName: "rectangle.stack.person.crop.fill")
                         Text("Feed")
                     }.tag(3)
+                UserView()
+                    .tabItem {
+                        Image(systemName: "person.crop.circle.fill")
+                        Text("Profile")
+                    }.tag(4)
         }
         .onAppear() {
             UITabBar.appearance().backgroundColor = UIColor(.white)
