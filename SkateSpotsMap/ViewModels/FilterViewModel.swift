@@ -60,37 +60,39 @@ class FilterViewModel: ObservableObject {
     }
     
     func validSpots() -> [SkateSpot]{
-        let validFeatures : [String] = selectedFeatures.filter{$0.value == true}.map({ $0.key })
-        //var featureKeys = validFeatures
         var spots : [SkateSpot] = []
-        let validTags : [String] = selectedTags.filter{$0.value == true}.map({ $0.key })
-//        for spot in skateSpotRepository.skate_spots{
-//            if spot.high_kickout.rawValue
-//            if spot.features.contains(feature) && spots.contains(spot) == false{
-//                spots.append(spot)
+        
+//        let validFeatures : [String] = selectedFeatures.filter{$0.value == true}.map({ $0.key })
+//        let validTags : [String] = selectedTags.filter{$0.value == true}.map({ $0.key })
+//
+//        for spot in skateSpotRepository.skate_spots {
+//            var containsFeature : Bool = false
+//            var containsTag : Bool = false
+//            if (spot.features.filter{validFeatures.contains($0)}).count > 0 || validFeatures.count == 0{
+//                containsFeature = true
+//            }
+//            if (spot.tags.filter{validTags.contains($0)}).count > 0 || validTags.count == 0{
+//                containsTag = true
 //            }
 //
+//            if containsTag && containsFeature{
+//                spots.append(spot)
+//            }
 //        }
-        for spot in skateSpotRepository.skate_spots {
-            var containsFeature : Bool = false
-            var containsTag : Bool = false
-            if (spot.features.filter{validFeatures.contains($0)}).count > 0 || validFeatures.count == 0{
-                containsFeature = true
-            }
-            if (spot.tags.filter{validTags.contains($0)}).count > 0 || validTags.count == 0{
-                containsTag = true
-            }
-            
-            if containsTag && containsFeature{
+        for spot in skateSpotRepository.skate_spots{
+            if validFeatures(skateSpot: spot)
+                && validTags(skateSpot: spot)
+                && validRating(skateSpot: spot)
+            {
                 spots.append(spot)
             }
         }
-        //validFeatures.filter{.contains($0) }
+
         return spots
     }
     func validFeatures(skateSpot : SkateSpot) -> Bool{
         let validFeatures : [String] = selectedFeatures.filter{$0.value == true}.map({ $0.key })
-        if (skateSpot.features.filter{validFeatures.contains($0)}).count > 0 || validFeatures.count == 0{
+        if (skateSpot.features.filter{validFeatures.contains($0)}).count == validFeatures.count || validFeatures.count == 0{
             return true
         }
         return false
@@ -98,11 +100,24 @@ class FilterViewModel: ObservableObject {
     
     func validTags(skateSpot : SkateSpot) -> Bool{
         let validTags : [String] = selectedTags.filter{$0.value == true}.map({ $0.key })
-        if (skateSpot.tags.filter{validTags.contains($0)}).count > 0 || validTags.count == 0{
+        if (skateSpot.tags.filter{validTags.contains($0)}).count == validTags.count || validTags.count == 0{
             return true
         }
         return false
     }
+    
+    func validRating(skateSpot : SkateSpot) -> Bool{
+        if skateSpot.rating_avg >= Float(minAvgRating){
+            return true
+        }
+        return false
+    }
+    
+    func validKickout(skateSpot : SkateSpot) -> Bool {
+        
+    }
+    
+    
 
     
 }
