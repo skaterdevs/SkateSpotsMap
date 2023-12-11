@@ -56,7 +56,7 @@ Before building, make sure the selected scheme is 'SkateSpotsMap' and not anythi
 
 #### GoogleService-Info.plist
 1. For more security reasons, the plist is not in the repo. This file has to be manually added.
-2. Download the file (ask Jason for it) into the SkateSpotsMap folder where all the other Swift files are located
+2. Download the file (ask Jason for it) into the rootDirectory/SkateSpotsMap folder where all the other Swift files are located
 
 #### Amplify
 In order to use AWS S3 (storage), we must interface with it through a package called Amplify. This has already been installed and set up. However, if you just do a fresh clone, it will not build as two files are missing. Place the files in the root directory of the project.
