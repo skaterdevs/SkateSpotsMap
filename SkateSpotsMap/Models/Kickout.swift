@@ -13,5 +13,5 @@ enum Kickout: String {
     case medium = "Medium"
     case high = "High"
     
-    static let allKickout = ["N/A", "Low", "Medium", "High"]
+    static let allKickout = [ "Low", "Medium", "High"]
 }

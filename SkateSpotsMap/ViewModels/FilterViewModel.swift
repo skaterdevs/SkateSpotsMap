@@ -84,7 +84,7 @@ class FilterViewModel: ObservableObject {
                 && validTags(skateSpot: spot)
                 //&& validRating(skateSpot: spot)
                 && validDistance(skateSpot: spot)
-                && validKickout(skateSpot: spot)
+                //&& validKickout(skateSpot: spot)
                 {
                     spots.append(spot)
                 }
