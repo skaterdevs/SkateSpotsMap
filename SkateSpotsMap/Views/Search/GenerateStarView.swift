@@ -22,20 +22,24 @@ struct GenerateStarView: View {
 
             case true:
                 Image(systemName: "star.leadinghalf.filled")
+                    //.foregroundColor(Color(UIColor.gray))
                     .foregroundColor(.yellow)
                     .font(.caption)
+//                    .background(.white)
                 if rating != 4{
                     ForEach(Int(rating)+1..<5, id: \.self) {_ in
-                        Image(systemName:"star.fill")
-                            .foregroundColor(Color(UIColor.lightGray))
+                        Image(systemName:"star")
+                            //.foregroundColor(Color(UIColor.lightGray))
+                            .foregroundColor(.yellow)
                             .font(.caption)
                     }
                 }
             case false:
                 ForEach((Int(rating)) ..< 5, id: \.self) {_ in
-                    Image(systemName:"star.fill")
-                        .foregroundColor(Color(UIColor.lightGray))
+                    Image(systemName:"star")
+                        //.foregroundColor(Color(UIColor.lightGray))
                         .font(.caption)
+                        .foregroundColor(.yellow)
                 
             }
         }

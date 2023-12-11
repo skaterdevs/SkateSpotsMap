@@ -29,22 +29,30 @@ struct SearchView: View {
     var body: some View {
         //Will need to be separated into SpotRowView at a later point
         //TextField("Search: ", text:$searchText)
+        
             VStack {
                 NavigationStack {
                     HStack{
                         //ZStack{
-                            TextField("Search:", text: $searchText).textFieldStyle(.roundedBorder)
+                        Spacer()
+                        TextField("Search:", text: $searchText)
+                            .textFieldStyle(.roundedBorder)
+                            .overlay(RoundedRectangle(cornerRadius: 3)
+                                .stroke(.gray, lineWidth: 1))
+                            
+                        Spacer()
                             NavigationLink(
                                 destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
                                                         inputRating: filterViewModel.minAvgRating),
                                 label:{
-                                    FilterButtonView().frame(alignment : .trailing)
+                                    FilterButtonView()
                                 }
                             )
                             
                         //}
-                        
-                    }.padding(.top, 10)
+                        Spacer()
+                    }.padding(.top, 10)//.padding(.trailing, 10)
+
                     List{
                         ForEach (searchResults) { skateSpot in
                             switch searchText.isEmpty{

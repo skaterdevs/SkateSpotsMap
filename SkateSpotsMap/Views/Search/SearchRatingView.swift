@@ -12,10 +12,12 @@ struct SearchRatingView: View {
     var body: some View {
         HStack(){
 
-            var rating_string = String(format: "%.2f", skateSpot.rating_avg)
-            Text(rating_string).multilineTextAlignment(.leading)
+            let rating_string = String(format: "%.2f", skateSpot.rating_avg)
+            Text(rating_string)
+                .multilineTextAlignment(.leading)
                 .font(.system(size:10))
                 .fontWeight(.light)
+                .padding(.top, 1)
             Image(systemName: "star.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -23,7 +25,8 @@ struct SearchRatingView: View {
                 .frame(width: 12)
                 .foregroundStyle(.yellow)
             //Text("(102)").multilineTextAlignment(.leading)
-            Text("(" + String((skateSpot.reviews).count) + ")").multilineTextAlignment(.leading)
+            Text("(" + String((skateSpot.reviews).count) + ")")
+                .multilineTextAlignment(.leading)
                 .font(.system(size:10))
                 .fontWeight(.light)
         }

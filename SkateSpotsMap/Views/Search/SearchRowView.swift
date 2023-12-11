@@ -28,7 +28,7 @@ struct SearchRowView: View {
                         SearchDistanceView(skateSpot : skateSpot)
                     }
                     Spacer()
-                    DirectionsButtonView(skateSpot: skateSpot)
+                    DirectionsButtonView(skateSpot: skateSpot).padding(.trailing, 1)
                 }
             }
         )
