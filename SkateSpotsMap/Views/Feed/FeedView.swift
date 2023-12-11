@@ -6,11 +6,41 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct FeedView: View {
+    @ObservedObject var clipViewModel = ClipsRepository()
+    
+    @State var allClips = [Clip]()
+    
     var body: some View {
-        Text("Feed Coming Soon...")
-            .font(.headline)
+        NavigationView {
+            ScrollView(.vertical) {
+                VStack {
+                    // Header
+                    HStack {
+                        Button {
+                        } label: {
+                            Label("", systemImage: "video.badge.plus.fill")
+                                .foregroundColor(Color.clear)
+                        }
+                        Spacer()
+                        Text("Spot Feed").font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        Spacer()
+                        Image("video.badge.plus.fill")
+                        NavigationLink(destination:
+                                        {ClipUploadView()},
+                                       label: {
+                            Label("", systemImage: "video.badge.plus.fill")
+                        })
+                    }
+                    // Feed
+                    ForEach(allClips) { clip in
+                        ClipRowView(clip: clip)
+                    }
+                }.onAppear{allClips = clipViewModel.clips}
+            }
+        }
     }
 }
 

@@ -36,7 +36,7 @@ struct SkateSpotDetailView: View {
             
             // image carousel
             ScrollView(.horizontal) {
-                HStack(spacing: 10) {
+                LazyHStack(spacing: 10) {
                     // TODO: make show skateSpot.photos
                     ForEach(images, id: \.self) { image in
                         Image(uiImage: image)

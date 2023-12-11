@@ -13,13 +13,9 @@ struct SkateSpotOverviewView: View {
     @StateObject var locationManager = LocationManager()
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     
-    let columns = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
-    
     var body: some View {
         VStack {
-            
             OverviewReviewPartialView(skateSpot: skateSpot, isOverview: true)
-            Divider().padding(5)
             HStack {
                 
                 Spacer()
@@ -47,24 +43,30 @@ struct SkateSpotOverviewView: View {
                     Divider().frame(height: 15)
                     
                     VStack {
-                        HStack {
-                            LazyVGrid(columns: columns) {
-                                ForEach(skateSpot.tags, id: \.self) { tag in
-                                    Text(tag)
+                        if(skateSpot.tags.count > 0) {
+                            HStack {
+                                LazyVGrid(columns: getNumTagColumns()) {
+                                    ForEach(skateSpot.tags, id: \.self) { tag in
+                                        Text(tag)
+                                    }
                                 }
                             }
+                            Divider().frame(height: 15)
                         }
                     }
                     
                     
-                    Divider().frame(height: 15)
                     
                     // TODO: Features
                     
                     VStack {
-                        HStack(spacing: 20) {
-                            ForEach(skateSpot.features, id: \.self) { feature in
-                                Text(feature)
+                        if(skateSpot.features.count > 0) {
+                            HStack {
+                                LazyVGrid(columns: getNumFeatureColumns()) {
+                                    ForEach(skateSpot.features, id: \.self) { feature in
+                                        Text(feature)
+                                    }
+                                }
                             }
                         }
                     }
@@ -84,11 +86,35 @@ struct SkateSpotOverviewView: View {
             }
         }
     }
+    
+    func getNumTagColumns() -> [GridItem] {
+        if(skateSpot.features.count == 0) { return []}
+        if(skateSpot.tags.count < 3) {
+            var tagresult = [GridItem]()
+            for _ in 1...skateSpot.tags.count {
+                tagresult.append(GridItem(.flexible()))
+            }
+            return tagresult
+        }
+        return [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    }
+    
+    func getNumFeatureColumns() -> [GridItem] {
+        if(skateSpot.features.count == 0) { return []}
+        if(skateSpot.features.count < 3) {
+            var featresult = [GridItem]()
+            for _ in 1...skateSpot.features.count {
+                featresult.append(GridItem(.flexible()))
+            }
+            return featresult
+        }
+        return [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
+    }
 }
 
 struct SkateSpotOverviewView_Previews: PreviewProvider {
     static var previews: some View {
-        SkateSpotOverviewView(skateSpot: SkateSpot.example)
+        SkateSpotOverviewView(skateSpot: SkateSpot.example2)
     }
 }
 
