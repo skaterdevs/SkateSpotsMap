@@ -21,8 +21,8 @@ struct SearchRowView: View {
                             .font(.title2)
                             .padding(.bottom, 0.5)
                         
-                        SearchKickoutView(skateSpot : skateSpot).padding(.bottom, 0.5)
-
+                        SearchKickoutView(skateSpot : skateSpot, levelColor : .black).padding(.bottom, 0.5)
+                        
                         SearchDistanceView(skateSpot : skateSpot)
                     }
                     Spacer()

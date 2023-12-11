@@ -16,8 +16,10 @@ struct SearchDistanceView: View {
         HStack{
             //Text("Distance".uppercased()).fontWeight(.light)
             //Text(distance ?? "Unavailable").fontWeight(.bold)
+            Image("destinationIcon").resizable().aspectRatio(contentMode: .fit).frame(height: 20).padding(.trailing, -5)
             if let unwrapped = distance{
-                Text(unwrapped + " miles away").font(.subheadline)
+                //Text(unwrapped + " miles away!").font(.subheadline)
+                Text(unwrapped ).font(.subheadline)
             }
             else{
                 Text("Unavailable").font(.subheadline)

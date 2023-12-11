@@ -11,8 +11,6 @@ struct DirectionsButtonView: View {
     var skateSpot : SkateSpot
     var body: some View {
         VStack {
-
-
             Button{
                 var lat = skateSpot.location.latitude //replace with lat from skatespot geopoint
                 var long = skateSpot.location.longitude //replace with long from skatespot geopoint
@@ -25,7 +23,7 @@ struct DirectionsButtonView: View {
                     .frame(width: 40)
                     .foregroundStyle(.green)
             }.buttonStyle(.plain)
-            Text("Directions").font(.caption).fontWeight(.semibold)
+            Text("Directions").font(.caption).fontWeight(.semibold).foregroundColor(Color(UIColor.darkGray))
         }
     }
 }

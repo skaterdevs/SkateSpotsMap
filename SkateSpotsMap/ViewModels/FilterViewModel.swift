@@ -99,6 +99,7 @@ class FilterViewModel: ObservableObject {
             //print(validFeatures)
             print(skateSpot.name)
             print(skateSpot.features)
+            //print(skateSpot.distance)
             print("")
             
             return true
