@@ -33,32 +33,27 @@ struct SearchView: View {
             VStack {
                 NavigationStack {
                     HStack{
-                        HStack{
-                            //ZStack{
-                            Spacer()
-                            TextField("Search:", text: $searchText)
-                                
-                            Spacer()
-                                NavigationLink(
-                                    destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
-                                                            inputRating: filterViewModel.minAvgRating),
-                                    label:{
-                                        FilterButtonView()
-                                    }
-                                )
-                                
-                            //}
-                            Spacer()
-                        }
-                        .overlay(RoundedRectangle(cornerRadius: 3)
-                            .stroke(.gray, lineWidth: 1))
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
-                        .background(Color(.white))
+                        //ZStack{
+                        Spacer()
+                        TextField("Search:", text: $searchText)
+                            
+                        Spacer()
+                            NavigationLink(
+                                destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
+                                                        inputRating: filterViewModel.minAvgRating),
+                                label:{
+                                    FilterButtonView()
+                                }
+                            )
+                            
+                        //}
+                        Spacer()
                     }
-                    .background(Color(UIColor.lightGray))
+                    .overlay(RoundedRectangle(cornerRadius: 3)
+                        .stroke(.gray, lineWidth: 1))
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
                     .padding(.bottom, -4)
-                    
                     
 
                     List{
