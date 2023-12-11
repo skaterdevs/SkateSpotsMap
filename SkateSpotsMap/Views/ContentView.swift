@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   var skateSpotList = SkateSpotViewModel()
+  var filterViewModel = FilterViewModel()
     
   var body: some View {
         TabView() {
@@ -27,7 +28,7 @@ struct ContentView: View {
                 Image(systemName: "rectangle.stack.person.crop.fill")
                 Text("Feed")
             }.tag(3)
-          }
+        }.environmentObject(filterViewModel)
       }
 }
 

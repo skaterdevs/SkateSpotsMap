@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TagButtonView: View {
-    @EnvironmentObject var searchViewModel : SearchViewModel
+    @EnvironmentObject var filterViewModel : FilterViewModel
     var tag : String
     var isSelected : Bool?
     var buttonColors : [Color] {
@@ -27,7 +27,7 @@ struct TagButtonView: View {
     
     var body: some View {
         Button(tag, action: {
-            searchViewModel.updateTagState(tag:tag)
+            filterViewModel.updateTagState(tag:tag)
         })
         .background(buttonColors[0])
         .foregroundColor(buttonColors[1])

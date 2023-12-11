@@ -10,23 +10,14 @@ import SwiftUI
 
 
 struct FilterView: View {
-    @EnvironmentObject var searchViewModel : SearchViewModel
+    @EnvironmentObject var filterViewModel : FilterViewModel
     @State var inputKickout : String
     @State var inputDistance : Double
     @State var inputRating : Int
     
-    @State var inputFeatures : [String:Bool]
-    
     var featureStrings = Feature.allFeatures
     var tagStrings = Tag.allTags
     @State var showingAlert = false
-//    @State var allRatings = ["1", "2", "3", "4", "5"]
-//    @State var test = false
-//    @State var featuresEnabled [String] = []
-    
-//    @State var inputKickout = ""
-//    @State var inputDistance = 3.0
-//    @State var inputRating = 3
 
     
     
@@ -43,7 +34,7 @@ struct FilterView: View {
                         .onChange(of: inputKickout){ newInput in
                             var _ = print(inputKickout)
                             //searchViewModel.updateFeatures(inputKickout: inputKickout, inputMinAvgRating: inputRating, inputMaxDistance: inputDistance)
-                            searchViewModel.kickout = inputKickout
+                            filterViewModel.kickout = inputKickout
                         }
                         HStack{
                             Text("Maximum Distance")
@@ -54,7 +45,7 @@ struct FilterView: View {
                             }
                             .onChange(of: inputDistance){newInput in
                                 var _ = print(inputDistance)
-                                searchViewModel.maxDistance = inputDistance
+                                filterViewModel.maxDistance = inputDistance
                             }
                             Text("25")
                         }
@@ -67,13 +58,13 @@ struct FilterView: View {
                         }
                         .onChange(of: inputRating){newInput in
                             var _ = print(inputRating)
-                            searchViewModel.minAvgRating = inputRating
+                            filterViewModel.minAvgRating = inputRating
                         }
                         VStack{
                             Text("Features")
                             HStack{
                                 ForEach(featureStrings, id: \.self){ f in
-                                    FeatureButtonView(feature:f, isSelected: searchViewModel.getFeatureState(feature: f))
+                                    FeatureButtonView(feature:f, isSelected: filterViewModel.getFeatureState(feature: f))
                                 }
                             }
                         }
@@ -81,7 +72,7 @@ struct FilterView: View {
                             Text("Tags")
                             HStack{
                                 ForEach(tagStrings, id: \.self){ t in
-                                    TagButtonView(tag:t, isSelected: searchViewModel.getTagState(tag: t))
+                                    TagButtonView(tag:t, isSelected: filterViewModel.getTagState(tag: t))
                                 }
                             }
                         }
@@ -100,7 +91,7 @@ struct FilterView: View {
                         Alert(
                             title: Text("Clear all filters?"),
                             primaryButton: .destructive(Text("Clear")) {
-                                searchViewModel.clearAll()
+                                filterViewModel.clearAll()
                             },
                             secondaryButton: .cancel()
                         )

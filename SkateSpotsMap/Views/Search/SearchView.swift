@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotRepository()
+    @EnvironmentObject var filterViewModel : FilterViewModel
     @State private var searchText = ""
     var searchResults: [SkateSpot] {
         if searchText.isEmpty {
@@ -22,7 +23,17 @@ struct SearchView: View {
         //Will need to be separated into SpotRowView at a later point
         //TextField("Search: ", text:$searchText)
             VStack {
-                NavigationView {
+                NavigationStack {
+                    HStack{
+                        NavigationLink(
+                            destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
+                                                    inputRating: filterViewModel.minAvgRating),
+                            label:{
+                                FilterButtonView()
+                            }
+                            )
+                        TextField("Search:", text: $searchText)
+                    }
                     List{
                         ForEach (skateSpotViewModel.skate_spots) { skateSpot in
                             SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)

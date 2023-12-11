@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FeatureButtonView: View {
-    @EnvironmentObject var searchViewModel : SearchViewModel
+    @EnvironmentObject var filterViewModel : FilterViewModel
     var feature : String
     var isSelected : Bool?
     var buttonColors : [Color] {
@@ -27,7 +27,7 @@ struct FeatureButtonView: View {
     
     var body: some View {
         Button(feature, action: {
-            searchViewModel.updateFeatureState(feature: feature)
+            filterViewModel.updateFeatureState(feature: feature)
         })
         .background(buttonColors[0])
         .foregroundColor(buttonColors[1])

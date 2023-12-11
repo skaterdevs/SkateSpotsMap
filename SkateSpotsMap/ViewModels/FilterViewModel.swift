@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SearchViewModel: ObservableObject {
+class FilterViewModel: ObservableObject {
     @Published var kickout : String = "Low"
     @Published var minAvgRating : Int = 3
     @Published var maxDistance : Double = 5.0
