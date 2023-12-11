@@ -40,4 +40,22 @@ struct Clip: Identifiable, Comparable, Codable {
         // The left operand is smaller than the right operand
         return lhs.timestamp.compare(rhs.timestamp) == ComparisonResult.orderedAscending
     }
+    
+    // MARK: Example for SwiftUI
+    static let example = Clip(
+        id: "clip1",
+        user: Reviewer.example,
+        media: [],
+        location: "",
+        likes: 0,
+        dislikes: 0,
+        timestamp: Timestamp())
+    
+    static let example2 = Clip(
+        user: Reviewer.example2,
+        media: [],
+        location: "",
+        likes: 50,
+        dislikes: 0,
+        timestamp: Timestamp())
 }

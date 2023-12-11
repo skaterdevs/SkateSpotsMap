@@ -18,8 +18,25 @@ final class ViewModelTests: XCTestCase {
     }
     
     // MARK: SkateSpot View Model
-    // No tests as everything is either firebase or using core location unable to set precise coords for testing
-    // Manually tested using device simulator
+    // Manually tested using device simulator firebase & core location
+    func testFindSkateSpot () {
+        var target = findSkateSpot(SkateSpot.example.id ?? "")
+        XCTAssertEqual(target, SkateSpot.example)
+        target = findSkateSpot(SkateSpot.example2.id ?? "")
+        XCTAssertEqual(target, SkateSpot.example2)
+        target = findSkateSpot(SkateSpot.example3.id ?? "")
+        XCTAssertNil(target)
+    }
+    
+    // Same func in SkateSpotViewModel.swift but uses list of test spots
+    func findSkateSpot(_ id: String) -> SkateSpot? {
+        let spots = [SkateSpot.example, SkateSpot.example2, SkateSpot.example3]
+        if let spot = spots.first(where: {$0.id == id}) {
+            return spot
+        } else {
+            return nil
+        }
+    }
     
     // MARK: Review View Model
     func testCalculateOverallKickout() {
@@ -76,6 +93,24 @@ final class ViewModelTests: XCTestCase {
         let users = [User.example, User.example2, User.example3]
         if let user = users.first(where: {$0.id == id}) {
             return user
+        } else {
+            return nil
+        }
+    }
+    
+    // MARK: Clip View Model
+    func testFindClip () {
+        var target = findClip(Clip.example.id ?? "")
+        XCTAssertEqual(target, Clip.example)
+        target = findClip(Clip.example2.id ?? "")
+        XCTAssertNil(target)
+    }
+    
+    // Same func in ClipViewModel.swift but uses list of test clips
+    func findClip(_ id: String) -> Clip? {
+        let clips = [Clip.example, Clip.example2]
+        if let clip = clips.first(where: {$0.id == id}) {
+            return clip
         } else {
             return nil
         }

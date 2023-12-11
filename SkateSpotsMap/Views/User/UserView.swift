@@ -6,16 +6,20 @@
 //
 
 import SwiftUI
+import Amplify
 
 struct UserView: View {
+    @ObservedObject var userVM = UserViewModel()
     @State var selectedTab = "SkateSpots"
     let picWidth = UIScreen.main.bounds.width * 0.50
+    @State var image = UIImage()
+    @State var notDownloaded = true
     var body: some View {
         VStack {
-            Text("[User Name]")
+            Text(userVM.findUser(User.defaultUser)?.username ?? "")
                 .font(.largeTitle)
             
-            Image(systemName: "person.crop.circle.fill")
+            Image(uiImage: image)
                 .resizable()
                 .scaledToFit()
                 .clipShape(Circle())
@@ -41,8 +45,27 @@ struct UserView: View {
                     .tag("Clips")
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-        }
+        }.onAppear() {downloadImage(userVM.findUser(User.defaultUser)?.avatar ?? "") }
         .padding()
+    }
+    
+    func downloadImage(_ image_key: String) {
+        if notDownloaded && image_key != "" {
+//            image_keys.forEach { image_key in
+            Amplify.Storage.downloadData(key: image_key) {
+                result in
+                switch result {
+                case .success(let data):
+                    DispatchQueue.main.async {
+                        self.image = UIImage(data: data)!
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+//            }
+            notDownloaded = false
+        }
     }
 }
 

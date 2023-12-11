@@ -45,4 +45,12 @@ class SkateSpotViewModel: ObservableObject {
         }
         return "N/A"
     }
+    
+    func findSkateSpot(_ id: String) -> SkateSpot? {
+        if let skateSpot = skateSpotRepository.skate_spots.first(where: {$0.id == id}) {
+            return skateSpot
+        } else {
+            return nil
+        }
+    }
 }

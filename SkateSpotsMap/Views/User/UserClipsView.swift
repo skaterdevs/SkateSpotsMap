@@ -6,10 +6,24 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct UserClipsView: View {
+    @ObservedObject var userVM = UserViewModel()
+    @ObservedObject var clipVM = ClipViewModel()
+    @ObservedObject var repo = UserRepository()
     var body: some View {
-        Text("Clips")
+        VStack {
+            if let user = userVM.findUser(User.defaultUser) {
+                List {
+                    ForEach(user.clips.map {clipVM.findClip($0)!}) { clip in
+                        Text(clip.id!)
+                    }
+                }
+            } else {
+                Text("No Clips")
+            }
+        }
     }
 }
 
