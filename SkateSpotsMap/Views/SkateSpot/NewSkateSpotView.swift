@@ -13,6 +13,7 @@ import Amplify
 
 struct NewSkateSpotView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
+    @Binding var userCoords: CLLocationCoordinate2D?
     @State private var location = 1
     @State private var name = String()
     @State private var photos = [String]()
@@ -26,42 +27,45 @@ struct NewSkateSpotView: View {
     
     var body: some View {
         VStack {
-            
-            Text("Add Skate Spot")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            
-            VStack(alignment: .center, spacing: 12) {
+            VStack {
+                Text("Add Skate Spot")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                 
-                Divider()
-            }
-            VStack{
+                VStack(alignment: .center, spacing: 12) {
+                    
+                    Divider()
+                }
                 // location selection
                 Text("Location").font(.title3).fontWeight(.semibold)
-                AddSpotGoogleMapViewModel(selectedMarker: $selectedMarker)
+                Text("Select the spot's location on the map.").font(.subheadline).fontWeight(.regular)
+                Text("Hold and drag to change or refine your selection.").font(.subheadline).fontWeight(.regular)
+                AddSpotGoogleMapViewModel(selectedMarker: $selectedMarker, userCoords: userCoords)
                     .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: 200.00)
+                
+                Divider()
                 
                 // name field
                 Text("Name").font(.title3).fontWeight(.semibold)
-                TextField("Name your new spot...", text: $name)
+                TextField("Name your new spot here...", text: $name)
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
-            }
-            
-            ScrollView(.horizontal) {
-                HStack {
-                    ForEach(0..<selectedImages.count, id: \.self) { i in
-                        selectedImages[i]
-                            .resizable()
-                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                            .frame(width: 150, height: 150, alignment: .center)
-                            .clipShape(Rectangle())
+                ScrollView(.horizontal) {
+                    HStack {
+                        ForEach(0..<selectedImages.count, id: \.self) { i in
+                            selectedImages[i]
+                                .resizable()
+                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                                .frame(width: 150, height: 150, alignment: .center)
+                                .clipShape(Rectangle())
+                        }
                     }
                 }
             }
-            
+            Divider()
             // photo entry field
             Text("Photos").font(.title3).fontWeight(.semibold)
+            Text("Upload photos of the site.").font(.subheadline).fontWeight(.regular)
             PhotosPicker("Select Images", selection: $selectedItems, matching: .images)
                 .onChange(of: selectedItems) { _ in
                     Task {
@@ -77,7 +81,7 @@ struct NewSkateSpotView: View {
                             }
                         }
                     }}
-            
+            Divider()
             // feature selection
             Text("Select Available Features").font(.title3).fontWeight(.semibold)
             HStack {
@@ -103,7 +107,7 @@ struct NewSkateSpotView: View {
             }
             
             // submit
-            Button("Submit Button") {
+            Button("Submit") {
                 addSkateSpot()
                 let _ = print(photos)
                 clearFields()
@@ -168,6 +172,8 @@ struct NewSkateSpotView: View {
     }
 }
 
-//#Preview {
-//    NewSkateSpotView()
+//struct NewSkateSpotView_Preview: PreviewProvider {
+//    static var previews: some View {
+//        NewSkateSpotView()
+//    }
 //}

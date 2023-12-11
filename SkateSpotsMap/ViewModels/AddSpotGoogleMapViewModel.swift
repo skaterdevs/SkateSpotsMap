@@ -11,6 +11,7 @@ import SwiftUI
 
 struct AddSpotGoogleMapViewModel: UIViewControllerRepresentable {
     @Binding var selectedMarker: GMSMarker?
+    var userCoords: CLLocationCoordinate2D?
     
     func makeUIViewController(context: Context) -> GoogleMapViewModel {
         let uiViewModel = GoogleMapViewModel()
@@ -19,15 +20,17 @@ struct AddSpotGoogleMapViewModel: UIViewControllerRepresentable {
         uiViewModel.mapView.isMyLocationEnabled = true
         // Allow users to recenter
         uiViewModel.mapView.settings.myLocationButton = true
+        // Default camera position to user location
+        uiViewModel.mapView.camera = GMSCameraPosition.camera(withLatitude: userCoords?.latitude ?? 0,
+                                                              longitude: userCoords?.longitude ?? 0,
+                                                              zoom: 15)
         return uiViewModel
     }
     
     func updateUIViewController(_ uiViewModel: GoogleMapViewModel, context: Context) {
         // Default camera position to user location
-        let userLat = uiViewModel.mapView.myLocation?.coordinate.latitude
-        let userLong = uiViewModel.mapView.myLocation?.coordinate.longitude
-        uiViewModel.mapView.camera = GMSCameraPosition.camera(withLatitude: userLat ?? 0,
-                                                              longitude: userLong ?? 0,
+        uiViewModel.mapView.camera = GMSCameraPosition.camera(withLatitude: userCoords?.latitude ?? 0,
+                                                              longitude: userCoords?.longitude ?? 0,
                                                               zoom: 15)
     }
     

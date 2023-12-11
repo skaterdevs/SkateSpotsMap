@@ -22,6 +22,7 @@ SkateSpotsMap.xcworkspace/xcuserdata/
 *.moved-aside
 *.xcuserstate
 GoogleService-Info.plist
+contents.txt
 
 ## Obj-C/Swift specific
 *.hmap
