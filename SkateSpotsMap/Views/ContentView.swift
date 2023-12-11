@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   var skateSpotList = SkateSpotViewModel()
+  var filterViewModel = FilterViewModel()
     
     var body: some View {
         TabView() {
@@ -17,7 +18,7 @@ struct ContentView: View {
                             Image(systemName: "map.fill")
                             Text("Map")
                     }.tag(1)
-                SearchSpotsView()
+                SearchView()
                     .tabItem{
                         Image(systemName: "magnifyingglass.circle.fill")
                         Text("Search")
@@ -36,6 +37,7 @@ struct ContentView: View {
         .onAppear() {
             UITabBar.appearance().backgroundColor = UIColor(.white)
         }
+        .environmentObject(filterViewModel)
     }
 }
 

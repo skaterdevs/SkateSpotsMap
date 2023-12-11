@@ -13,10 +13,9 @@
 		01678CAA2B1FF7A70010A29D /* ClipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA92B1FF7A70010A29D /* ClipViewModel.swift */; };
 		1546C075571D35341768FB36 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */; };
 		3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */; };
-		530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */; };
 		57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D962AFA9D1200DD9C69 /* MapView.swift */; };
 		57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9A2AFA9D2700DD9C69 /* NewSkateSpotView.swift */; };
-		57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9C2AFA9D2F00DD9C69 /* SearchSpotsView.swift */; };
+		57266D9D2AFA9D2F00DD9C69 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9C2AFA9D2F00DD9C69 /* SearchView.swift */; };
 		57266D9F2AFA9D3A00DD9C69 /* SkateSpotRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9E2AFA9D3A00DD9C69 /* SkateSpotRowView.swift */; };
 		57266DA12AFA9D4200DD9C69 /* SkateSpotDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DA02AFA9D4200DD9C69 /* SkateSpotDetailView.swift */; };
 		57266DA32AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DA22AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift */; };
@@ -47,7 +46,6 @@
 		9636CE202AF35F6300F014C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9636CE1F2AF35F6300F014C5 /* Preview Assets.xcassets */; };
 		965283402AF977C800E7299E /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652833F2AF977C800E7299E /* Feature.swift */; };
 		965283422AF978D100E7299E /* Kickout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965283412AF978D100E7299E /* Kickout.swift */; };
-		96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96645AE12AF492B70017C298 /* GoogleService-Info.plist */; };
 		9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */; };
 		9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */; };
 		969B00EF2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */; };
@@ -59,6 +57,23 @@
 		D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513A44E2AFDC98800E86B14 /* ReviewHeaderView.swift */; };
 		D513A4512AFDCA7700E86B14 /* LeaveReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513A4502AFDCA7700E86B14 /* LeaveReviewView.swift */; };
 		D513A4532AFDCB4C00E86B14 /* ReviewRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513A4522AFDCB4C00E86B14 /* ReviewRowView.swift */; };
+		D558C96C2B266DEC0054FBBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D558C96B2B266DEC0054FBBD /* GoogleService-Info.plist */; };
+		D558C96E2B266DF60054FBBD /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D558C96D2B266DF60054FBBD /* awsconfiguration.json */; };
+		D558C9702B266DFB0054FBBD /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D558C96F2B266DFB0054FBBD /* amplifyconfiguration.json */; };
+		D558C9722B266E200054FBBD /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9712B266E200054FBBD /* FilterViewModel.swift */; };
+		D558C9762B266EAC0054FBBD /* FeatureButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9752B266EAC0054FBBD /* FeatureButtonView.swift */; };
+		D558C9782B266EB50054FBBD /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9772B266EB50054FBBD /* FeatureView.swift */; };
+		D558C97A2B266EBF0054FBBD /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9792B266EBF0054FBBD /* FilterButtonView.swift */; };
+		D558C97C2B266ED30054FBBD /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C97B2B266ED30054FBBD /* FilterView.swift */; };
+		D558C97E2B266EFA0054FBBD /* KickoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C97D2B266EFA0054FBBD /* KickoutView.swift */; };
+		D558C9802B266F090054FBBD /* RadiusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C97F2B266F090054FBBD /* RadiusView.swift */; };
+		D558C9822B266F1B0054FBBD /* TagButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9812B266F1B0054FBBD /* TagButtonView.swift */; };
+		D558C9842B266F280054FBBD /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558C9832B266F280054FBBD /* TagView.swift */; };
+		D55A60652B26728700AB1C13 /* SearchRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A60642B26728700AB1C13 /* SearchRowView.swift */; };
+		D55A60672B26736200AB1C13 /* SearchRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A60662B26736200AB1C13 /* SearchRatingView.swift */; };
+		D55A606D2B26749200AB1C13 /* DirectionsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A606C2B26749200AB1C13 /* DirectionsButtonView.swift */; };
+		D55A606F2B268B0300AB1C13 /* SearchKickoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A606E2B268B0300AB1C13 /* SearchKickoutView.swift */; };
+		D55A60712B268F1800AB1C13 /* SearchDistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A60702B268F1800AB1C13 /* SearchDistanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,12 +99,10 @@
 		01678CA72B1FEF830010A29D /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		01678CA92B1FF7A70010A29D /* ClipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipViewModel.swift; sourceTree = "<group>"; };
 		11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.release.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.release.xcconfig"; sourceTree = "<group>"; };
-		1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
-		1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		3AD1F795D6D71255438CF639 /* Pods-SkateSpotsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.debug.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.debug.xcconfig"; sourceTree = "<group>"; };
 		57266D962AFA9D1200DD9C69 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		57266D9A2AFA9D2700DD9C69 /* NewSkateSpotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSkateSpotView.swift; sourceTree = "<group>"; };
-		57266D9C2AFA9D2F00DD9C69 /* SearchSpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSpotsView.swift; sourceTree = "<group>"; };
+		57266D9C2AFA9D2F00DD9C69 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		57266D9E2AFA9D3A00DD9C69 /* SkateSpotRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotRowView.swift; sourceTree = "<group>"; };
 		57266DA02AFA9D4200DD9C69 /* SkateSpotDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotDetailView.swift; sourceTree = "<group>"; };
 		57266DA22AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotReviewsView.swift; sourceTree = "<group>"; };
@@ -124,7 +137,6 @@
 		9636CE422AF368ED00F014C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9652833F2AF977C800E7299E /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		965283412AF978D100E7299E /* Kickout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kickout.swift; sourceTree = "<group>"; };
-		96645AE12AF492B70017C298 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9699E62F2AF370A200EF7FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9699E6312AF373E100EF7FC2 /* GoogleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapView.swift; sourceTree = "<group>"; };
 		969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewModel.swift; sourceTree = "<group>"; };
@@ -137,6 +149,23 @@
 		D513A44E2AFDC98800E86B14 /* ReviewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHeaderView.swift; sourceTree = "<group>"; };
 		D513A4502AFDCA7700E86B14 /* LeaveReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveReviewView.swift; sourceTree = "<group>"; };
 		D513A4522AFDCB4C00E86B14 /* ReviewRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRowView.swift; sourceTree = "<group>"; };
+		D558C96B2B266DEC0054FBBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D558C96D2B266DF60054FBBD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
+		D558C96F2B266DFB0054FBBD /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
+		D558C9712B266E200054FBBD /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		D558C9752B266EAC0054FBBD /* FeatureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureButtonView.swift; sourceTree = "<group>"; };
+		D558C9772B266EB50054FBBD /* FeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
+		D558C9792B266EBF0054FBBD /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
+		D558C97B2B266ED30054FBBD /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		D558C97D2B266EFA0054FBBD /* KickoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickoutView.swift; sourceTree = "<group>"; };
+		D558C97F2B266F090054FBBD /* RadiusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusView.swift; sourceTree = "<group>"; };
+		D558C9812B266F1B0054FBBD /* TagButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonView.swift; sourceTree = "<group>"; };
+		D558C9832B266F280054FBBD /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		D55A60642B26728700AB1C13 /* SearchRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowView.swift; sourceTree = "<group>"; };
+		D55A60662B26736200AB1C13 /* SearchRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRatingView.swift; sourceTree = "<group>"; };
+		D55A606C2B26749200AB1C13 /* DirectionsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsButtonView.swift; sourceTree = "<group>"; };
+		D55A606E2B268B0300AB1C13 /* SearchKickoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchKickoutView.swift; sourceTree = "<group>"; };
+		D55A60702B268F1800AB1C13 /* SearchDistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDistanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,8 +205,8 @@
 		4A1C6FF1A267805FBACBDB9C /* AmplifyConfig */ = {
 			isa = PBXGroup;
 			children = (
-				1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */,
-				1C2D37DB6D16459E37651F20 /* amplifyconfiguration.json */,
+				D558C96F2B266DFB0054FBBD /* amplifyconfiguration.json */,
+				D558C96D2B266DF60054FBBD /* awsconfiguration.json */,
 			);
 			name = AmplifyConfig;
 			sourceTree = "<group>";
@@ -185,7 +214,12 @@
 		57266DA62AFA9D6700DD9C69 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				57266D9C2AFA9D2F00DD9C69 /* SearchSpotsView.swift */,
+				57266D9C2AFA9D2F00DD9C69 /* SearchView.swift */,
+				D55A60642B26728700AB1C13 /* SearchRowView.swift */,
+				D55A60662B26736200AB1C13 /* SearchRatingView.swift */,
+				D55A606C2B26749200AB1C13 /* DirectionsButtonView.swift */,
+				D55A606E2B268B0300AB1C13 /* SearchKickoutView.swift */,
+				D55A60702B268F1800AB1C13 /* SearchDistanceView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -274,8 +308,8 @@
 				968271C12AF6E222008A5994 /* ViewModels */,
 				968271C22AF6E222008A5994 /* Views */,
 				968271BF2AF6E108008A5994 /* DataRepositories */,
-				96645AE12AF492B70017C298 /* GoogleService-Info.plist */,
 				9636CE422AF368ED00F014C5 /* Info.plist */,
+				D558C96B2B266DEC0054FBBD /* GoogleService-Info.plist */,
 				9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */,
 				9636CE1C2AF35F6300F014C5 /* Assets.xcassets */,
 				9636CE1E2AF35F6300F014C5 /* Preview Content */,
@@ -337,6 +371,7 @@
 				969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */,
 				969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */,
 				012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */,
+				D558C9712B266E200054FBBD /* FilterViewModel.swift */,
 				01678CA92B1FF7A70010A29D /* ClipViewModel.swift */,
 			);
 			path = ViewModels;
@@ -345,6 +380,7 @@
 		968271C22AF6E222008A5994 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D558C9742B266E5F0054FBBD /* Filter */,
 				91038BA82B261E4D001FE35C /* User */,
 				9160824D2AFE132400893EB5 /* Maps */,
 				916082482AFE10EB00893EB5 /* Feed */,
@@ -363,6 +399,21 @@
 				11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D558C9742B266E5F0054FBBD /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				D558C9752B266EAC0054FBBD /* FeatureButtonView.swift */,
+				D558C9772B266EB50054FBBD /* FeatureView.swift */,
+				D558C9792B266EBF0054FBBD /* FilterButtonView.swift */,
+				D558C97B2B266ED30054FBBD /* FilterView.swift */,
+				D558C97D2B266EFA0054FBBD /* KickoutView.swift */,
+				D558C97F2B266F090054FBBD /* RadiusView.swift */,
+				D558C9812B266F1B0054FBBD /* TagButtonView.swift */,
+				D558C9832B266F280054FBBD /* TagView.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,8 +522,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D558C96E2B266DF60054FBBD /* awsconfiguration.json in Resources */,
 				9636CE202AF35F6300F014C5 /* Preview Assets.xcassets in Resources */,
+				D558C9702B266DFB0054FBBD /* amplifyconfiguration.json in Resources */,
 				9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */,
+				D558C96C2B266DEC0054FBBD /* GoogleService-Info.plist in Resources */,
 				96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */,
 				1546C075571D35341768FB36 /* awsconfiguration.json in Resources */,
 				96BA2E082B150A8300CACC9E /* contents.txt in Resources */,
@@ -548,24 +602,33 @@
 				57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */,
 				659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */,
 				57266DA52AFA9D5500DD9C69 /* NewReviewView.swift in Sources */,
+				D55A60652B26728700AB1C13 /* SearchRowView.swift in Sources */,
 				57266DB02AFAA6C400DD9C69 /* SkateSpotViewModel.swift in Sources */,
+				D558C97A2B266EBF0054FBBD /* FilterButtonView.swift in Sources */,
+				D558C9722B266E200054FBBD /* FilterViewModel.swift in Sources */,
 				91038BAC2B262D70001FE35C /* UserSkateSpotsView.swift in Sources */,
 				D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
-				57266D9D2AFA9D2F00DD9C69 /* SearchSpotsView.swift in Sources */,
+				57266D9D2AFA9D2F00DD9C69 /* SearchView.swift in Sources */,
 				657B429F2AF9F4E800785EBF /* Tag.swift in Sources */,
+				D558C9762B266EAC0054FBBD /* FeatureButtonView.swift in Sources */,
 				91038BAA2B261E68001FE35C /* UserView.swift in Sources */,
 				969B00F12AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift in Sources */,
+				D55A60672B26736200AB1C13 /* SearchRatingView.swift in Sources */,
 				965283422AF978D100E7299E /* Kickout.swift in Sources */,
+				D55A606D2B26749200AB1C13 /* DirectionsButtonView.swift in Sources */,
 				96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */,
+				D55A60712B268F1800AB1C13 /* SearchDistanceView.swift in Sources */,
 				969B00EF2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift in Sources */,
 				9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */,
 				57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */,
 				D513A4532AFDCB4C00E86B14 /* ReviewRowView.swift in Sources */,
+				D55A606F2B268B0300AB1C13 /* SearchKickoutView.swift in Sources */,
 				91038BAE2B262D7C001FE35C /* UserClipsView.swift in Sources */,
 				657B42A32AF9F99800785EBF /* Review.swift in Sources */,
 				575316312B26131F003544B8 /* ClipRowView.swift in Sources */,
 				5747FDC32AFE180100793AAE /* OverviewReviewPartialView.swift in Sources */,
+				D558C9802B266F090054FBBD /* RadiusView.swift in Sources */,
 				57266DA12AFA9D4200DD9C69 /* SkateSpotDetailView.swift in Sources */,
 				9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */,
 				657B42A52AFA00F500785EBF /* User.swift in Sources */,
@@ -574,17 +637,22 @@
 				01678CA62B1FED870010A29D /* ClipsRepository.swift in Sources */,
 				57266DA32AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift in Sources */,
 				657B42A12AF9F79700785EBF /* Reviewer.swift in Sources */,
+				D558C97C2B266ED30054FBBD /* FilterView.swift in Sources */,
 				9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */,
 				012C7CEF2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift in Sources */,
 				01678CAA2B1FF7A70010A29D /* ClipViewModel.swift in Sources */,
 				57266DB22AFAA6D100DD9C69 /* ReviewViewModel.swift in Sources */,
 				65FDF93A2AFDC113005DEEED /* LocationManager.swift in Sources */,
 				57266DB42AFAA6D900DD9C69 /* UserViewModel.swift in Sources */,
+				D558C9842B266F280054FBBD /* TagView.swift in Sources */,
+				D558C9822B266F1B0054FBBD /* TagButtonView.swift in Sources */,
 				01678CA82B1FEF830010A29D /* Clip.swift in Sources */,
 				9160824C2AFE117900893EB5 /* FeedView.swift in Sources */,
+				D558C9782B266EB50054FBBD /* FeatureView.swift in Sources */,
 				969B00F32AFD77FB00FF3EB7 /* MarkerViewModel.swift in Sources */,
 				57266DE12AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift in Sources */,
 				D513A4512AFDCA7700E86B14 /* LeaveReviewView.swift in Sources */,
+				D558C97E2B266EFA0054FBBD /* KickoutView.swift in Sources */,
 				9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
