@@ -8,6 +8,8 @@
 import Foundation
 
 class FilterViewModel: ObservableObject {
+    private var skateSpotRepository = SkateSpotRepository()
+    //@Published var test : String = ""
     @Published var kickout : String = "Low"
     @Published var minAvgRating : Int = 3
     @Published var maxDistance : Double = 5.0
@@ -56,5 +58,51 @@ class FilterViewModel: ObservableObject {
         selectedTags[tag]?.toggle()
         print(selectedTags)
     }
+    
+    func validSpots() -> [SkateSpot]{
+        let validFeatures : [String] = selectedFeatures.filter{$0.value == true}.map({ $0.key })
+        //var featureKeys = validFeatures
+        var spots : [SkateSpot] = []
+        let validTags : [String] = selectedTags.filter{$0.value == true}.map({ $0.key })
+//        for spot in skateSpotRepository.skate_spots{
+//            if spot.high_kickout.rawValue
+//            if spot.features.contains(feature) && spots.contains(spot) == false{
+//                spots.append(spot)
+//            }
+//
+//        }
+        for spot in skateSpotRepository.skate_spots {
+            var containsFeature : Bool = false
+            var containsTag : Bool = false
+            if (spot.features.filter{validFeatures.contains($0)}).count > 0 || validFeatures.count == 0{
+                containsFeature = true
+            }
+            if (spot.tags.filter{validTags.contains($0)}).count > 0 || validTags.count == 0{
+                containsTag = true
+            }
+            
+            if containsTag && containsFeature{
+                spots.append(spot)
+            }
+        }
+        //validFeatures.filter{.contains($0) }
+        return spots
+    }
+    func validFeatures(skateSpot : SkateSpot) -> Bool{
+        let validFeatures : [String] = selectedFeatures.filter{$0.value == true}.map({ $0.key })
+        if (skateSpot.features.filter{validFeatures.contains($0)}).count > 0 || validFeatures.count == 0{
+            return true
+        }
+        return false
+    }
+    
+    func validTags(skateSpot : SkateSpot) -> Bool{
+        let validTags : [String] = selectedTags.filter{$0.value == true}.map({ $0.key })
+        if (skateSpot.tags.filter{validTags.contains($0)}).count > 0 || validTags.count == 0{
+            return true
+        }
+        return false
+    }
+
     
 }
