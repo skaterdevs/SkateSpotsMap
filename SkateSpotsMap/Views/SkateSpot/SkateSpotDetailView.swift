@@ -11,6 +11,7 @@ import Amplify
 struct SkateSpotDetailView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     @State var images = [UIImage]()
+    @State var notDownloaded = true
     var skateSpot: SkateSpot?
     
     var body: some View {
@@ -35,13 +36,14 @@ struct SkateSpotDetailView: View {
             
             // image carousel
             ScrollView(.horizontal) {
-                HStack(spacing: 10) {
+                LazyHStack(spacing: 10) {
                     // TODO: make show skateSpot.photos
                     ForEach(images, id: \.self) { image in
                         Image(uiImage: image)
-                            .frame(width: 200, height: 200)
+                            .resizable()
+                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            .frame(width: 150, height: 150, alignment: .center)
                             .clipShape(Rectangle())
-                            .padding([.leading, .vertical], 5)
                     }
                 }
             }.onAppear() { downloadImages(image_keys: skateSpot!.photos) }
@@ -58,18 +60,21 @@ struct SkateSpotDetailView: View {
     }
     
     func downloadImages(image_keys: [String]) {
-        image_keys.forEach { image_key in
-            Amplify.Storage.downloadData(key: image_key) {
-                result in
-                switch result {
-                case .success(let data):
-                    DispatchQueue.main.async {
-                        self.images.append(UIImage(data: data)!)
+        if notDownloaded {
+            image_keys.forEach { image_key in
+                Amplify.Storage.downloadData(key: image_key) {
+                    result in
+                    switch result {
+                    case .success(let data):
+                        DispatchQueue.main.async {
+                            self.images.append(UIImage(data: data)!)
+                        }
+                    case .failure(let error):
+                        print(error)
                     }
-                case .failure(let error):
-                    print(error)
                 }
             }
+            notDownloaded = false
         }
     }
 }

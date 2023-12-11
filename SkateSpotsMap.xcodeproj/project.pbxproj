@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		012C7CEF2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */; };
+		01678CA62B1FED870010A29D /* ClipsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA52B1FED870010A29D /* ClipsRepository.swift */; };
+		01678CA82B1FEF830010A29D /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA72B1FEF830010A29D /* Clip.swift */; };
+		01678CAA2B1FF7A70010A29D /* ClipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA92B1FF7A70010A29D /* ClipViewModel.swift */; };
+		1546C075571D35341768FB36 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */; };
 		3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */; };
 		57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D962AFA9D1200DD9C69 /* MapView.swift */; };
 		57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9A2AFA9D2700DD9C69 /* NewSkateSpotView.swift */; };
@@ -21,6 +25,8 @@
 		57266DB42AFAA6D900DD9C69 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DB32AFAA6D900DD9C69 /* UserViewModel.swift */; };
 		57266DE12AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266DE02AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift */; };
 		5747FDC32AFE180100793AAE /* OverviewReviewPartialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747FDC22AFE180100793AAE /* OverviewReviewPartialView.swift */; };
+		575316312B26131F003544B8 /* ClipRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575316302B26131F003544B8 /* ClipRowView.swift */; };
+		575316332B261724003544B8 /* ClipUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575316322B261724003544B8 /* ClipUploadView.swift */; };
 		657B429F2AF9F4E800785EBF /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B429E2AF9F4E800785EBF /* Tag.swift */; };
 		657B42A12AF9F79700785EBF /* Reviewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A02AF9F79700785EBF /* Reviewer.swift */; };
 		657B42A32AF9F99800785EBF /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657B42A22AF9F99800785EBF /* Review.swift */; };
@@ -29,6 +35,9 @@
 		659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659513612AFD9260004DCCF5 /* GoogleDistance.swift */; };
 		65B4EB872B1ECB9D00A83E05 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B4EB862B1ECB9D00A83E05 /* ModelTests.swift */; };
 		65FDF93A2AFDC113005DEEED /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FDF9392AFDC113005DEEED /* LocationManager.swift */; };
+		91038BAA2B261E68001FE35C /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91038BA92B261E68001FE35C /* UserView.swift */; };
+		91038BAC2B262D70001FE35C /* UserSkateSpotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91038BAB2B262D70001FE35C /* UserSkateSpotsView.swift */; };
+		91038BAE2B262D7C001FE35C /* UserClipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91038BAD2B262D7C001FE35C /* UserClipsView.swift */; };
 		9160824C2AFE117900893EB5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9160824B2AFE117900893EB5 /* FeedView.swift */; };
 		919CDF562B1FF2F100656543 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919CDF552B1FF2F100656543 /* ViewModelTests.swift */; };
 		9636CE192AF35F5700F014C5 /* SkateSpotsMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9636CE182AF35F5700F014C5 /* SkateSpotsMapApp.swift */; };
@@ -42,6 +51,7 @@
 		969B00EF2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */; };
 		969B00F12AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B00F02AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift */; };
 		969B00F32AFD77FB00FF3EB7 /* MarkerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */; };
+		96BA2E082B150A8300CACC9E /* contents.txt in Resources */ = {isa = PBXBuildFile; fileRef = 96BA2E072B150A8300CACC9E /* contents.txt */; };
 		96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */; };
 		96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D22F972AF6FBA600657EF2 /* SkateSpot.swift */; };
 		D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D513A44E2AFDC98800E86B14 /* ReviewHeaderView.swift */; };
@@ -85,6 +95,9 @@
 
 /* Begin PBXFileReference section */
 		012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpotGoogleMapViewModel.swift; sourceTree = "<group>"; };
+		01678CA52B1FED870010A29D /* ClipsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsRepository.swift; sourceTree = "<group>"; };
+		01678CA72B1FEF830010A29D /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
+		01678CA92B1FF7A70010A29D /* ClipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipViewModel.swift; sourceTree = "<group>"; };
 		11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.release.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.release.xcconfig"; sourceTree = "<group>"; };
 		3AD1F795D6D71255438CF639 /* Pods-SkateSpotsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.debug.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.debug.xcconfig"; sourceTree = "<group>"; };
 		57266D962AFA9D1200DD9C69 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -99,6 +112,8 @@
 		57266DB32AFAA6D900DD9C69 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		57266DE02AFC2DDC00DD9C69 /* SkateSpotOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotOverviewView.swift; sourceTree = "<group>"; };
 		5747FDC22AFE180100793AAE /* OverviewReviewPartialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewReviewPartialView.swift; sourceTree = "<group>"; };
+		575316302B26131F003544B8 /* ClipRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipRowView.swift; sourceTree = "<group>"; };
+		575316322B261724003544B8 /* ClipUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipUploadView.swift; sourceTree = "<group>"; };
 		657B429E2AF9F4E800785EBF /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		657B42A02AF9F79700785EBF /* Reviewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviewer.swift; sourceTree = "<group>"; };
 		657B42A22AF9F99800785EBF /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
@@ -107,6 +122,9 @@
 		659513612AFD9260004DCCF5 /* GoogleDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDistance.swift; sourceTree = "<group>"; };
 		65B4EB862B1ECB9D00A83E05 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		65FDF9392AFDC113005DEEED /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		91038BA92B261E68001FE35C /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		91038BAB2B262D70001FE35C /* UserSkateSpotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSkateSpotsView.swift; sourceTree = "<group>"; };
+		91038BAD2B262D7C001FE35C /* UserClipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClipsView.swift; sourceTree = "<group>"; };
 		9160824B2AFE117900893EB5 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		919CDF552B1FF2F100656543 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		9636CE152AF35F5700F014C5 /* SkateSpotsMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkateSpotsMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +142,7 @@
 		969B00EE2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewModel.swift; sourceTree = "<group>"; };
 		969B00F02AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewModelBridge.swift; sourceTree = "<group>"; };
 		969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerViewModel.swift; sourceTree = "<group>"; };
+		96BA2E072B150A8300CACC9E /* contents.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = contents.txt; sourceTree = "<group>"; };
 		96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpotRepository.swift; sourceTree = "<group>"; };
 		96D22F972AF6FBA600657EF2 /* SkateSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkateSpot.swift; sourceTree = "<group>"; };
 		C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkateSpotsMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,10 +248,22 @@
 			path = SkateSpot;
 			sourceTree = "<group>";
 		};
+		91038BA82B261E4D001FE35C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				91038BA92B261E68001FE35C /* UserView.swift */,
+				91038BAB2B262D70001FE35C /* UserSkateSpotsView.swift */,
+				91038BAD2B262D7C001FE35C /* UserClipsView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		916082482AFE10EB00893EB5 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				9160824B2AFE117900893EB5 /* FeedView.swift */,
+				575316302B26131F003544B8 /* ClipRowView.swift */,
+				575316322B261724003544B8 /* ClipUploadView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -272,6 +303,7 @@
 		9636CE172AF35F5700F014C5 /* SkateSpotsMap */ = {
 			isa = PBXGroup;
 			children = (
+				96BA2E072B150A8300CACC9E /* contents.txt */,
 				968271C02AF6E222008A5994 /* Models */,
 				968271C12AF6E222008A5994 /* ViewModels */,
 				968271C22AF6E222008A5994 /* Views */,
@@ -308,6 +340,7 @@
 			children = (
 				96D22F952AF6EF1F00657EF2 /* SkateSpotRepository.swift */,
 				657B42A62AFA032400785EBF /* UserRepository.swift */,
+				01678CA52B1FED870010A29D /* ClipsRepository.swift */,
 			);
 			path = DataRepositories;
 			sourceTree = "<group>";
@@ -323,6 +356,7 @@
 				657B42A22AF9F99800785EBF /* Review.swift */,
 				657B42A42AFA00F500785EBF /* User.swift */,
 				659513612AFD9260004DCCF5 /* GoogleDistance.swift */,
+				01678CA72B1FEF830010A29D /* Clip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,6 +372,7 @@
 				969B00F22AFD77FB00FF3EB7 /* MarkerViewModel.swift */,
 				012C7CEE2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift */,
 				D558C9712B266E200054FBBD /* FilterViewModel.swift */,
+				01678CA92B1FF7A70010A29D /* ClipViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -346,6 +381,7 @@
 			isa = PBXGroup;
 			children = (
 				D558C9742B266E5F0054FBBD /* Filter */,
+				91038BA82B261E4D001FE35C /* User */,
 				9160824D2AFE132400893EB5 /* Maps */,
 				916082482AFE10EB00893EB5 /* Feed */,
 				57266DA82AFA9DA800DD9C69 /* SkateSpot */,
@@ -491,6 +527,10 @@
 				D558C9702B266DFB0054FBBD /* amplifyconfiguration.json in Resources */,
 				9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */,
 				D558C96C2B266DEC0054FBBD /* GoogleService-Info.plist in Resources */,
+				96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */,
+				1546C075571D35341768FB36 /* awsconfiguration.json in Resources */,
+				96BA2E082B150A8300CACC9E /* contents.txt in Resources */,
+				530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,11 +606,13 @@
 				57266DB02AFAA6C400DD9C69 /* SkateSpotViewModel.swift in Sources */,
 				D558C97A2B266EBF0054FBBD /* FilterButtonView.swift in Sources */,
 				D558C9722B266E200054FBBD /* FilterViewModel.swift in Sources */,
+				91038BAC2B262D70001FE35C /* UserSkateSpotsView.swift in Sources */,
 				D513A44F2AFDC98800E86B14 /* ReviewHeaderView.swift in Sources */,
 				965283402AF977C800E7299E /* Feature.swift in Sources */,
 				57266D9D2AFA9D2F00DD9C69 /* SearchView.swift in Sources */,
 				657B429F2AF9F4E800785EBF /* Tag.swift in Sources */,
 				D558C9762B266EAC0054FBBD /* FeatureButtonView.swift in Sources */,
+				91038BAA2B261E68001FE35C /* UserView.swift in Sources */,
 				969B00F12AFD6F4500FF3EB7 /* GoogleMapViewModelBridge.swift in Sources */,
 				D55A60672B26736200AB1C13 /* SearchRatingView.swift in Sources */,
 				965283422AF978D100E7299E /* Kickout.swift in Sources */,
@@ -582,23 +624,29 @@
 				57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */,
 				D513A4532AFDCB4C00E86B14 /* ReviewRowView.swift in Sources */,
 				D55A606F2B268B0300AB1C13 /* SearchKickoutView.swift in Sources */,
+				91038BAE2B262D7C001FE35C /* UserClipsView.swift in Sources */,
 				657B42A32AF9F99800785EBF /* Review.swift in Sources */,
+				575316312B26131F003544B8 /* ClipRowView.swift in Sources */,
 				5747FDC32AFE180100793AAE /* OverviewReviewPartialView.swift in Sources */,
 				D558C9802B266F090054FBBD /* RadiusView.swift in Sources */,
 				57266DA12AFA9D4200DD9C69 /* SkateSpotDetailView.swift in Sources */,
 				9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */,
 				657B42A52AFA00F500785EBF /* User.swift in Sources */,
+				575316332B261724003544B8 /* ClipUploadView.swift in Sources */,
 				57266D9F2AFA9D3A00DD9C69 /* SkateSpotRowView.swift in Sources */,
+				01678CA62B1FED870010A29D /* ClipsRepository.swift in Sources */,
 				57266DA32AFA9D4B00DD9C69 /* SkateSpotReviewsView.swift in Sources */,
 				657B42A12AF9F79700785EBF /* Reviewer.swift in Sources */,
 				D558C97C2B266ED30054FBBD /* FilterView.swift in Sources */,
 				9636CE1B2AF35F5700F014C5 /* ContentView.swift in Sources */,
 				012C7CEF2AFE0FA40083F711 /* AddSpotGoogleMapViewModel.swift in Sources */,
+				01678CAA2B1FF7A70010A29D /* ClipViewModel.swift in Sources */,
 				57266DB22AFAA6D100DD9C69 /* ReviewViewModel.swift in Sources */,
 				65FDF93A2AFDC113005DEEED /* LocationManager.swift in Sources */,
 				57266DB42AFAA6D900DD9C69 /* UserViewModel.swift in Sources */,
 				D558C9842B266F280054FBBD /* TagView.swift in Sources */,
 				D558C9822B266F1B0054FBBD /* TagButtonView.swift in Sources */,
+				01678CA82B1FEF830010A29D /* Clip.swift in Sources */,
 				9160824C2AFE117900893EB5 /* FeedView.swift in Sources */,
 				D558C9782B266EB50054FBBD /* FeatureView.swift in Sources */,
 				969B00F32AFD77FB00FF3EB7 /* MarkerViewModel.swift in Sources */,

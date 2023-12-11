@@ -9,18 +9,20 @@ import SwiftUI
 import GoogleMaps
 
 struct MapView: View {
-    @State var selectedSkateSpot: SkateSpot?
+    @ObservedObject var markerViewModel = MarkerViewModel()
     @State var isActive: Bool = false
+    @State var userCoords: CLLocationCoordinate2D?
     
     var body: some View {
         NavigationView {
             ZStack{
                 VStack {
-                    GoogleMapViewModelBridge(goToSkateSpot: { (skateSpot) in
-                        self.selectedSkateSpot = skateSpot
+                    GoogleMapViewModelBridge(markerViewModel: markerViewModel, goToSkateSpot: {
                         self.isActive = true
-                    })
-                    NavigationLink(destination: SkateSpotDetailView(skateSpot: selectedSkateSpot), isActive: $isActive) { EmptyView() }
+                    }, refreshUserCoords: { (updatedCoords) in
+                        self.userCoords = updatedCoords;
+                    }).frame(height: UIScreen.main.bounds.height)
+                    NavigationLink(destination: SkateSpotDetailView(skateSpot: markerViewModel.selectedSkateSpot), isActive: $isActive) { EmptyView() }
                 }
                 
                 // Add SkateSpot Button
@@ -28,7 +30,7 @@ struct MapView: View {
                     Spacer()
                     VStack{
                         Spacer()
-                        NavigationLink(destination: NewSkateSpotView()) {
+                        NavigationLink(destination: NewSkateSpotView(userCoords: $userCoords)) {
                             Image(systemName: "plus")
                                 .resizable()
                                 .padding(6)
@@ -37,7 +39,7 @@ struct MapView: View {
                                 .clipShape(Circle())
                                 .foregroundColor(.white)
                         }
-                    }.padding(.bottom, 80)
+                    }.padding(.bottom, 150)
                 }.padding(.trailing, 10)
             }
         }

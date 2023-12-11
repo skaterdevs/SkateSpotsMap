@@ -11,25 +11,34 @@ struct ContentView: View {
   var skateSpotList = SkateSpotViewModel()
   var filterViewModel = FilterViewModel()
     
-  var body: some View {
+    var body: some View {
         TabView() {
-            MapView()
-            .tabItem {
-                Image(systemName: "map.fill")
-                Text("Map")
-            }.tag(1)
-            SearchView()
-            .tabItem{
-                Image(systemName: "magnifyingglass.circle.fill")
-                Text("Search")
-            }.tag(2)
-            FeedView()
-            .tabItem {
-                Image(systemName: "rectangle.stack.person.crop.fill")
-                Text("Feed")
-            }.tag(3)
-        }.environmentObject(filterViewModel)
-      }
+                MapView()
+                    .tabItem {
+                            Image(systemName: "map.fill")
+                            Text("Map")
+                    }.tag(1)
+                SearchView()
+                    .tabItem{
+                        Image(systemName: "magnifyingglass.circle.fill")
+                        Text("Search")
+                    }.tag(2)
+                FeedView()
+                    .tabItem {
+                        Image(systemName: "rectangle.stack.person.crop.fill")
+                        Text("Feed")
+                    }.tag(3)
+                UserView()
+                    .tabItem {
+                        Image(systemName: "person.crop.circle.fill")
+                        Text("Profile")
+                    }.tag(4)
+        }
+        .onAppear() {
+            UITabBar.appearance().backgroundColor = UIColor(.white)
+        }
+        .environmentObject(filterViewModel)
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
