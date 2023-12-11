@@ -11,11 +11,16 @@ import Foundation
 
 struct ClipRowView: View {
     var clip: Clip
+    @State var localLikes = 0
+    @State var localDislikes = 0
+    @State var hasNotInteracted = true
+    
+    @ObservedObject var clipViewModel = ClipsRepository()
     
     var body: some View {
         VStack {
             HStack {
-                Image("userIcon").resizable()
+                Image(clip.user.avatar).resizable().padding([.leading], 10)
                     .frame(width: 30.0, height: 30.0).clipShape(Circle())
                 Text(clip.user.username)
                 Spacer()
@@ -28,21 +33,50 @@ struct ClipRowView: View {
                 .clipShape(Rectangle())
             HStack {
                 Button(action: {
-                    }) {
-                        Image(systemName: "hand.thumbsup.fill")
-                        Text("\(clip.likes)")
-                    }
-                .padding()
-
-                Spacer()
-
+                    liked()
+                }) {
+                    Image(systemName: "hand.thumbsup.fill")
+                    Text("\(localLikes)")
+                }
+                .padding([.leading], 10)
+                
                 Button(action: {
-                    }) {
-                        Image(systemName: "hand.thumbsdown.fill")
-                        Text("\(clip.dislikes)")
-                    }
-                .padding()
+                    disliked()
+                }) {
+                    Image(systemName: "hand.thumbsdown.fill")
+                    Text("\(localDislikes)")
+                }
+                .padding([.leading], 10)
+                Spacer()
+            }.onAppear() {
+                localLikes = clip.likes
+                localDislikes = clip.dislikes
             }
+        }
+        
+    }
+    
+    func liked() {
+//       if clip is in likes, remove from likes and subtract
+//        let newLikedNum = clip.likes + 1
+//        var newClip = clip
+//        newClip.likes = newLikedNum
+//        clipViewModel.update(newClip)
+        if(hasNotInteracted){
+            localLikes+=1
+            hasNotInteracted=false
+        }
+    }
+    
+    func disliked() {
+        //        if clip is in dislikes, remove from dislikes and add 1
+//        let newDislikedNum = clip.dislikes + 1
+//        var newClip = clip
+//        newClip.dislikes = newDislikedNum
+//        clipViewModel.update(newClip)
+        if(hasNotInteracted){
+            localDislikes+=1
+            hasNotInteracted=false
         }
     }
 }
