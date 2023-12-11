@@ -39,7 +39,7 @@ struct NewReviewView: View {
                     HStack {
                         Spacer()
                         VStack {
-                            Text("Rate Experience").fontWeight(.medium)
+                            Text("Rate Experience:").font(.title3).fontWeight(.medium)
                             Picker(selection: $rating, label: Text("Rating")) {
                                 Text("1").tag(1)
                                 Text("2").tag(2)
@@ -57,7 +57,7 @@ struct NewReviewView: View {
                     HStack {
                         Spacer()
                         VStack {
-                            Text("Select Tags").fontWeight(.medium)
+                            Text("Select Applicable Tags:").font(.title3).fontWeight(.medium)
                             ScrollView {
                                 HStack {
                                     LazyVGrid(columns: columns) {
@@ -93,7 +93,7 @@ struct NewReviewView: View {
                     HStack {
                         Spacer()
                         VStack {
-                            Text("Select Kick-out Factor").fontWeight(.medium)
+                            Text("Select Kick-out Factor:").font(.title3).fontWeight(.medium)
                             
                             Picker(selection: $kickout, label: Text("Kick-out Factor")) {
                                 ForEach(Kickout.allKickout, id: \.self) { value in
@@ -110,7 +110,7 @@ struct NewReviewView: View {
                     HStack {
                         Spacer()
                         VStack {
-                            Text("Leave a Comment (Optional)").fontWeight(.medium)
+                            Text("Leave a Comment (Optional):").font(.title3).fontWeight(.medium)
                             TextField("Share your experience...", text: $comment, axis: .vertical).padding()
                                 .overlay(RoundedRectangle(cornerRadius: 10.0).strokeBorder(Color.black, style: StrokeStyle(lineWidth: 1.0)))
                                 .padding()

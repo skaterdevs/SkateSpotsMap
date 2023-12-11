@@ -9,7 +9,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct SkateSpot: Identifiable, Comparable, Codable {
+struct SkateSpot: Identifiable, Comparable, Codable, Hashable {
     // MARK: Fields
     @DocumentID var id: String?
     var name: String
@@ -50,6 +50,10 @@ struct SkateSpot: Identifiable, Comparable, Codable {
     static func <(lhs: SkateSpot, rhs: SkateSpot) -> Bool {
         return lhs.rating_avg < rhs.rating_avg
     }
+    
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
   
     // MARK: Example for SwiftUI
     static let example = SkateSpot(
@@ -95,4 +99,19 @@ struct SkateSpot: Identifiable, Comparable, Codable {
         rating_avg: 3.0,
         tags: [Tag.CityArea.rawValue, Tag.New.rawValue],
         reviews: [Review.example])
+    
+    static let exampleTemp = SkateSpot(
+        id: "spotTemp",
+        name: "Schenely Park",
+        location: GeoPoint(latitude: 3.2, longitude: 4.1),
+        photos: ["basic.landscape"],
+        features: [Feature.walls.rawValue, Feature.banks.rawValue, Feature.ledges.rawValue, Feature.curbs.rawValue],
+        overall_kickout: Kickout.high.rawValue,
+        low_kickout: 0,
+        medium_kickout: 0,
+        high_kickout: 1,
+        rating_sum: 5,
+        rating_avg: 5.0,
+        tags: [Tag.Popular.rawValue, Tag.Clean.rawValue, Tag.Safe.rawValue, Tag.CityArea.rawValue, Tag.New.rawValue, Tag.Popular.rawValue, Tag.Clean.rawValue, Tag.Safe.rawValue, Tag.CityArea.rawValue, Tag.New.rawValue],
+        reviews: [Review.example2])
 }

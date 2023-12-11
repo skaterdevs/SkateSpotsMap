@@ -42,6 +42,9 @@ struct User: Identifiable, Codable, Comparable {
     static func <(lhs: User, rhs: User) -> Bool {
         return lhs.username < rhs.username
     }
+    
+    // MARK: Default User
+    static let defaultUser = "26Dxy1VDAAYuiBSWryMB"
   
     // MARK: Example for SwiftUI
     static let example = User(

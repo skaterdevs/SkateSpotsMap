@@ -20,4 +20,12 @@ class UserViewModel: ObservableObject {
     func destroy(user: User) {
         userRepository.delete(user)
     }
+    
+    func findUser(_ id: String) -> User? {
+        if let user = userRepository.users.first(where: {$0.id == id}) {
+            return user
+        } else {
+            return nil
+        }
+    }
 }

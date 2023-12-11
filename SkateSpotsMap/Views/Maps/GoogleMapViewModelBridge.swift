@@ -10,9 +10,9 @@ import GoogleMaps
 import SwiftUI
 
 struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
-    @ObservedObject var markerViewModel = MarkerViewModel()
-    
-    var goToSkateSpot: (SkateSpot?) -> ()
+    var markerViewModel: MarkerViewModel
+    var goToSkateSpot: () -> ()
+    var refreshUserCoords: (CLLocationCoordinate2D) -> ()
     
     func makeUIViewController(context: Context) -> GoogleMapViewModel {
         let uiViewModel = GoogleMapViewModel()
@@ -31,6 +31,8 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
         uiViewModel.mapView.camera = GMSCameraPosition.camera(withLatitude: userLat ?? 0,
                                                               longitude: userLong ?? 0,
                                                               zoom: 15)
+        refreshUserCoords(CLLocationCoordinate2D(latitude: userLat ?? 0, longitude: userLong ?? 0))
+        uiViewModel.mapView.clear()
         markerViewModel.skateSpotMarkers.forEach { marker in
             marker.map = uiViewModel.mapView
         }
@@ -50,7 +52,8 @@ struct GoogleMapViewModelBridge: UIViewControllerRepresentable {
         func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
             // Unpack SkateSpot object in the marker
             let skateSpot = marker.userData as! SkateSpot?
-            self.googleMapViewModelBridge.goToSkateSpot(skateSpot)
+            self.googleMapViewModelBridge.goToSkateSpot()
+            self.googleMapViewModelBridge.markerViewModel.selectedSkateSpot = skateSpot
             print("Tapped \(skateSpot!.name)")
             return true
         }
