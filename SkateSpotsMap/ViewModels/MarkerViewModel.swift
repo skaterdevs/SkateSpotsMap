@@ -59,13 +59,13 @@ class MarkerViewModel: ObservableObject {
                 // Set marker icon based on kickout factor
                 switch skateSpot.overall_kickout {
                 case Kickout.low.rawValue:
-                    marker.icon = UIImage(named: "low")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                    marker.icon = UIImage(named: "low")!.scalePreservingAspectRatio(targetSize: CGSize(width: 56, height: 56))
                 case Kickout.medium.rawValue:
-                    marker.icon = UIImage(named: "medium")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                    marker.icon = UIImage(named: "medium")!.scalePreservingAspectRatio(targetSize: CGSize(width: 56, height: 56))
                 case Kickout.high.rawValue:
-                    marker.icon = UIImage(named: "high")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                    marker.icon = UIImage(named: "high")!.scalePreservingAspectRatio(targetSize: CGSize(width: 56, height: 56))
                 default:
-                    marker.icon = UIImage(named: "neutral")!.scalePreservingAspectRatio(targetSize: CGSize(width: 32, height: 32))
+                    marker.icon = UIImage(named: "neutral")!.scalePreservingAspectRatio(targetSize: CGSize(width: 56, height: 56))
                 }
                 
                 return marker
