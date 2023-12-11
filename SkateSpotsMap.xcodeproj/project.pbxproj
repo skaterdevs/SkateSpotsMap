@@ -64,6 +64,8 @@
 		D55A60692B2673EB00AB1C13 /* SearchTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A60682B2673EB00AB1C13 /* SearchTagsView.swift */; };
 		D55A606B2B26741900AB1C13 /* SearchFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A606A2B26741900AB1C13 /* SearchFeaturesView.swift */; };
 		D55A606D2B26749200AB1C13 /* DirectionsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A606C2B26749200AB1C13 /* DirectionsButtonView.swift */; };
+		D55A606F2B268B0300AB1C13 /* SearchKickoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A606E2B268B0300AB1C13 /* SearchKickoutView.swift */; };
+		D55A60712B268F1800AB1C13 /* SearchDistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55A60702B268F1800AB1C13 /* SearchDistanceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,8 @@
 		D55A60682B2673EB00AB1C13 /* SearchTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTagsView.swift; sourceTree = "<group>"; };
 		D55A606A2B26741900AB1C13 /* SearchFeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFeaturesView.swift; sourceTree = "<group>"; };
 		D55A606C2B26749200AB1C13 /* DirectionsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsButtonView.swift; sourceTree = "<group>"; };
+		D55A606E2B268B0300AB1C13 /* SearchKickoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchKickoutView.swift; sourceTree = "<group>"; };
+		D55A60702B268F1800AB1C13 /* SearchDistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDistanceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,8 @@
 				D55A60682B2673EB00AB1C13 /* SearchTagsView.swift */,
 				D55A606A2B26741900AB1C13 /* SearchFeaturesView.swift */,
 				D55A606C2B26749200AB1C13 /* DirectionsButtonView.swift */,
+				D55A606E2B268B0300AB1C13 /* SearchKickoutView.swift */,
+				D55A60702B268F1800AB1C13 /* SearchDistanceView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -576,11 +582,13 @@
 				965283422AF978D100E7299E /* Kickout.swift in Sources */,
 				D55A606D2B26749200AB1C13 /* DirectionsButtonView.swift in Sources */,
 				96D22F962AF6EF1F00657EF2 /* SkateSpotRepository.swift in Sources */,
+				D55A60712B268F1800AB1C13 /* SearchDistanceView.swift in Sources */,
 				969B00EF2AFD6E6700FF3EB7 /* GoogleMapViewModel.swift in Sources */,
 				D55A606B2B26741900AB1C13 /* SearchFeaturesView.swift in Sources */,
 				9699E6322AF373E100EF7FC2 /* GoogleMapView.swift in Sources */,
 				57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */,
 				D513A4532AFDCB4C00E86B14 /* ReviewRowView.swift in Sources */,
+				D55A606F2B268B0300AB1C13 /* SearchKickoutView.swift in Sources */,
 				657B42A32AF9F99800785EBF /* Review.swift in Sources */,
 				5747FDC32AFE180100793AAE /* OverviewReviewPartialView.swift in Sources */,
 				D558C9802B266F090054FBBD /* RadiusView.swift in Sources */,

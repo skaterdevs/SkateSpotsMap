@@ -18,7 +18,7 @@ struct SearchTagsView: View {
             ForEach(skateSpot.tags, id: \.self){ tag in
                 Text(tag).fontWeight(.light).font(.system(size:10)).padding(.top, 2)
             }
-        }
+        }.frame(maxHeight:.infinity)
     }
 }
 
