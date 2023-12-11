@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ClipViewModel {
+class ClipViewModel: ObservableObject {
     private var clipRepository = ClipsRepository()
     
     func post(clip: Clip) {

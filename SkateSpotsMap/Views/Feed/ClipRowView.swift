@@ -15,10 +15,11 @@ struct ClipRowView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(
-                    clip.user.username)
-                Text(
-                    clip.location)
+                Image("userIcon").resizable()
+                    .frame(width: 30.0, height: 30.0).clipShape(Circle())
+                Text(clip.user.username)
+                Spacer()
+                Text(clip.location)
             }
             let videoURL = URL(string: clip.media[0])
             let player = AVPlayer(url: videoURL!)

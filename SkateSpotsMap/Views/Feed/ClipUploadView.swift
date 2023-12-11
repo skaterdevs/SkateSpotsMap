@@ -8,6 +8,11 @@
 import AVKit
 import PhotosUI
 import SwiftUI
+import Amplify
+
+import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 struct Movie: Transferable {
     let url: URL
@@ -29,16 +34,39 @@ struct Movie: Transferable {
 }
 
 struct ClipUploadView: View {
+    @ObservedObject var clipViewModel = ClipViewModel()
+    @ObservedObject var skateSpotRepo = SkateSpotRepository()
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State private var user = Reviewer.example
+    @State private var media: [String] = []
+    @State private var location = ""
+    @State private var likes = 0
+    @State private var dislikes = 0
+    @State private var timestamp = Timestamp()
+    
     enum LoadState {
         case unknown, loading, loaded(Movie), failed
     }
-
+    
+    @State private var movieClip: Movie?
+    @State private var skateSpotSelection: SkateSpot?
     @State private var selectedItem: PhotosPickerItem?
     @State private var loadState = LoadState.unknown
 
     var body: some View {
         VStack {
-            PhotosPicker("Select movie", selection: $selectedItem, matching: .videos)
+            Text("Add A Clip")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+            
+            VStack(alignment: .center, spacing: 18) {
+                Divider()
+            }
+            
+            // Video Picker
+            PhotosPicker("Select a clip...", selection: $selectedItem, matching: .videos)
 
             switch loadState {
             case .unknown:
@@ -52,6 +80,44 @@ struct ClipUploadView: View {
             case .failed:
                 Text("Import failed")
             }
+            
+            VStack(alignment: .center, spacing: 18) {
+                Divider()
+            }
+            
+            // Location picker
+            Picker("", selection: $skateSpotSelection) {
+                Text("Select skate spot...").tag(String?.none)
+                ForEach(skateSpotRepo.skate_spots) {skateSpot in
+                    Text(skateSpot.name).tag(SkateSpot?.some(skateSpot))
+                    // https://stackoverflow.com/questions/59277070/swiftui-picker-selection-binding-not-updating
+                }
+            }
+            .pickerStyle(.menu)
+            
+            HStack {
+                Text("Selected spot: " )
+                Text("\(skateSpotSelection?.name ?? "No selection")").fontWeight(.medium)
+            }
+            
+            VStack(alignment: .center, spacing: 18) {
+                Divider()
+            }
+            
+            // Submit button
+            Button("Submit") {
+                guard selectedItem != nil && skateSpotSelection != nil else { return }
+                addNewClip()
+                clearFields()
+                presentationMode.wrappedValue.dismiss()
+            }
+            .padding()
+            .background(.blue)
+            .cornerRadius(10)
+            .foregroundColor(.white)
+            .fontWeight(.medium)
+            
+            Spacer()
         }
         .onChange(of: selectedItem) { _ in
             Task {
@@ -60,6 +126,8 @@ struct ClipUploadView: View {
 
                     if let movie = try await selectedItem?.loadTransferable(type: Movie.self) {
                         loadState = .loaded(movie)
+                        movieClip = movie
+                        print(movieClip?.url ?? "Didn't get value")
                     } else {
                         loadState = .failed
                     }
@@ -69,8 +137,44 @@ struct ClipUploadView: View {
             }
         }
     }
-}
-
-#Preview {
-    ClipUploadView()
+    
+    func addNewClip() {
+        
+        let newID = UUID().uuidString
+        uploadVideo(clipID: newID)
+        let newClip = Clip(id: newID,
+                           // TODO: REPLACE
+                           user: user,
+                           media: ["https://skaterbucket193541-dev.s3.amazonaws.com/public/"+"\(newID+(self.movieClip!.url.absoluteString).suffix(4))"],
+                           location: skateSpotSelection!.id ?? "Could not get skate spot id",
+                           likes: 0,
+                           dislikes: 0,
+                           timestamp: Timestamp()
+                      )
+        clipViewModel.post(clip: newClip)
+    }
+    
+    func uploadVideo(clipID: String) {
+        // TODO: Don't force unwrap
+        Amplify.Storage.uploadFile(key: "\(clipID+(self.movieClip!.url.absoluteString).suffix(4))",
+                                   local: (self.movieClip!.url))
+        { result in
+            switch result {
+            case .success(let uploadedData):
+                print(uploadedData)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
+    
+    func clearFields() {
+        user = user
+        media = [String]()
+        location = String()
+        likes = 0
+        dislikes = 0
+        timestamp = Timestamp()
+    }
 }

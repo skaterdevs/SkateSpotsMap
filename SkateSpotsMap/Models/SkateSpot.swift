@@ -9,7 +9,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct SkateSpot: Identifiable, Comparable, Codable {
+struct SkateSpot: Identifiable, Comparable, Codable, Hashable {
     // MARK: Fields
     @DocumentID var id: String?
     var name: String
@@ -50,6 +50,10 @@ struct SkateSpot: Identifiable, Comparable, Codable {
     static func <(lhs: SkateSpot, rhs: SkateSpot) -> Bool {
         return lhs.rating_avg < rhs.rating_avg
     }
+    
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
   
     // MARK: Example for SwiftUI
     static let example = SkateSpot(

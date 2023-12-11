@@ -14,6 +14,7 @@ import Amplify
 struct NewSkateSpotView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     @State private var location = 1
+    @Binding var userCoords: CLLocationCoordinate2D?
     @State private var name = String()
     @State private var photos = [String]()
     @State private var features = [String]()
@@ -170,8 +171,8 @@ struct NewSkateSpotView: View {
     }
 }
 
-struct NewSkateSpotView_Preview: PreviewProvider {
-    static var previews: some View {
-        NewSkateSpotView()
-    }
-}
+//struct NewSkateSpotView_Preview: PreviewProvider {
+//    static var previews: some View {
+//        NewSkateSpotView()
+//    }
+//}
