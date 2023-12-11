@@ -75,6 +75,8 @@
 		D5E0A0B02B277FBB00EF18AB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5E0A0AF2B277FBB00EF18AB /* awsconfiguration.json */; };
 		D5E0A0B22B277FC000EF18AB /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = D5E0A0B12B277FC000EF18AB /* amplifyconfiguration.json */; };
 		D5E0A0B42B278F9E00EF18AB /* KickoutDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E0A0B32B278F9E00EF18AB /* KickoutDataView.swift */; };
+		D5E0A0B62B2792AF00EF18AB /* SearchReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E0A0B52B2792AF00EF18AB /* SearchReviewView.swift */; };
+		D5E0A0B82B279AB900EF18AB /* GenerateStarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E0A0B72B279AB900EF18AB /* GenerateStarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,8 @@
 		D5E0A0AF2B277FBB00EF18AB /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		D5E0A0B12B277FC000EF18AB /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
 		D5E0A0B32B278F9E00EF18AB /* KickoutDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KickoutDataView.swift; sourceTree = "<group>"; };
+		D5E0A0B52B2792AF00EF18AB /* SearchReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchReviewView.swift; sourceTree = "<group>"; };
+		D5E0A0B72B279AB900EF18AB /* GenerateStarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateStarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +227,8 @@
 				D55A606E2B268B0300AB1C13 /* SearchKickoutView.swift */,
 				D55A60702B268F1800AB1C13 /* SearchDistanceView.swift */,
 				D5E0A0B32B278F9E00EF18AB /* KickoutDataView.swift */,
+				D5E0A0B52B2792AF00EF18AB /* SearchReviewView.swift */,
+				D5E0A0B72B279AB900EF18AB /* GenerateStarView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -599,6 +605,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				657B42A72AFA032400785EBF /* UserRepository.swift in Sources */,
+				D5E0A0B82B279AB900EF18AB /* GenerateStarView.swift in Sources */,
 				96D22F982AF6FBA600657EF2 /* SkateSpot.swift in Sources */,
 				57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */,
 				659513622AFD9260004DCCF5 /* GoogleDistance.swift in Sources */,
@@ -633,6 +640,7 @@
 				D558C9802B266F090054FBBD /* RadiusView.swift in Sources */,
 				57266DA12AFA9D4200DD9C69 /* SkateSpotDetailView.swift in Sources */,
 				9699E6302AF370A200EF7FC2 /* AppDelegate.swift in Sources */,
+				D5E0A0B62B2792AF00EF18AB /* SearchReviewView.swift in Sources */,
 				657B42A52AFA00F500785EBF /* User.swift in Sources */,
 				575316332B261724003544B8 /* ClipUploadView.swift in Sources */,
 				57266D9F2AFA9D3A00DD9C69 /* SkateSpotRowView.swift in Sources */,

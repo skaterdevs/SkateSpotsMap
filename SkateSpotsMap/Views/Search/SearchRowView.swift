@@ -19,7 +19,9 @@ struct SearchRowView: View {
                         Text(skateSpot.name)
                             .fontWeight(.bold)
                             .font(.title3)
-                            .padding(.bottom, 0.5)
+                            .padding(.bottom, -3)
+                        
+                        SearchReviewView(skateSpot: skateSpot).padding(.bottom, 1.5)
                         
                         SearchKickoutView(skateSpot : skateSpot, levelColor : .black).padding(.bottom, 0.5)
                         
