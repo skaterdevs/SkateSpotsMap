@@ -11,7 +11,7 @@
 		01678CA62B1FED870010A29D /* ClipsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA52B1FED870010A29D /* ClipsRepository.swift */; };
 		01678CA82B1FEF830010A29D /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA72B1FEF830010A29D /* Clip.swift */; };
 		01678CAA2B1FF7A70010A29D /* ClipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA92B1FF7A70010A29D /* ClipViewModel.swift */; };
-		1546C075571D35341768FB36 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F00CB4B3E856C2D1EB04D8E /* awsconfiguration.json */; };
+		1546C075571D35341768FB36 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */; };
 		57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D962AFA9D1200DD9C69 /* MapView.swift */; };
 		57266D9B2AFA9D2700DD9C69 /* NewSkateSpotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D9A2AFA9D2700DD9C69 /* NewSkateSpotView.swift */; };
@@ -149,9 +149,9 @@
 		D513A44E2AFDC98800E86B14 /* ReviewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHeaderView.swift; sourceTree = "<group>"; };
 		D513A4502AFDCA7700E86B14 /* LeaveReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveReviewView.swift; sourceTree = "<group>"; };
 		D513A4522AFDCB4C00E86B14 /* ReviewRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRowView.swift; sourceTree = "<group>"; };
-		D558C96B2B266DEC0054FBBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D558C96D2B266DF60054FBBD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
-		D558C96F2B266DFB0054FBBD /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = amplifyconfiguration.json; path = ../../../Downloads/amplifyconfiguration.json; sourceTree = "<group>"; };
+		D558C96B2B266DEC0054FBBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D558C96D2B266DF60054FBBD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		D558C96F2B266DFB0054FBBD /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		D558C9712B266E200054FBBD /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
 		D558C9752B266EAC0054FBBD /* FeatureButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureButtonView.swift; sourceTree = "<group>"; };
 		D558C9772B266EB50054FBBD /* FeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
@@ -527,10 +527,8 @@
 				D558C9702B266DFB0054FBBD /* amplifyconfiguration.json in Resources */,
 				9636CE1D2AF35F6300F014C5 /* Assets.xcassets in Resources */,
 				D558C96C2B266DEC0054FBBD /* GoogleService-Info.plist in Resources */,
-				96645AE22AF492B80017C298 /* GoogleService-Info.plist in Resources */,
-				1546C075571D35341768FB36 /* awsconfiguration.json in Resources */,
+				1546C075571D35341768FB36 /* (null) in Resources */,
 				96BA2E082B150A8300CACC9E /* contents.txt in Resources */,
-				530C34D634A43A806452F735 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
