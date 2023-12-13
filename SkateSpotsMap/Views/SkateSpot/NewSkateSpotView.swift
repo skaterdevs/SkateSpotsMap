@@ -124,7 +124,9 @@ struct NewSkateSpotView: View {
     func addSkateSpot() {
         uploadImages()
         let loc = GeoPoint(latitude: selectedMarker?.position.latitude ?? 0.0, longitude: selectedMarker?.position.longitude ?? 0.0)
-        let skateSpot = SkateSpot(name: name,
+        let skate_spot_id = UUID().uuidString
+        let skateSpot = SkateSpot(skate_spot_id: skate_spot_id,
+                                  name: name,
                                   location: loc,
                                   photos: photos,
                                   features: features,
