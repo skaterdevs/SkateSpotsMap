@@ -13,6 +13,7 @@ import Amplify
 
 struct NewSkateSpotView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
+    @ObservedObject var userViewModel = UserViewModel()
     @Binding var userCoords: CLLocationCoordinate2D?
     @State private var location = 1
     @State private var name = String()
@@ -139,6 +140,10 @@ struct NewSkateSpotView: View {
                                   tags: [String](),
                                   reviews: [Review]())
         skateSpotViewModel.add(skateSpot: skateSpot)
+        // Add spot to user
+        var user = userViewModel.findUser("26Dxy1VDAAYuiBSWryMB")
+        user?.spots.append(skate_spot_id)
+        userViewModel.update(user: user!)
     }
     func uploadImages() {
         print(selectedUIImage.count)

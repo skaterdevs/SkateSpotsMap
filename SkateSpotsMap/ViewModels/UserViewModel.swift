@@ -16,6 +16,10 @@ class UserViewModel: ObservableObject {
     func add(user: User) {
         userRepository.create(user)
     }
+    
+    func update(user: User) {
+        userRepository.update(user)
+    }
   
     func destroy(user: User) {
         userRepository.delete(user)
