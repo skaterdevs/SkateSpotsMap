@@ -12,6 +12,7 @@ import FirebaseFirestoreSwift
 struct SkateSpot: Identifiable, Comparable, Codable, Hashable {
     // MARK: Fields
     @DocumentID var id: String?
+    var skate_spot_id: String
     var name: String
     var location: GeoPoint
     var photos: [String]
@@ -28,6 +29,7 @@ struct SkateSpot: Identifiable, Comparable, Codable, Hashable {
     // MARK: Codable
     enum CodingKeys: String, CodingKey {
         case id
+        case skate_spot_id
         case name
         case location
         case photos
@@ -58,6 +60,7 @@ struct SkateSpot: Identifiable, Comparable, Codable, Hashable {
     // MARK: Example for SwiftUI
     static let example = SkateSpot(
         id: "spot1",
+        skate_spot_id: UUID().uuidString,
         name: "Schenely Park",
         location: GeoPoint(latitude: 3.2, longitude: 4.1),
         photos: ["basic.landscape"],
@@ -73,6 +76,7 @@ struct SkateSpot: Identifiable, Comparable, Codable, Hashable {
 
     static let example2 = SkateSpot(
         id: "spot2",
+        skate_spot_id: UUID().uuidString,
         name: "Deathback Ridge",
         location: GeoPoint(latitude: 20, longitude: -40),
         photos: ["deathly.landscape"],
@@ -87,6 +91,8 @@ struct SkateSpot: Identifiable, Comparable, Codable, Hashable {
         reviews: [Review.example3, Review.example4])
 
     static let example3 = SkateSpot(
+        id: "spot3",
+        skate_spot_id: UUID().uuidString,
         name: "Point State Park",
         location: GeoPoint(latitude: 90, longitude: -1),
         photos: ["polluted.landscape"],
@@ -102,6 +108,7 @@ struct SkateSpot: Identifiable, Comparable, Codable, Hashable {
     
     static let exampleTemp = SkateSpot(
         id: "spotTemp",
+        skate_spot_id: UUID().uuidString,
         name: "Schenely Park",
         location: GeoPoint(latitude: 3.2, longitude: 4.1),
         photos: ["basic.landscape"],
