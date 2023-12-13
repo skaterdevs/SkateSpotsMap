@@ -9,7 +9,7 @@ import SwiftUI
 import Foundation
 
 struct FeedView: View {
-    @ObservedObject var clipViewModel = ClipsRepository()
+    @ObservedObject var clipViewModel = ClipViewModel()
     
     @State var allClips = [Clip]()
     
@@ -38,7 +38,7 @@ struct FeedView: View {
                     ForEach(allClips) { clip in
                         ClipRowView(clip: clip)
                     }
-                }.onAppear{allClips = clipViewModel.clips}
+                }.onAppear{allClips = clipViewModel.clipRepository.clips}
             }
         }
     }

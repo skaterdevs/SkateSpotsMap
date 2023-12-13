@@ -10,12 +10,12 @@ import AVKit
 import Foundation
 
 struct ClipRowView: View {
-    var clip: Clip
+    @State var clip: Clip
     @State var localLikes = 0
     @State var localDislikes = 0
     @State var hasNotInteracted = true
     
-    @ObservedObject var clipViewModel = ClipsRepository()
+    @ObservedObject var clipViewModel = ClipViewModel()
     
     var body: some View {
         VStack {
@@ -57,26 +57,28 @@ struct ClipRowView: View {
     }
     
     func liked() {
-//       if clip is in likes, remove from likes and subtract
-//        let newLikedNum = clip.likes + 1
-//        var newClip = clip
-//        newClip.likes = newLikedNum
-//        clipViewModel.update(newClip)
         if(hasNotInteracted){
-            localLikes+=1
-            hasNotInteracted=false
+            hasNotInteracted = false
+            localLikes += 1
+            var updatedClip = clip
+            updatedClip.likes = localLikes
+            // Update Firebase
+            clipViewModel.update(clip: updatedClip)
+            // Update local
+            clip = updatedClip
         }
     }
     
     func disliked() {
-        //        if clip is in dislikes, remove from dislikes and add 1
-//        let newDislikedNum = clip.dislikes + 1
-//        var newClip = clip
-//        newClip.dislikes = newDislikedNum
-//        clipViewModel.update(newClip)
         if(hasNotInteracted){
-            localDislikes+=1
-            hasNotInteracted=false
+            hasNotInteracted = false
+            localDislikes += 1
+            var updatedClip = clip
+            updatedClip.dislikes = localDislikes
+            // Update Firebase
+            clipViewModel.update(clip: updatedClip)
+            // Update local
+            clip = updatedClip
         }
     }
 }

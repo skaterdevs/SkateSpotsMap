@@ -8,10 +8,14 @@
 import Foundation
 
 class ClipViewModel: ObservableObject {
-    private var clipRepository = ClipsRepository()
+    @Published var clipRepository = ClipsRepository()
     
     func post(clip: Clip) {
         clipRepository.create(clip)
+    }
+    
+    func update(clip: Clip) {
+        clipRepository.update(clip)
     }
     
     func findClip(_ id: String) -> Clip? {
