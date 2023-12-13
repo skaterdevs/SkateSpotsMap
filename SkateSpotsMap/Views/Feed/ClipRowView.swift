@@ -29,7 +29,7 @@ struct ClipRowView: View {
             let videoURL = URL(string: clip.media[0])
             let player = AVPlayer(url: videoURL!)
             VideoPlayer(player: player)
-                .frame(height: 200)
+                .aspectRatio(CGSize(width: 9, height: 16), contentMode: .fill)
                 .clipShape(Rectangle())
             HStack {
                 Button(action: {
