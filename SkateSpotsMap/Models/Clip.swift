@@ -13,6 +13,7 @@ struct Clip: Identifiable, Comparable, Codable {
     // MARK: Fields
     @DocumentID var id: String?
     // TODO: Maybe rename Reviewer struct
+    var clip_id: String
     var user: Reviewer
     var media: [String]
     var location: String
@@ -23,6 +24,7 @@ struct Clip: Identifiable, Comparable, Codable {
     // MARK: Codable
     enum CodingKeys: String, CodingKey {
         case id
+        case clip_id
         case user
         case media
         case location
@@ -44,6 +46,7 @@ struct Clip: Identifiable, Comparable, Codable {
     // MARK: Example for SwiftUI
     static let example = Clip(
         id: "clip1",
+        clip_id: UUID().uuidString,
         user: Reviewer.example,
         media: [],
         location: "",
@@ -52,6 +55,7 @@ struct Clip: Identifiable, Comparable, Codable {
         timestamp: Timestamp())
     
     static let example2 = Clip(
+        clip_id: UUID().uuidString,
         user: Reviewer.example2,
         media: [],
         location: "",
