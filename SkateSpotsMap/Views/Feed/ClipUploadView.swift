@@ -14,6 +14,8 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
+// Movie Struct, LoadState, and Switch statement from:
+// https://www.hackingwithswift.com/quick-start/swiftui/how-to-let-users-import-videos-using-photospicker
 struct Movie: Transferable {
     let url: URL
 
