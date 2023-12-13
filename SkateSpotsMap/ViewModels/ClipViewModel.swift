@@ -19,7 +19,7 @@ class ClipViewModel: ObservableObject {
     }
     
     func findClip(_ id: String) -> Clip? {
-        if let clip = clipRepository.clips.first(where: {$0.id == id}) {
+        if let clip = clipRepository.clips.first(where: {$0.clip_id == id}) {
             return clip
         } else {
             return nil
