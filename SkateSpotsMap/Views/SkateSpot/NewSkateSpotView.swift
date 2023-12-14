@@ -13,6 +13,7 @@ import Amplify
 
 struct NewSkateSpotView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
+    @ObservedObject var userViewModel = UserViewModel()
     @Binding var userCoords: CLLocationCoordinate2D?
     @State private var location = 1
     @State private var name = String()
@@ -124,7 +125,9 @@ struct NewSkateSpotView: View {
     func addSkateSpot() {
         uploadImages()
         let loc = GeoPoint(latitude: selectedMarker?.position.latitude ?? 0.0, longitude: selectedMarker?.position.longitude ?? 0.0)
-        let skateSpot = SkateSpot(name: name,
+        let skate_spot_id = UUID().uuidString
+        let skateSpot = SkateSpot(skate_spot_id: skate_spot_id,
+                                  name: name,
                                   location: loc,
                                   photos: photos,
                                   features: features,
@@ -137,6 +140,10 @@ struct NewSkateSpotView: View {
                                   tags: [String](),
                                   reviews: [Review]())
         skateSpotViewModel.add(skateSpot: skateSpot)
+        // Add spot to user
+        var user = userViewModel.findUser("26Dxy1VDAAYuiBSWryMB")
+        user?.spots.append(skate_spot_id)
+        userViewModel.update(user: user!)
     }
     func uploadImages() {
         print(selectedUIImage.count)

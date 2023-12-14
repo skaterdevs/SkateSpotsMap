@@ -47,7 +47,7 @@ class SkateSpotViewModel: ObservableObject {
     }
     
     func findSkateSpot(_ id: String) -> SkateSpot? {
-        if let skateSpot = skateSpotRepository.skate_spots.first(where: {$0.id == id}) {
+        if let skateSpot = skateSpotRepository.skate_spots.first(where: {$0.skate_spot_id == id}) {
             return skateSpot
         } else {
             return nil

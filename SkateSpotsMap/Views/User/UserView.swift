@@ -10,48 +10,54 @@ import Amplify
 
 struct UserView: View {
     @ObservedObject var userVM = UserViewModel()
-    @State var selectedTab = "SkateSpots"
+    @ObservedObject var skateSpotVM = SkateSpotViewModel()
+    @ObservedObject var repo = UserRepository()
     let picWidth = UIScreen.main.bounds.width * 0.50
     @State var image = UIImage()
     @State var notDownloaded = true
     var body: some View {
-        VStack {
-            Text(userVM.findUser(User.defaultUser)?.username ?? "")
-                .font(.largeTitle)
-            
-            Image(uiImage: image)
-                .resizable()
-                .scaledToFit()
-                .clipShape(Circle())
-                .overlay(
-                  Circle()
-                    .stroke(Color.white, lineWidth: 4)
-                    .shadow(radius: 10)
-                )
-                .frame(width: picWidth, height: picWidth, alignment: .center)
+        NavigationView {
+            VStack {
+                Text(userVM.findUser(User.defaultUser)?.username ?? "")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(Circle())
+                    .overlay(
+                        Circle()
+                            .stroke(Color.white, lineWidth: 4)
+                            .shadow(radius: 10)
+                    )
+                    .frame(width: picWidth, height: picWidth, alignment: .center)
+                    .padding()
+                
+                HStack() {
+                    Spacer()
+                    Text("Skate Spots")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    Spacer()
+                }.frame(height: 40)
+                
+                if let user = userVM.findUser(User.defaultUser) {
+                    let maybeSpots: [SkateSpot?] = user.spots.map {skateSpotVM.findSkateSpot($0)}
+                    let spots: [SkateSpot] = maybeSpots.filter{$0 != nil}.map{$0!}
+                    List {
+                        ForEach(spots) { spot in
+                            UserSkateSpotRowView(skateSpot: spot)
+                        }
+                    }
+                }
+            }.onAppear() {downloadImage(userVM.findUser(User.defaultUser)?.avatar ?? "") }
                 .padding()
-            
-            Picker("", selection: $selectedTab) {
-                Text("Skate Spots").tag("SkateSpots")
-                Text("Clips").tag("Clips")
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
-             
-            TabView(selection: $selectedTab) {
-                UserSkateSpotsView()
-                    .tag("SkateSpots")
-                UserClipsView()
-                    .tag("Clips")
-            }
-            .tabViewStyle(.page(indexDisplayMode: .never))
-        }.onAppear() {downloadImage(userVM.findUser(User.defaultUser)?.avatar ?? "") }
-        .padding()
+        }
     }
     
     func downloadImage(_ image_key: String) {
         if notDownloaded && image_key != "" {
-//            image_keys.forEach { image_key in
             Amplify.Storage.downloadData(key: image_key) {
                 result in
                 switch result {
@@ -63,14 +69,13 @@ struct UserView: View {
                     print(error)
                 }
             }
-//            }
             notDownloaded = false
         }
     }
 }
 
-struct UserView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserView()
-    }
-}
+//struct UserView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserView()
+//    }
+//}

@@ -25,8 +25,7 @@ struct SkateSpotReviewsView: View {
                 ForEach(skateSpot.reviews){ review in
                     ReviewRowView(review:review)
                 }
-            }
-            Spacer()
+            }.frame(height: 150)
         }
     }
 }
