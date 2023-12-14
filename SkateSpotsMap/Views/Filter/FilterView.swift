@@ -71,37 +71,50 @@ struct FilterView: View {
                                 }
                             }
                         }
-                        VStack{
-                            Text("Tags")
-                            HStack{
-                                ForEach(tagStrings, id: \.self){ t in
-                                    TagButtonView(tag:t, isSelected: filterViewModel.getTagState(tag: t))
-                                }
-                            }
-                        }
+//                        Picker("Tags", selection: $inputKickout) {
+//                            TagListView()
+//                        }
+//                        .pickerStyle(.navigationLink)
 
+                        VStack{
+//                            LazyTestView()
+                            Text("Tags")
+                            TagListView()
+//                            Form{
+//                                ForEach(tagStrings, id: \.self){ t in
+//                                    //TagButtonView(tag:t, isSelected: filterViewModel.getTagState(tag: t))
+//                                    Text(t)
+//                                }
+//                            }
+                            
+                        }
+                        
                     }
+                    Section{
+                        //HStack(alignment: .center){
+                            Button {
+                                showingAlert = true
+                            } label: {
+                                Text("Clear Filters").frame(maxWidth: .infinity)
+                            }
+                            //.background(.red)
+                            .foregroundColor(.red)
+//                            .buttonStyle(.bordered)
+                            .cornerRadius(8)
+                            .alert(isPresented:$showingAlert) {
+                                Alert(
+                                    title: Text("Clear all filters?"),
+                                    primaryButton: .destructive(Text("Clear")) {
+                                        filterViewModel.clearAll()
+                                    },
+                                    secondaryButton: .cancel()
+                                )
+                            }
+                        //}
+                    }
+                   
                 }
-                .overlay(alignment : .topTrailing) {
-//                    Button("Clear All", action: {
-//                        searchViewModel.clearAll()
-//
-//                    })
-                    Button("Clear Filters") {
-                        showingAlert = true
-                    }
-                    .alert(isPresented:$showingAlert) {
-                        Alert(
-                            title: Text("Clear all filters?"),
-                            primaryButton: .destructive(Text("Clear")) {
-                                filterViewModel.clearAll()
-                            },
-                            secondaryButton: .cancel()
-                        )
-                    }
-                    .padding()
-                    
-                }
+
                 
             //}
 //            .frame(

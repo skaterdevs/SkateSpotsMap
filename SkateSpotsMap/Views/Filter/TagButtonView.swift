@@ -26,14 +26,18 @@ struct TagButtonView: View {
     
     
     var body: some View {
-        Button(tag, action: {
+        Button {
             filterViewModel.updateTagState(tag:tag)
-            filterViewModel.filterChange = true
-        })
+        } label: {
+            Text(tag)
+                .frame(maxWidth: .infinity)
+        }
         .background(buttonColors[0])
         .foregroundColor(buttonColors[1])
         .buttonStyle(.bordered)
         .cornerRadius(8)
+        
+        //.frame(minWidth: 300, maxWidth:.infinity)
     }
 }
 
