@@ -24,9 +24,6 @@ struct FilterView: View {
             //ZStack{
                 Form{
                     Section(header: Text("Options")){
-                        //KickoutFormView(inputKickout: inputKickout)
-                        //DistanceFormView(inputDistance: inputDistance)
-//                        RatingFormView(inputRating: inputRating)
                         
                         Picker(selection: $inputKickout, label: Text("Kickout Rating")){
                             ForEach(Kickout.allKickout, id:\.self){inputKickout in
