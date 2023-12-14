@@ -10,13 +10,14 @@ import SwiftUI
 struct FilterButtonView: View {
     var body: some View {
         Image(systemName: "line.3.horizontal.decrease.circle")
-            .foregroundColor(.black)
+            .foregroundColor(Color(UIColor.lightGray))
+            .font(.title)
+            .padding(.top, 3)
+            .padding(.bottom, 3)
 
     }
 
 }
-    //.foregroundColor(.black)
-    //Image(systemName: "line.3.horizontal.decrease.circle")
 
 //struct FilterButtonView_Previews: PreviewProvider {
 //    static var previews: some View {

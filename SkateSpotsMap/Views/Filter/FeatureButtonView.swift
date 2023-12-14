@@ -33,6 +33,7 @@ struct FeatureButtonView: View {
         .foregroundColor(buttonColors[1])
         .buttonStyle(.bordered)
         .cornerRadius(8)
+        .padding(.trailing, 1)
     }
 }
 
