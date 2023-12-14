@@ -31,7 +31,7 @@ struct LeaveReviewView: View {
                 }
                 Spacer()
             }
-        ).padding([.top, .bottom], 20)
+        ).padding([.top, .bottom], 5)
     }
 }
 

@@ -8,30 +8,23 @@
 import SwiftUI
 
 struct OverviewReviewPartialView: View {
-    var skateSpot: SkateSpot?
-    @State var isOverview: Bool
+    var skateSpot: SkateSpot
+    @State var selectedTab = "Overview"
     
     var body: some View {
-        // overview and reviews
-        Divider().padding(5)
-        HStack {
-          Spacer()
-        NavigationLink(
-        destination: SkateSpotDetailView(skateSpot: skateSpot!),
-        label: {
-          Text("Overview")
-        }).disabled(isOverview)
-
-        Spacer()
-        NavigationLink(
-        destination: SkateSpotReviewsView(skateSpot: skateSpot!),
-        label: {
-          Text("Reviews")
-        }).disabled(!isOverview)
-
-          Spacer()
+        Picker("", selection: $selectedTab) {
+            Text("Overview").tag("Overview")
+            Text("Reviews").tag("Reviews")
         }
-        Divider().padding(5)
+        .pickerStyle(SegmentedPickerStyle())
+        .padding()
+        
+        TabView(selection: $selectedTab) {
+            SkateSpotOverviewView(skateSpot: skateSpot)
+                .tag("Overview")
+            SkateSpotReviewsView(skateSpot: skateSpot)
+                .tag("Reviews")
+        }
     }
 }
 
