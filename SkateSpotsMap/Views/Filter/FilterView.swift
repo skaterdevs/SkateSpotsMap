@@ -42,7 +42,8 @@ struct FilterView: View {
                             }
                         }
                         .onChange(of: inputRating){newInput in
-                            var _ = print(inputRating                            filterViewModel.minAvgRating = inputRating
+                            var _ = print(inputRating)
+                            filterViewModel.minAvgRating = inputRating
                         }
                         
                         VStack{
