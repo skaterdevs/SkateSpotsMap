@@ -16,6 +16,7 @@ struct ClipRowView: View {
     @State var hasNotInteracted = true
     
     @ObservedObject var clipViewModel = ClipViewModel()
+    @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
     
     var body: some View {
         VStack {
@@ -24,7 +25,7 @@ struct ClipRowView: View {
                     .frame(width: 30.0, height: 30.0).clipShape(Circle())
                 Text(clip.user.username)
                 Spacer()
-                Text(clip.location)
+                Text(skateSpotViewModel.findSkateSpot(clip.location)?.name ?? "NOTHING")
             }
             let videoURL = URL(string: clip.media[0])
             let player = AVPlayer(url: videoURL!)
