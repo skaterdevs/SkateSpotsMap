@@ -11,8 +11,7 @@ struct SearchView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotRepository()
     @EnvironmentObject var filterViewModel : FilterViewModel
     @State private var searchText = ""
-    @StateObject var locationManager = LocationManager()
-    @State var distance: String?
+
 //    @State private var features : [String]
 
 
@@ -30,13 +29,10 @@ struct SearchView: View {
 
     
     var body: some View {
-        //Will need to be separated into SpotRowView at a later point
-        //TextField("Search: ", text:$searchText)
         
             VStack {
                 NavigationStack {
                     HStack{
-                        //ZStack{
                         Spacer()
                         TextField("Search:", text: $searchText)
                             
@@ -48,8 +44,6 @@ struct SearchView: View {
                                     FilterButtonView()
                                 }
                             )
-                            
-                        //}
                         Spacer()
                     }
                     .overlay(RoundedRectangle(cornerRadius: 3)
@@ -65,29 +59,6 @@ struct SearchView: View {
                             EmptyView()
                             SearchRowView(skateSpot: result).frame(maxHeight:.infinity)
                         }
-//                        ForEach (searchResults) { skateSpot in
-//                            switch searchText.isEmpty{
-//                                case true:
-//                                    if(filterViewModel.filterChange){
-//                                        if(filterViewModel.validSpots().contains(skateSpot)){
-//                                            SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
-//                                        }
-//                                    }
-//                                    else{
-//                                        SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
-//                                    }
-//                                case false:
-//                                    if(filterViewModel.validSpots().contains(skateSpot)){
-//                                        SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
-//                                    }
-//                            }
-////                            if(filterViewModel.validSpots().contains(skateSpot)){
-////                                SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
-////                            }
-//                            if(filterViewModel.filterChange){
-//                                filterViewModel.filterChange.toggle()
-//                            }
-//                        }
                         
                     }.background(Color(UIColor.lightGray))
                 }
