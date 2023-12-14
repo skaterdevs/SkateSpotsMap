@@ -28,6 +28,7 @@ struct TagButtonView: View {
     var body: some View {
         Button(tag, action: {
             filterViewModel.updateTagState(tag:tag)
+            filterViewModel.filterChange = true
         })
         .background(buttonColors[0])
         .foregroundColor(buttonColors[1])

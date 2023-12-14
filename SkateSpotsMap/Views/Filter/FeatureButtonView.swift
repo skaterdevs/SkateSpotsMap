@@ -28,6 +28,7 @@ struct FeatureButtonView: View {
     var body: some View {
         Button(feature, action: {
             filterViewModel.updateFeatureState(feature: feature)
+            filterViewModel.filterChange = true
         })
         .background(buttonColors[0])
         .foregroundColor(buttonColors[1])

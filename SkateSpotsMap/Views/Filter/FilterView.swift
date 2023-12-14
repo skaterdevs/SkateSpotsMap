@@ -35,6 +35,7 @@ struct FilterView: View {
                             var _ = print(inputKickout)
                             //searchViewModel.updateFeatures(inputKickout: inputKickout, inputMinAvgRating: inputRating, inputMaxDistance: inputDistance)
                             filterViewModel.kickout = inputKickout
+                            filterViewModel.filterChange = true
                         }
                         HStack{
                             Text("Maximum Distance")
@@ -46,6 +47,7 @@ struct FilterView: View {
                             .onChange(of: inputDistance){newInput in
                                 var _ = print(inputDistance)
                                 filterViewModel.maxDistance = inputDistance
+                                filterViewModel.filterChange = true
                             }
                             Text("25")
                         }
@@ -59,6 +61,7 @@ struct FilterView: View {
                         .onChange(of: inputRating){newInput in
                             var _ = print(inputRating)
                             filterViewModel.minAvgRating = inputRating
+                            filterViewModel.filterChange = true
                         }
                         VStack{
                             Text("Features")
