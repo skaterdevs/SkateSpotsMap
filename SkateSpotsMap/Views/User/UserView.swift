@@ -12,7 +12,6 @@ struct UserView: View {
     @ObservedObject var userVM = UserViewModel()
     @ObservedObject var skateSpotVM = SkateSpotViewModel()
     @ObservedObject var repo = UserRepository()
-    @State var selectedTab = "SkateSpots"
     let picWidth = UIScreen.main.bounds.width * 0.50
     @State var image = UIImage()
     @State var notDownloaded = true
@@ -52,26 +51,6 @@ struct UserView: View {
                         }
                     }
                 }
-                
-//                Picker("", selection: $selectedTab) {
-//                    Text("Skate Spots").tag("SkateSpots")
-//                    NavigationLink(
-//                        destination: FeedView(),
-//                        label: {
-//                            Text("Clips")
-//                        }).tag("Clips")
-//                    Text("Clips").tag("Clips")
-//                }
-//                .pickerStyle(SegmentedPickerStyle())
-//                .padding()
-//
-//                TabView(selection: $selectedTab) {
-//                    UserSkateSpotsView()
-//                        .tag("SkateSpots")
-//                    UserClipsView()
-//                        .tag("Clips")
-//                }
-//                .tabViewStyle(.page(indexDisplayMode: .never))
             }.onAppear() {downloadImage(userVM.findUser(User.defaultUser)?.avatar ?? "") }
                 .padding()
         }

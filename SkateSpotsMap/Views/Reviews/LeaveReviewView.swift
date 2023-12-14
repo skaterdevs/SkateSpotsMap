@@ -9,9 +9,12 @@ import SwiftUI
 
 struct LeaveReviewView: View {
     var skateSpot : SkateSpot
+    @ObservedObject var userVM = UserViewModel()
+    @ObservedObject var repo = UserRepository()
     var body: some View {
+        let user = userVM.findUser(User.defaultUser) ?? User.example
         NavigationLink(
-            destination: NewReviewView(skateSpot:skateSpot, user: User.example),
+            destination: NewReviewView(skateSpot:skateSpot, user: user),
             label:{
                 Spacer()
                 VStack{
