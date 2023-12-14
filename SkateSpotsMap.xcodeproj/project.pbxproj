@@ -11,6 +11,7 @@
 		01678CA62B1FED870010A29D /* ClipsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA52B1FED870010A29D /* ClipsRepository.swift */; };
 		01678CA82B1FEF830010A29D /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA72B1FEF830010A29D /* Clip.swift */; };
 		01678CAA2B1FF7A70010A29D /* ClipViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01678CA92B1FF7A70010A29D /* ClipViewModel.swift */; };
+		01B716CA2B2A82CC008E1F33 /* GoogleMapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 01B716C92B2A82CC008E1F33 /* GoogleMapStyle.json */; };
 		1546C075571D35341768FB36 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		3ADB463F05D33595A952BAD8 /* Pods_SkateSpotsMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43A3B6D12EF0C80049540E1 /* Pods_SkateSpotsMap.framework */; };
 		57266D972AFA9D1200DD9C69 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57266D962AFA9D1200DD9C69 /* MapView.swift */; };
@@ -98,6 +99,7 @@
 		01678CA52B1FED870010A29D /* ClipsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipsRepository.swift; sourceTree = "<group>"; };
 		01678CA72B1FEF830010A29D /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		01678CA92B1FF7A70010A29D /* ClipViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipViewModel.swift; sourceTree = "<group>"; };
+		01B716C92B2A82CC008E1F33 /* GoogleMapStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GoogleMapStyle.json; sourceTree = "<group>"; };
 		11D57FF5577BA985F5BF563C /* Pods-SkateSpotsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.release.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.release.xcconfig"; sourceTree = "<group>"; };
 		3AD1F795D6D71255438CF639 /* Pods-SkateSpotsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkateSpotsMap.debug.xcconfig"; path = "Target Support Files/Pods-SkateSpotsMap/Pods-SkateSpotsMap.debug.xcconfig"; sourceTree = "<group>"; };
 		57266D962AFA9D1200DD9C69 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 		9636CE172AF35F5700F014C5 /* SkateSpotsMap */ = {
 			isa = PBXGroup;
 			children = (
+				01B716C92B2A82CC008E1F33 /* GoogleMapStyle.json */,
 				96BA2E072B150A8300CACC9E /* contents.txt */,
 				968271C02AF6E222008A5994 /* Models */,
 				968271C12AF6E222008A5994 /* ViewModels */,
@@ -529,6 +532,7 @@
 				D558C96C2B266DEC0054FBBD /* GoogleService-Info.plist in Resources */,
 				1546C075571D35341768FB36 /* (null) in Resources */,
 				96BA2E082B150A8300CACC9E /* contents.txt in Resources */,
+				01B716CA2B2A82CC008E1F33 /* GoogleMapStyle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
