@@ -50,13 +50,9 @@ struct SkateSpotDetailView: View {
             
         }
         
-        Divider().frame(height: 15)
-        
-        // overview and reviews
-        
-        SkateSpotOverviewView(skateSpot: skateSpot!)
-        
-        Spacer()
+        Divider().frame(height: 10)
+
+        OverviewReviewPartialView(skateSpot: skateSpot!)
     }
     
     func downloadImages(image_keys: [String]) {
@@ -79,12 +75,8 @@ struct SkateSpotDetailView: View {
     }
 }
 
-struct SkateSpotDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        SkateSpotDetailView(skateSpot: SkateSpot.example)
-    }
-}
-
-//#Preview {
-//  SkateSpotDetailView(skateSpot: .example)
+//struct SkateSpotDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SkateSpotDetailView(skateSpot: SkateSpot.example)
+//    }
 //}

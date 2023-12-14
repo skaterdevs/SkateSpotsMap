@@ -15,7 +15,6 @@ struct SkateSpotOverviewView: View {
     
     var body: some View {
         VStack {
-            OverviewReviewPartialView(skateSpot: skateSpot, isOverview: true)
             HStack {
                 
                 Spacer()

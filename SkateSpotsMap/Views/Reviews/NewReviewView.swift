@@ -119,7 +119,7 @@ struct NewReviewView: View {
                     }.padding(.bottom, 10.0)
                     
                     // submit
-                    Button("Submit Button") {
+                    Button("Submit") {
                         addReview()
                         clearFields()
                     }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-  var skateSpotList = SkateSpotViewModel()
-  var filterViewModel = FilterViewModel()
+    var skateSpotList = SkateSpotViewModel()
+    var filterViewModel = FilterViewModel()
     
     var body: some View {
         TabView() {
@@ -41,8 +41,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
-  }
-}
+//struct ContentView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ContentView()
+//  }
+//}

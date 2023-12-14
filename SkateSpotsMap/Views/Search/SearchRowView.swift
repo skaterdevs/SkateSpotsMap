@@ -18,15 +18,17 @@ struct SearchRowView: View {
                     VStack(alignment: .leading) {
                         Text(skateSpot.name)
                             .fontWeight(.bold)
-                            .font(.title2)
-                            .padding(.bottom, 0.5)
+                            .font(.title3)
+                            .padding(.bottom, -3)
                         
-                        SearchKickoutView(skateSpot : skateSpot).padding(.bottom, 0.5)
-
+                        SearchReviewView(skateSpot: skateSpot).padding(.bottom, 1.5)
+                        
+                        SearchKickoutView(skateSpot : skateSpot, levelColor : .black).padding(.bottom, 0.5)
+                        
                         SearchDistanceView(skateSpot : skateSpot)
                     }
                     Spacer()
-                    DirectionsButtonView(skateSpot: skateSpot)
+                    DirectionsButtonView(skateSpot: skateSpot).padding(.trailing, 1)
                 }
             }
         )

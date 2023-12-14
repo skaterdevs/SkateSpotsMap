@@ -11,14 +11,13 @@ struct SearchView: View {
     @ObservedObject var skateSpotViewModel = SkateSpotRepository()
     @EnvironmentObject var filterViewModel : FilterViewModel
     @State private var searchText = ""
-//    @State private var features : [String]
-
 
     var searchResults: [SkateSpot] {
         if searchText.isEmpty {
             return skateSpotViewModel.skate_spots
-        } else {
-            
+        }
+
+        else {
             return skateSpotViewModel.skate_spots.filter {
                 $0.name.lowercased().contains(searchText.lowercased())
             }
@@ -27,41 +26,35 @@ struct SearchView: View {
 
     
     var body: some View {
-        //Will need to be separated into SpotRowView at a later point
-        //TextField("Search: ", text:$searchText)
-            VStack {
-                NavigationStack {
-                    HStack{
-                        //ZStack{
-                            TextField("Search:", text: $searchText).textFieldStyle(.roundedBorder)
-                            NavigationLink(
-                                destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
-                                                        inputRating: filterViewModel.minAvgRating),
-                                label:{
-                                    FilterButtonView().frame(alignment : .trailing)
-                                }
-                            )
-                            
-                        //}
+        VStack {
+            NavigationStack {
+                HStack{
+                    Spacer()
+                    TextField("Search:", text: $searchText)
                         
-                    }.padding(.top, 10)
-                    List{
-                        ForEach (searchResults) { skateSpot in
-                            if(filterViewModel.validSpots().contains(skateSpot)){
-                                SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
+                    Spacer()
+                        NavigationLink(
+                            destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
+                                                    inputRating: filterViewModel.minAvgRating),
+                            label:{
+                                FilterButtonView()
                             }
-
-                            //Text(skateSpot.name)
-                        }
-//                        ForEach (filterViewModel.validSpots()) { skateSpot in
-//                            SearchRowView(skateSpot: skateSpot).frame(maxHeight:.infinity)
-//                        }
-                    }
+                        )
+                    Spacer()
                 }
-            }
-    }
-    func containsTags(features : [String]) -> Bool{
+                .overlay(RoundedRectangle(cornerRadius: 3)
+                .stroke(.gray, lineWidth: 1))
+                .padding(.leading, 10)
+                .padding(.trailing, 10)
+                .padding(.bottom, -4)
 
-        return false
+                List{
+                    ForEach(filterViewModel.validSpots(searchText:searchText)) { result in
+                        SearchRowView(skateSpot: result).frame(maxHeight:.infinity)
+                    }
+                    
+                }.background(Color(UIColor.lightGray))
+            }
+        }
     }
 }

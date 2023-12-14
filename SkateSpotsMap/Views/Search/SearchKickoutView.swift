@@ -9,33 +9,22 @@ import SwiftUI
 
 struct SearchKickoutView: View {
     var skateSpot : SkateSpot
+    var levelColor : Color = .black
     var body: some View {
         HStack{
-            Text("Kickout Rating:").font(.subheadline)
             switch skateSpot.overall_kickout{
                 case Kickout.high.rawValue:
-                    Text(skateSpot.overall_kickout)
-                    .foregroundColor(.red)
-                    .font(.subheadline)
-                    //.fontWeight(.semibold)
-                    .padding(.leading, -4)
+                    KickoutDataView(skateSpot: skateSpot, kickoutColor: .red)
                 
                 case Kickout.medium.rawValue:
-                    Text(skateSpot.overall_kickout)
-                    .foregroundColor(.orange)
-                    .font(.subheadline)
-                    //.fontWeight(.semibold)
-                    .padding(.leading, -4)
+                    KickoutDataView(skateSpot: skateSpot, kickoutColor: .orange)
                     
                 case Kickout.low.rawValue:
-                    Text(skateSpot.overall_kickout)
-                    .foregroundColor(.green)
-                    .font(.subheadline)
-                    //.fontWeight(.semibold)
-                    .padding(.leading, -4)
+                    KickoutDataView(skateSpot: skateSpot, kickoutColor: .green)
                 
                 default:
-                    Text("N/A")
+                    KickoutDataView(skateSpot: skateSpot, kickoutColor: .black)
+            
             }
         }
     }

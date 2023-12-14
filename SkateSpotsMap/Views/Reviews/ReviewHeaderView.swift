@@ -10,13 +10,6 @@ import SwiftUI
 struct ReviewHeaderView: View {
     var skateSpot: SkateSpot
     var body: some View {
-        VStack{
-            Text(skateSpot.name)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-            OverviewReviewPartialView(skateSpot: skateSpot, isOverview: false)
-        }
         HStack{
             Text(String(skateSpot.rating_avg))
                 .fontWeight(.semibold)
@@ -40,7 +33,7 @@ struct ReviewHeaderView: View {
             
             Text("(\(skateSpot.reviews.count))")
                 .fontWeight(.regular)
-        }.padding(.vertical, 20)
+        }.padding(.bottom, 5)
     }
 }
 

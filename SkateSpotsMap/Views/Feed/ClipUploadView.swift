@@ -14,6 +14,8 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
+// Movie Struct, LoadState, and Switch statement from:
+// https://www.hackingwithswift.com/quick-start/swiftui/how-to-let-users-import-videos-using-photospicker
 struct Movie: Transferable {
     let url: URL
 
@@ -36,10 +38,11 @@ struct Movie: Transferable {
 struct ClipUploadView: View {
     @ObservedObject var clipViewModel = ClipViewModel()
     @ObservedObject var skateSpotRepo = SkateSpotRepository()
+    @ObservedObject var userViewModel = UserViewModel()
+    let defaultUserID: String = "26Dxy1VDAAYuiBSWryMB"
     
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var user = Reviewer.example
     @State private var media: [String] = []
     @State private var location = ""
     @State private var likes = 0
@@ -139,12 +142,14 @@ struct ClipUploadView: View {
     }
     
     func addNewClip() {
-        
+        // Find user
+        var user = userViewModel.findUser(defaultUserID)
+        var embeddedUser = Reviewer(id: user!.id!, username: user!.username, avatar: user!.avatar)
         let newID = UUID().uuidString
         uploadVideo(clipID: newID)
-        let newClip = Clip(id: newID,
+        let newClip = Clip(clip_id: newID,
                            // TODO: REPLACE
-                           user: user,
+                           user: embeddedUser,
                            media: ["https://skaterbucket193541-dev.s3.amazonaws.com/public/"+"\(newID+(self.movieClip!.url.absoluteString).suffix(4))"],
                            location: skateSpotSelection!.id ?? "Could not get skate spot id",
                            likes: 0,
@@ -152,6 +157,9 @@ struct ClipUploadView: View {
                            timestamp: Timestamp()
                       )
         clipViewModel.post(clip: newClip)
+        // Add clip to user
+        user?.clips.append(newID)
+        userViewModel.update(user: user!)
     }
     
     func uploadVideo(clipID: String) {
@@ -170,7 +178,6 @@ struct ClipUploadView: View {
     }
     
     func clearFields() {
-        user = user
         media = [String]()
         location = String()
         likes = 0
