@@ -11,7 +11,7 @@ class FilterViewModel: ObservableObject {
     private var skateSpotRepository = SkateSpotRepository()
 
     @Published var noResults : Bool = false
-    @Published var filterChange : Bool = false
+
     //@Published var test : String = ""
     @Published var kickout : String = "N/A"
     @Published var minAvgRating : Int = 1
@@ -31,8 +31,8 @@ class FilterViewModel: ObservableObject {
     }
 
     func clearAll(){
-        kickout = "Low"
-        minAvgRating = 3
+        kickout = "N/A"
+        minAvgRating = 1
         maxDistance = 5.0
         selectedFeatures = ["Walls" : false,
                             "Banks" : false,
@@ -65,23 +65,6 @@ class FilterViewModel: ObservableObject {
     func validSpots(searchText:String) -> [SkateSpot]{
         var spots : [SkateSpot] = []
         
-//        let validFeatures : [String] = selectedFeatures.filter{$0.value == true}.map({ $0.key })
-//        let validTags : [String] = selectedTags.filter{$0.value == true}.map({ $0.key })
-//
-//        for spot in skateSpotRepository.skate_spots {
-//            var containsFeature : Bool = false
-//            var containsTag : Bool = false
-//            if (spot.features.filter{validFeatures.contains($0)}).count > 0 || validFeatures.count == 0{
-//                containsFeature = true
-//            }
-//            if (spot.tags.filter{validTags.contains($0)}).count > 0 || validTags.count == 0{
-//                containsTag = true
-//            }
-//
-//            if containsTag && containsFeature{
-//                spots.append(spot)
-//            }
-//        }
         for spot in skateSpotRepository.skate_spots{
             if validFeatures(skateSpot: spot)
                 && validTags(skateSpot: spot)

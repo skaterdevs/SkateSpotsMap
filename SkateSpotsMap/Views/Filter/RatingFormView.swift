@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct RatingFormView: View {
+    @EnvironmentObject var filterViewModel : FilterViewModel
+    @State var inputRating : Int
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Picker(selection: $inputRating, label: Text("Minimum Average Rating"))
+        {
+            ForEach(1..<6, id:\.self){i in
+                Text("\(i)")
+            }
+        }
+        .onChange(of: inputRating){newInput in
+            var _ = print(inputRating)
+            filterViewModel.minAvgRating = inputRating
+        }
     }
 }
 
-struct RatingFormView_Previews: PreviewProvider {
-    static var previews: some View {
-        RatingFormView()
-    }
-}
+//struct RatingFormView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RatingFormView()
+//    }
+//}
