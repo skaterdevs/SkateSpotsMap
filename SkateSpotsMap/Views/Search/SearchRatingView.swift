@@ -24,7 +24,6 @@ struct SearchRatingView: View {
                 .scaledToFit()
                 .frame(width: 12)
                 .foregroundStyle(.yellow)
-            //Text("(102)").multilineTextAlignment(.leading)
             Text("(" + String((skateSpot.reviews).count) + ")")
                 .multilineTextAlignment(.leading)
                 .font(.system(size:10))

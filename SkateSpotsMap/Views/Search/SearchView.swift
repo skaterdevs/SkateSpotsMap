@@ -12,9 +12,6 @@ struct SearchView: View {
     @EnvironmentObject var filterViewModel : FilterViewModel
     @State private var searchText = ""
 
-//    @State private var features : [String]
-
-
     var searchResults: [SkateSpot] {
         if searchText.isEmpty {
             return skateSpotViewModel.skate_spots
@@ -29,43 +26,35 @@ struct SearchView: View {
 
     
     var body: some View {
-        
-            VStack {
-                NavigationStack {
-                    HStack{
-                        Spacer()
-                        TextField("Search:", text: $searchText)
-                            
-                        Spacer()
-                            NavigationLink(
-                                destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
-                                                        inputRating: filterViewModel.minAvgRating),
-                                label:{
-                                    FilterButtonView()
-                                }
-                            )
-                        Spacer()
-                    }
-                    .overlay(RoundedRectangle(cornerRadius: 3)
-                        .stroke(.gray, lineWidth: 1))
-                    .padding(.leading, 10)
-                    .padding(.trailing, 10)
-                    .padding(.bottom, -4)
-                    
-
-                    List{
-                        EmptyView()
-                        ForEach(filterViewModel.validSpots(searchText:searchText)) { result in
-                            EmptyView()
-                            SearchRowView(skateSpot: result).frame(maxHeight:.infinity)
-                        }
+        VStack {
+            NavigationStack {
+                HStack{
+                    Spacer()
+                    TextField("Search:", text: $searchText)
                         
-                    }.background(Color(UIColor.lightGray))
+                    Spacer()
+                        NavigationLink(
+                            destination: FilterView(inputKickout: filterViewModel.kickout, inputDistance: filterViewModel.maxDistance,
+                                                    inputRating: filterViewModel.minAvgRating),
+                            label:{
+                                FilterButtonView()
+                            }
+                        )
+                    Spacer()
                 }
-            }
-    }
-    func containsTags(features : [String]) -> Bool{
+                .overlay(RoundedRectangle(cornerRadius: 3)
+                .stroke(.gray, lineWidth: 1))
+                .padding(.leading, 10)
+                .padding(.trailing, 10)
+                .padding(.bottom, -4)
 
-        return false
+                List{
+                    ForEach(filterViewModel.validSpots(searchText:searchText)) { result in
+                        SearchRowView(skateSpot: result).frame(maxHeight:.infinity)
+                    }
+                    
+                }.background(Color(UIColor.lightGray))
+            }
+        }
     }
 }
