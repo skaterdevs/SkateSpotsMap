@@ -42,8 +42,7 @@ struct FilterView: View {
                             }
                         }
                         .onChange(of: inputRating){newInput in
-                            var _ = print(inputRating)
-                            filterViewModel.minAvgRating = inputRating
+                            var _ = print(inputRating                            filterViewModel.minAvgRating = inputRating
                         }
                         
                         VStack{
@@ -60,7 +59,6 @@ struct FilterView: View {
                             List{
                                 ForEach(tagStrings, id: \.self){ t in
                                     TagButtonView(tag:t, isSelected: filterViewModel.getTagState(tag: t))
-                                    //Text(t)
                                     Spacer()
                                 }
                             }

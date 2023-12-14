@@ -25,7 +25,6 @@ struct SearchDistanceView: View {
                 .padding(.trailing, -4)
             
             if let unwrapped = distance{
-                //Text(unwrapped + " miles away!").font(.subheadline)
                 Text(unwrapped ).font(.subheadline)
             }
             else{
