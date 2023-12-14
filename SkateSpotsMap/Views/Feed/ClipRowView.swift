@@ -8,12 +8,15 @@
 import SwiftUI
 import AVKit
 import Foundation
+import Amplify
 
 struct ClipRowView: View {
     @State var clip: Clip
     @State var localLikes = 0
     @State var localDislikes = 0
     @State var hasNotInteracted = true
+    @State var image = UIImage()
+    @State var notDownloaded = true
     
     @ObservedObject var clipViewModel = ClipViewModel()
     @ObservedObject var skateSpotViewModel = SkateSpotViewModel()
@@ -21,16 +24,21 @@ struct ClipRowView: View {
     var body: some View {
         VStack {
             HStack {
-                Image(clip.user.avatar).resizable().padding([.leading], 10)
+                Image(uiImage: image).resizable().padding([.leading], 0)
                     .frame(width: 30.0, height: 30.0).clipShape(Circle())
                 Text(clip.user.username)
+                    .fontWeight(.regular)
                 Spacer()
                 Text(skateSpotViewModel.findSkateSpot(clip.location)?.name ?? "NOTHING")
-            }
+                    .fontWeight(.regular)
+                    .padding(.trailing, 10.0)
+            }.onAppear() {
+                downloadImage(clip.user.avatar)
+            }.padding(.leading, 10.0)
             let videoURL = URL(string: clip.media[0])
             let player = AVPlayer(url: videoURL!)
             VideoPlayer(player: player)
-                .aspectRatio(CGSize(width: 9, height: 16), contentMode: .fill)
+                .aspectRatio(CGSize(width: 9, height: 14), contentMode: .fill)
                 .clipShape(Rectangle())
             HStack {
                 Button(action: {
@@ -53,8 +61,26 @@ struct ClipRowView: View {
                 localLikes = clip.likes
                 localDislikes = clip.dislikes
             }
+            Divider()
         }
         
+    }
+    
+    func downloadImage(_ image_key: String) {
+        if notDownloaded && image_key != "" {
+            Amplify.Storage.downloadData(key: image_key) {
+                result in
+                switch result {
+                case .success(let data):
+                    DispatchQueue.main.async {
+                        self.image = UIImage(data: data)!
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+            notDownloaded = false
+        }
     }
     
     func liked() {
